@@ -50,12 +50,14 @@ class OpeningGameCollectionDataSource: CollectDataSource {
             currentMove = currentOpening!.moveSequence[0]
             moveChoices = currentOpening!.generate6ChoiceFor(correctMove: currentMove!)
             
-            rootController.openingName.text = currentOpening!.name
-            rootController.stats.text = "Moves: \(correctMoveCount) / \(currentOpening!.movesCount)"
-            rootController.openingStats.text = "Openings: \(correctOpeningCount) / \(game!.data.count)"
-            rootController.moveNum.text = "Move: \(moveIndex + 1)"
-            print("reloaded")
-            collectView.reloadData()
+            DispatchQueue.main.async {
+                rootController.openingName.text = currentOpening!.name
+                rootController.stats.text = "Moves: \(correctMoveCount) / \(currentOpening!.movesCount)"
+                rootController.openingStats.text = "Openings: \(correctOpeningCount) / \(game!.data.count)"
+                rootController.moveNum.text = "Move: \(moveIndex + 1)"
+                //print("reloaded")
+                collectView.reloadData()
+            }
         }
     }
     
@@ -112,7 +114,7 @@ class OpeningGameCollectionDataSource: CollectDataSource {
         cell!.layer.cornerRadius = 20
         
         if let moves = moveChoices {
-            print("Unwrapped")
+            //print("Unwrapped")
             cell!.text = moves[indexPath.item]
 
             if currentOpening!.moveSequence.firstIndex(of: currentMove!)!.isEven {
@@ -128,7 +130,7 @@ class OpeningGameCollectionDataSource: CollectDataSource {
             return cell!
         }
         else {
-            print("Not unwrapped")
+            //print("Not unwrapped")
             return cell!
         }
     }

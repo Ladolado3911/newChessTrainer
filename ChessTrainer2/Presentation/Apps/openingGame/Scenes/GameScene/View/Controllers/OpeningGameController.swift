@@ -30,9 +30,11 @@ class OpeningGameController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
- 
         configViewModel()
-        dataSource.setInitialInfo()
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            guard let self = self else { return }
+            self.dataSource.setInitialInfo()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
