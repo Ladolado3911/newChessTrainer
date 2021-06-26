@@ -20,6 +20,6 @@ class GeneralStyleButton: UIButton {
         
         backgroundColor = ProjectColors.purple
         setTitleColor(ProjectColors.white, for: .normal)
-        layer.cornerRadius = 20
+        layer.cornerRadius = 15
     }
 }

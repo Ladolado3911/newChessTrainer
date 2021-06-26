@@ -8,71 +8,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Choose Opening-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Play-->
+        <scene sceneID="FNT-fS-7iE">
             <objects>
-                <viewController storyboardIdentifier="StartController" id="BYZ-38-t0r" customClass="StartController" customModule="ChessTrainer2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="ChooseGameController" id="mdZ-dX-YkR" customClass="ChooseGameController" customModule="ChessTrainer2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Vt-dT-B0f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="3Nr-tH-0yk">
-                                <rect key="frame" x="0.0" y="140" width="414" height="216"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Difficulty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbe-VZ-SYK" customClass="GeneralStyleLabel" customModule="ChessTrainer2" customModuleProvider="target">
-                                <rect key="frame" x="20" y="356" width="374" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="HMj-5a-3vH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snw-yl-Zsa">
-                                <rect key="frame" x="0.0" y="386" width="414" height="216"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="cx7-CM-ni9"/>
-                                </constraints>
-                            </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gO-R8-k2r" customClass="GeneralStyleButton" customModule="ChessTrainer2" customModuleProvider="target">
-                                <rect key="frame" x="20" y="602" width="374" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="xbq-TF-o5b"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Start"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fh6-Yc-uhQ" customClass="GeneralStyleButton" customModule="ChessTrainer2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="180" width="374" height="30"/>
+                                <state key="normal" title="Opening Game"/>
                                 <connections>
-                                    <action selector="onStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nAb-f1-uGe"/>
+                                    <action selector="onOpeningGame:" destination="mdZ-dX-YkR" eventType="touchUpInside" id="I4S-9Y-UAl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtH-09-PbK" customClass="GeneralStyleButton" customModule="ChessTrainer2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="250" width="374" height="30"/>
+                                <state key="normal" title="Coming Soon..."/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="di4-dQ-wqL" customClass="GeneralStyleButton" customModule="ChessTrainer2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="320" width="374" height="30"/>
+                                <state key="normal" title="Coming Soon..."/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HxW-qh-GSN" customClass="GeneralStyleButton" customModule="ChessTrainer2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="390" width="374" height="30"/>
+                                <state key="normal" title="Coming Soon..."/>
+                            </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="lYQ-2X-7mh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lbe-VZ-SYK" firstAttribute="top" secondItem="3Nr-tH-0yk" secondAttribute="bottom" id="7eg-UY-pSK"/>
-                            <constraint firstItem="3Nr-tH-0yk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8b0-GZ-q5k"/>
-                            <constraint firstItem="snw-yl-Zsa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8xj-LN-3JK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0gO-R8-k2r" secondAttribute="trailing" constant="20" id="AsJ-Fe-rnC"/>
-                            <constraint firstItem="lbe-VZ-SYK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JY5-GZ-rZN"/>
-                            <constraint firstItem="3Nr-tH-0yk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KvQ-SD-WqV"/>
-                            <constraint firstItem="3Nr-tH-0yk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QuF-up-INp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lbe-VZ-SYK" secondAttribute="trailing" constant="20" id="UBe-i5-3EG"/>
-                            <constraint firstItem="snw-yl-Zsa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b9j-bn-jT0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0gO-R8-k2r" secondAttribute="bottom" constant="30" id="i4C-gu-RM6"/>
-                            <constraint firstItem="snw-yl-Zsa" firstAttribute="height" secondItem="3Nr-tH-0yk" secondAttribute="height" id="pCj-iE-AsN"/>
-                            <constraint firstItem="0gO-R8-k2r" firstAttribute="top" secondItem="snw-yl-Zsa" secondAttribute="bottom" id="qzf-bW-1Rg"/>
-                            <constraint firstItem="0gO-R8-k2r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vcD-K6-XZT"/>
-                            <constraint firstItem="snw-yl-Zsa" firstAttribute="top" secondItem="lbe-VZ-SYK" secondAttribute="bottom" id="wHc-cU-aV8"/>
+                            <constraint firstItem="di4-dQ-wqL" firstAttribute="leading" secondItem="fh6-Yc-uhQ" secondAttribute="leading" id="GpT-oK-DLl"/>
+                            <constraint firstItem="AtH-09-PbK" firstAttribute="leading" secondItem="fh6-Yc-uhQ" secondAttribute="leading" id="Mmr-Fn-Spr"/>
+                            <constraint firstItem="HxW-qh-GSN" firstAttribute="top" secondItem="di4-dQ-wqL" secondAttribute="bottom" constant="40" id="PNm-bi-jYy"/>
+                            <constraint firstItem="HxW-qh-GSN" firstAttribute="trailing" secondItem="fh6-Yc-uhQ" secondAttribute="trailing" id="Pbs-0Z-7Od"/>
+                            <constraint firstItem="AtH-09-PbK" firstAttribute="trailing" secondItem="fh6-Yc-uhQ" secondAttribute="trailing" id="SFa-9P-edB"/>
+                            <constraint firstItem="fh6-Yc-uhQ" firstAttribute="leading" secondItem="lYQ-2X-7mh" secondAttribute="leading" constant="20" id="aqf-tx-Viu"/>
+                            <constraint firstItem="lYQ-2X-7mh" firstAttribute="trailing" secondItem="fh6-Yc-uhQ" secondAttribute="trailing" constant="20" id="b9A-vJ-C78"/>
+                            <constraint firstItem="di4-dQ-wqL" firstAttribute="trailing" secondItem="fh6-Yc-uhQ" secondAttribute="trailing" id="hXr-P0-vwZ"/>
+                            <constraint firstItem="fh6-Yc-uhQ" firstAttribute="top" secondItem="lYQ-2X-7mh" secondAttribute="top" constant="40" id="jPY-ep-3gs"/>
+                            <constraint firstItem="AtH-09-PbK" firstAttribute="top" secondItem="fh6-Yc-uhQ" secondAttribute="bottom" constant="40" id="nHV-zC-nhW"/>
+                            <constraint firstItem="HxW-qh-GSN" firstAttribute="leading" secondItem="fh6-Yc-uhQ" secondAttribute="leading" id="rzQ-lM-ExG"/>
+                            <constraint firstItem="di4-dQ-wqL" firstAttribute="top" secondItem="AtH-09-PbK" secondAttribute="bottom" constant="40" id="zt0-GH-AEo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Choose Opening" id="7vd-rk-fuj"/>
-                    <connections>
-                        <outlet property="difficultyPicker" destination="snw-yl-Zsa" id="I8K-Db-EhE"/>
-                        <outlet property="openingPicker" destination="3Nr-tH-0yk" id="Gzg-zS-Avt"/>
-                        <outlet property="start" destination="0gO-R8-k2r" id="1xh-Mw-93p"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Play" id="LXG-m1-aad"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OOi-2k-B3p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-294" y="815"/>
         </scene>
@@ -190,7 +173,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iSR-Fw-5YJ"/>
+                        <segue destination="mdZ-dX-YkR" kind="relationship" relationship="rootViewController" id="Ivk-1I-CBd"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2r-t4-3qV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
