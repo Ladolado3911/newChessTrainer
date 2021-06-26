@@ -41,7 +41,7 @@ class OpeningFilter {
             let openings = try JSONDecoder().decode([JsonOpening].self, from: data)
             let entireData = openings.map { Opening(with: $0) }
             let filter1 = entireData.filter { $0.name.contains(openingNameFilter!) }
-            var filter2: [Opening] = []
+            //var filter2: [Opening] = []
             var result: [Opening] = []
 //
 //            if filter1.count >= 2 {

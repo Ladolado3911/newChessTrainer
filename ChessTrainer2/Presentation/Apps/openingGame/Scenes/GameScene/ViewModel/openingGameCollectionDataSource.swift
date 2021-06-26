@@ -10,9 +10,9 @@ import UIKit
 
 class OpeningGameCollectionDataSource: CollectDataSource {
     
-    var collectView: UICollectionView!
-    var rootController: OpeningGameController!
-    var viewModel: OpeningViewModel!
+    weak var collectView: UICollectionView!
+    weak var rootController: OpeningGameController!
+    weak var viewModel: OpeningViewModel!
     
     var game: OpeningGame?
 
@@ -25,8 +25,8 @@ class OpeningGameCollectionDataSource: CollectDataSource {
     var openingIndex: Int = 0
     var isCorrectMove: Bool = false
     
-    var color1 = ProjectColors.purple
-    var color2 = ProjectColors.white
+    weak var color1 = ProjectColors.purple
+    weak var color2 = ProjectColors.white
     
     var correctMoveCount: Int = 0
     var correctOpeningCount: Int = 0
@@ -119,7 +119,7 @@ class OpeningGameCollectionDataSource: CollectDataSource {
                 cell!.backgroundColor = color2
                 cell!.label.textColor = color1
                 cell!.layer.borderWidth = 2
-                cell!.layer.borderColor = color1.cgColor
+                cell!.layer.borderColor = color1!.cgColor
             }
             else {
                 cell!.backgroundColor = color1

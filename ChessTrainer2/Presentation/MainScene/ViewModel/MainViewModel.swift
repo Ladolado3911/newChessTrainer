@@ -18,14 +18,15 @@ typealias CollectDataSource = CollectView & NSObject
 
 class MainViewModel: PickerView {
 
-    var distributor: DataDistributor!
+    weak var distributor: DataDistributor!
     var openingParser: OpeningParser!
     
-    var openingPicker: UIPickerView!
-    var difficultyPicker: UIPickerView!
+    weak var openingPicker: UIPickerView!
+    weak var difficultyPicker: UIPickerView!
     
-    lazy var openings: [String] = {
-        openingParser.uniqueOpeningNames
+    lazy var openings: [String] = { [weak self] in
+        guard let self = self else { return [""] }
+        return self.openingParser.uniqueOpeningNames
     }()
     
     init(distributor object: DataDistributor,

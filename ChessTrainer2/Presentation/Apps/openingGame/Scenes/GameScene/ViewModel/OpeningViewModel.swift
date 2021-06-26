@@ -10,8 +10,8 @@ import UIKit
 
 class OpeningViewModel {
     
-    var openingFilter: OpeningFilter!
-    var openingParser: OpeningParser!
+    weak var openingFilter: OpeningFilter!
+    weak var openingParser: OpeningParser!
     
     init(with filter: OpeningFilter, with2 parser: OpeningParser) {
         openingFilter = filter
