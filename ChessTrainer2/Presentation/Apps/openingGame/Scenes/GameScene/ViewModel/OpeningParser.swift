@@ -15,7 +15,7 @@ class OpeningParser {
         var result: [String] = []
         var tempDict: [String: String] = [:]
         let datta = fetchData()
-        datta!.map {
+        datta!.forEach {
             let name = $0.name
             let tempString = String(name.split(separator: ":")[0])
             

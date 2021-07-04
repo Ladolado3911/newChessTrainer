@@ -14,6 +14,8 @@ class StartController: UIViewController {
     @IBOutlet weak var chosenOpening: UILabel!
     @IBOutlet weak var chosenDifficulty: UILabel!
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     var nameFilter: String?
     var levelFilter: Int?
     
@@ -40,6 +42,7 @@ class StartController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        spinner.isHidden = true
 
     }
 
@@ -54,23 +57,37 @@ class StartController: UIViewController {
             self.openingGameController.filters = filter
             pushController(from: self, to: self.openingGameController, method: .withBackItem)
         }
-//        openingGameController.filters = mainViewModel.getFilters()
-//        pushController(from: self, to: openingGameController, method: .withBackItem)
     }
     
     @IBAction func onChooseOpening(_ sender: Any) {
+        //view.isUserInteractionEnabled = false
+        view.backgroundColor = .gray
+        spinner.isHidden = false
+        spinner.startAnimating()
         let vc = pickOpeningController
-        present(vc, animated: true) { [weak self] in
-            vc.rootController = self
+        vc.rootController = self
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            guard let self = self else { return }
+            self.present(vc, animated: true) { [weak self] in
+                guard let self = self else { return }
+                self.view.isUserInteractionEnabled = true
+                self.view.backgroundColor = .white
+                self.spinner.stopAnimating()
+                self.spinner.isHidden = true
+            }
         }
     }
     
     
     @IBAction func onChooseDifficulty(_ sender: Any) {
+        view.isUserInteractionEnabled = false
+        view.backgroundColor = .gray
+        spinner.isHidden = false
+        spinner.startAnimating()
+        
         let vc = pickDifficultyController
-        present(vc, animated: true) { [weak self] in
-            vc.rootController = self
-        }
+        vc.rootController = self
+        present(vc, animated: true)
     }
 }
 

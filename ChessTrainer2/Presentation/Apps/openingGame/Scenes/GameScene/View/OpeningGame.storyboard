@@ -177,7 +177,7 @@
                                     <action selector="onChooseOpening:" destination="Pm9-rS-4hV" eventType="touchUpInside" id="qZl-Ec-8V9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJF-az-yiE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJF-az-yiE">
                                 <rect key="frame" x="20" y="105" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -189,7 +189,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTF-kC-tHY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTF-kC-tHY">
                                 <rect key="frame" x="20" y="277" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -202,6 +202,15 @@
                                     <action selector="onChooseDifficulty:" destination="Pm9-rS-4hV" eventType="touchUpInside" id="Na4-US-tEk"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="UxB-w1-IPe">
+                                <rect key="frame" x="177" y="418" width="60" height="60"/>
+                                <color key="tintColor" name="ProjectColor1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="7Eh-mb-MaQ"/>
+                                    <constraint firstAttribute="height" constant="60" id="Mul-jL-ZKi"/>
+                                </constraints>
+                                <color key="color" name="ProjectColor1"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oc2-aF-p2f"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -219,8 +228,10 @@
                             <constraint firstItem="GJF-az-yiE" firstAttribute="leading" secondItem="oc2-aF-p2f" secondAttribute="leading" constant="20" id="XjJ-Ey-TXa"/>
                             <constraint firstItem="Gbf-IM-yxf" firstAttribute="leading" secondItem="oc2-aF-p2f" secondAttribute="leading" constant="20" id="Xrw-vZ-c8Z"/>
                             <constraint firstItem="oc2-aF-p2f" firstAttribute="trailing" secondItem="Gbf-IM-yxf" secondAttribute="trailing" constant="20" id="aBr-cb-YAT"/>
+                            <constraint firstItem="UxB-w1-IPe" firstAttribute="centerY" secondItem="eNf-z4-FtW" secondAttribute="centerY" id="dma-vC-VTq"/>
                             <constraint firstItem="hNo-wL-sHW" firstAttribute="top" secondItem="oc2-aF-p2f" secondAttribute="top" constant="20" id="fvb-hD-98S"/>
                             <constraint firstItem="Gbf-IM-yxf" firstAttribute="top" secondItem="v56-nz-35g" secondAttribute="bottom" constant="60" id="gVa-mC-JN2"/>
+                            <constraint firstItem="UxB-w1-IPe" firstAttribute="centerX" secondItem="eNf-z4-FtW" secondAttribute="centerX" id="hm4-fV-Ay1"/>
                             <constraint firstItem="xTF-kC-tHY" firstAttribute="leading" secondItem="oc2-aF-p2f" secondAttribute="leading" constant="20" id="htx-hn-ab1"/>
                             <constraint firstItem="oc2-aF-p2f" firstAttribute="trailing" secondItem="LFf-Li-kCX" secondAttribute="trailing" constant="20" id="i3N-TH-XWp"/>
                             <constraint firstItem="LFf-Li-kCX" firstAttribute="top" secondItem="xTF-kC-tHY" secondAttribute="bottom" constant="20" id="nYm-f3-Gzd"/>
@@ -233,12 +244,13 @@
                     <connections>
                         <outlet property="chosenDifficulty" destination="xTF-kC-tHY" id="JKd-xa-lg6"/>
                         <outlet property="chosenOpening" destination="GJF-az-yiE" id="U0t-jo-x9g"/>
+                        <outlet property="spinner" destination="UxB-w1-IPe" id="WOP-bd-5vn"/>
                         <outlet property="start" destination="bkh-pV-Sde" id="wRo-1d-8RT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lwC-bv-QwU" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-123" y="137"/>
+            <point key="canvasLocation" x="-123.18840579710145" y="136.60714285714286"/>
         </scene>
     </scenes>
     <resources>

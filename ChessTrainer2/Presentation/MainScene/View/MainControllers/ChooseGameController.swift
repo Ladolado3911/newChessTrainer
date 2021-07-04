@@ -9,8 +9,6 @@ import UIKit
 
 class ChooseGameController: UIViewController {
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

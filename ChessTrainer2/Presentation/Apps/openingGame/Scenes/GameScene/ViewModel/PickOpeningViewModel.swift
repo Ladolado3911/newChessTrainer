@@ -10,21 +10,31 @@ import UIKit
 
 class PickOpeningViewModel: PickerView {
 
-    weak var openingParser: OpeningParser!
-    weak var openingPicker: UIPickerView!
-    weak var rootController: StartController!
+    var openingParser: OpeningParser?
+    var openingPicker: UIPickerView!
+    var rootController1: StartController!
+    var rootController2: OpeningFilterController!
     
-    lazy var openings: [String] = { [weak self] in
-        guard let self = self else { return [""] }
-        return self.openingParser.uniqueOpeningNames
-    }()
+    var openings: [String] {
+        guard let openingParser = self.openingParser else { return [""] }
+        return openingParser.uniqueOpeningNames
+    }
     
-    init(with picker: UIPickerView, with openingParser: OpeningParser, with rootController: StartController) {
-        super.init()
+    init(with picker: UIPickerView,
+         with openingParser: OpeningParser,
+         with rootController1: StartController,
+         with rootController2: OpeningFilterController) {
+        
+    super.init()
         self.openingPicker = picker
         self.openingParser = openingParser
-        self.rootController = rootController
-        configPicker()
+        self.rootController1 = rootController1
+        self.rootController2 = rootController2
+        DispatchQueue.main.async {
+            self.configPicker()
+            print("initialized")
+        }
+
     }
     
     func configPicker() {
