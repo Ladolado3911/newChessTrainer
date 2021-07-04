@@ -37,7 +37,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8c1-X8-9IB">
-                                <rect key="frame" x="20" y="79" width="374" height="763"/>
+                                <rect key="frame" x="20" y="89" width="374" height="753"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lvJ-g2-hDp">
                                     <size key="itemSize" width="128" height="128"/>
@@ -75,7 +75,7 @@
                             <constraint firstItem="mDm-BN-nKi" firstAttribute="leading" secondItem="dLw-C1-r1E" secondAttribute="leading" id="QhT-Hs-kLO"/>
                             <constraint firstItem="8c1-X8-9IB" firstAttribute="leading" secondItem="jhU-JF-8Ov" secondAttribute="leading" constant="20" id="R1f-Oa-pwX"/>
                             <constraint firstItem="jhU-JF-8Ov" firstAttribute="trailing" secondItem="mDm-BN-nKi" secondAttribute="trailing" constant="20" id="RAq-Au-Peg"/>
-                            <constraint firstItem="8c1-X8-9IB" firstAttribute="top" secondItem="mDm-BN-nKi" secondAttribute="bottom" constant="5" id="Ufy-Sb-Y3J"/>
+                            <constraint firstItem="8c1-X8-9IB" firstAttribute="top" secondItem="mDm-BN-nKi" secondAttribute="bottom" constant="15" id="Ufy-Sb-Y3J"/>
                             <constraint firstItem="jhU-JF-8Ov" firstAttribute="bottom" secondItem="8c1-X8-9IB" secondAttribute="bottom" constant="20" id="gRm-Yd-CcT"/>
                             <constraint firstItem="mDm-BN-nKi" firstAttribute="top" secondItem="dLw-C1-r1E" secondAttribute="bottom" constant="5" id="het-3H-uBQ"/>
                             <constraint firstItem="jhU-JF-8Ov" firstAttribute="trailing" secondItem="r4d-uK-6W7" secondAttribute="trailing" constant="5" id="hog-4a-44s"/>

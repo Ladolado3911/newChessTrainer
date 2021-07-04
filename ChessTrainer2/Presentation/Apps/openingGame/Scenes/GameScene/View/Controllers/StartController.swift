@@ -30,7 +30,7 @@ class StartController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configViewModel()
-
+        navigationController!.navigationBar.prefersLargeTitles = false
     }
     
     func configViewModel() {

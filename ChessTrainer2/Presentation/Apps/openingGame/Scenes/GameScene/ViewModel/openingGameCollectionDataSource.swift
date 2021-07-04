@@ -151,9 +151,8 @@ class OpeningGameCollectionDataSource: CollectDataSource {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (collectionView.bounds.width - 75) / 2
-        let height = width
-//        let height = (collectionView.bounds.height - 40) / 3
-//        let width = height
+        let height = (collectionView.bounds.height - 40) / 3
+ 
         return CGSize(width: width, height: height)
     }
     

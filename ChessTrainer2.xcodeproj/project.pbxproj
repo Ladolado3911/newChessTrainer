@@ -119,6 +119,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		246EF1E826919FCA000056AF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		246EF1E92691A0A4000056AF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		24BA26092675249D00A81F6C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +363,7 @@
 		ACE29D632673CCC100F1D9D8 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				246EF1E826919FCA000056AF /* Coordinator */,
 				3F6FB369265FD2FE00E41C41 /* Extensions */,
 				ACE29D642673CD8A00F1D9D8 /* Network */,
 			);
@@ -394,6 +409,7 @@
 		ACE29D6D2673D12300F1D9D8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				246EF1E92691A0A4000056AF /* Storyboards */,
 				3F6FB329265FCE8900E41C41 /* MainControllers */,
 			);
 			path = View;
