@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Pick Opening Controller-->
+        <!--Opening Filter Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="PickOpeningController" id="Y6W-OH-hqX" customClass="PickOpeningController" customModule="ChessTrainer2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PickOpeningController" id="Y6W-OH-hqX" customClass="OpeningFilterController" customModule="ChessTrainer2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,6 +22,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B71-zA-miU" customClass="GeneralStyleButton" customModule="ChessTrainer2" customModuleProvider="target">
                                 <rect key="frame" x="20" y="692" width="374" height="30"/>
                                 <state key="normal" title="Set Opening"/>
+                                <connections>
+                                    <action selector="onSetOpening:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gkU-51-fyH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -37,6 +40,9 @@
                             <constraint firstItem="Hxd-Kc-ZWn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="wm7-AO-ymL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="openingPicker" destination="Hxd-Kc-ZWn" id="LDi-UF-QLe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -13,11 +13,15 @@ enum ControllerID: String {
     case openingGameController = "OpeningGameController"
     case statsController = "StatsController"
     case ChooseModeController = "ChooseModeController"
+    case pickOpening = "PickOpeningController"
+    case pickDifficulty = "PickDifficultyController"
 }
 
 enum StoryboardID: String {
     case main = "Main"
     case openingGame = "OpeningGame"
+    case pickOpening = "PickOpeningController"
+    case picDifficulty = "PickDifficultyController"
 }
 
 enum TabBarControllerID: String {

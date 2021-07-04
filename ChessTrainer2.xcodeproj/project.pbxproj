@@ -11,7 +11,10 @@
 		240D7D21268748DD001AA9D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240D7D1F268748DD001AA9D1 /* Main.storyboard */; };
 		246EF1EE2691A4EF000056AF /* PickOpeningController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246EF1ED2691A4EF000056AF /* PickOpeningController.storyboard */; };
 		246EF1F02691A4FD000056AF /* PickDifficultyController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246EF1EF2691A4FD000056AF /* PickDifficultyController.storyboard */; };
-		246EF1F22691A515000056AF /* PickOpeningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EF1F12691A515000056AF /* PickOpeningController.swift */; };
+		246EF1F22691A515000056AF /* OpeningFilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EF1F12691A515000056AF /* OpeningFilterController.swift */; };
+		246EF1F42691AC48000056AF /* PickOpeningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EF1F32691AC48000056AF /* PickOpeningViewModel.swift */; };
+		246EF1F62691AE41000056AF /* DiffiucultyPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EF1F52691AE41000056AF /* DiffiucultyPickerController.swift */; };
+		246EF1F82691B015000056AF /* PickDifficultyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EF1F72691B015000056AF /* PickDifficultyViewModel.swift */; };
 		249B748126779024008E88A9 /* LeaderboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249B748026779024008E88A9 /* LeaderboardController.swift */; };
 		249B748326779044008E88A9 /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249B748226779044008E88A9 /* LogInController.swift */; };
 		249B74852677905D008E88A9 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249B74842677905D008E88A9 /* RegisterController.swift */; };
@@ -63,7 +66,10 @@
 		240D7D20268748DD001AA9D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		246EF1ED2691A4EF000056AF /* PickOpeningController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PickOpeningController.storyboard; sourceTree = "<group>"; };
 		246EF1EF2691A4FD000056AF /* PickDifficultyController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PickDifficultyController.storyboard; sourceTree = "<group>"; };
-		246EF1F12691A515000056AF /* PickOpeningController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickOpeningController.swift; sourceTree = "<group>"; };
+		246EF1F12691A515000056AF /* OpeningFilterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningFilterController.swift; sourceTree = "<group>"; };
+		246EF1F32691AC48000056AF /* PickOpeningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickOpeningViewModel.swift; sourceTree = "<group>"; };
+		246EF1F52691AE41000056AF /* DiffiucultyPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffiucultyPickerController.swift; sourceTree = "<group>"; };
+		246EF1F72691B015000056AF /* PickDifficultyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDifficultyViewModel.swift; sourceTree = "<group>"; };
 		249B748026779024008E88A9 /* LeaderboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardController.swift; sourceTree = "<group>"; };
 		249B748226779044008E88A9 /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
 		249B74842677905D008E88A9 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
@@ -241,7 +247,8 @@
 				3F6FB313265FCE7000E41C41 /* StartController.swift */,
 				3FE2BA9726878887003B07AE /* ChooseModeController.swift */,
 				3F6FB345265FD0A500E41C41 /* OpeningGameController.swift */,
-				246EF1F12691A515000056AF /* PickOpeningController.swift */,
+				246EF1F12691A515000056AF /* OpeningFilterController.swift */,
+				246EF1F52691AE41000056AF /* DiffiucultyPickerController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -449,6 +456,8 @@
 				ACE29D7A2673DBE300F1D9D8 /* OpeningFilter.swift */,
 				ACE29D7C2673DF3200F1D9D8 /* OpeningViewModel.swift */,
 				240D62BC2676261C002BEB1D /* OpeningParser.swift */,
+				246EF1F32691AC48000056AF /* PickOpeningViewModel.swift */,
+				246EF1F72691B015000056AF /* PickDifficultyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -543,7 +552,7 @@
 				3F6C335A266CCB010070E83C /* TabBarController.swift in Sources */,
 				3F6C334C266CAAF80070E83C /* openingGameCollectionDataSource.swift in Sources */,
 				240D62BD2676261C002BEB1D /* OpeningParser.swift in Sources */,
-				246EF1F22691A515000056AF /* PickOpeningController.swift in Sources */,
+				246EF1F22691A515000056AF /* OpeningFilterController.swift in Sources */,
 				3F6C335E266CEC9C0070E83C /* ProjectColors.swift in Sources */,
 				ACE29D7F2673F18600F1D9D8 /* stringExtension.swift in Sources */,
 				3F6FB335265FCECA00E41C41 /* LocalDatabaseHelpers.swift in Sources */,
@@ -557,6 +566,7 @@
 				ACE29D7B2673DBE300F1D9D8 /* OpeningFilter.swift in Sources */,
 				249B74852677905D008E88A9 /* RegisterController.swift in Sources */,
 				ACE29D722673D60C00F1D9D8 /* openingManager.swift in Sources */,
+				246EF1F82691B015000056AF /* PickDifficultyViewModel.swift in Sources */,
 				ACE29D7D2673DF3200F1D9D8 /* OpeningViewModel.swift in Sources */,
 				24BA260D2675255400A81F6C /* Distributor.swift in Sources */,
 				3F6C3354266CCA7F0070E83C /* Color+Extension.swift in Sources */,
@@ -565,6 +575,7 @@
 				ACE29D672673CDDB00F1D9D8 /* NetworkManager.swift in Sources */,
 				3F6FB333265FCECA00E41C41 /* IDs.swift in Sources */,
 				3F6FB334265FCECA00E41C41 /* ControllerHelpers.swift in Sources */,
+				246EF1F42691AC48000056AF /* PickOpeningViewModel.swift in Sources */,
 				3F6FB314265FCE7000E41C41 /* StartController.swift in Sources */,
 				3F6FB36F265FD47A00E41C41 /* GameHelpers.swift in Sources */,
 				249B748126779024008E88A9 /* LeaderboardController.swift in Sources */,
@@ -577,6 +588,7 @@
 				249B748326779044008E88A9 /* LogInController.swift in Sources */,
 				3F6FB36B265FD33900E41C41 /* testExtension.swift in Sources */,
 				3F6FB360265FD26F00E41C41 /* GeneralStyleButton.swift in Sources */,
+				246EF1F62691AE41000056AF /* DiffiucultyPickerController.swift in Sources */,
 				3F6FB31A265FCE7000E41C41 /* ChessTrainer2.xcdatamodeld in Sources */,
 				3FE2BA9A26878945003B07AE /* ChooseGameController.swift in Sources */,
 				3F6FB376265FDCB500E41C41 /* AnswerCell.swift in Sources */,
