@@ -22,5 +22,12 @@ class DiffiucultyPickerController: UIViewController {
     }
     
     @IBAction func onSetDifficulty(_ sender: Any) {
+        dismiss(animated: true) { [weak self] in
+            guard let self = self else { return }
+            guard let rootController = self.rootController else { return }
+            let level = self.difficultyViewModel.getLevelFilter()
+            rootController.levelFilter = level
+            rootController.chosenDifficulty.text = "\(level)"
+        }
     }
 }

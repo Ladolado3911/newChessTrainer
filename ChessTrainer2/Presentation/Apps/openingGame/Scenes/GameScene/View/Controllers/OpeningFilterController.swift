@@ -11,32 +11,15 @@ class OpeningFilterController: UIViewController {
     
     @IBOutlet weak var openingPicker: UIPickerView!
     var openingViewModel: PickOpeningViewModel!
-    var rootController: StartController?
-    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    var rootController: StartController!
         
-    override func loadView() {
-        super.loadView()
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-        view.isUserInteractionEnabled = false
-        view.backgroundColor = .gray
-        spinner.isHidden = false
-        spinner.startAnimating()
-        print("here")
-        
-        DispatchQueue.global(qos: .background).async { [weak self] in
-            guard let self = self else { return }
-            guard let rootController = self.rootController else { return }
-            let parser = OpeningParser()
-            self.openingViewModel = PickOpeningViewModel(with: self.openingPicker, with: parser, with: rootController, with: self)
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else { return }
-                self.view.isUserInteractionEnabled = true
-                self.view.backgroundColor = .white
-                self.spinner.stopAnimating()
-                self.spinner.isHidden = true
-                print("init2")
-            }
-        }
+        guard let rootController = self.rootController else { return }
+        let parser = OpeningParser()
+        self.openingViewModel = PickOpeningViewModel(with: self.openingPicker, with: parser, with: rootController, with: self)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,3 +40,4 @@ class OpeningFilterController: UIViewController {
         }
     }
 }
+

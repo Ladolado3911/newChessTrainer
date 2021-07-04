@@ -11,7 +11,7 @@ import UIKit
 class PickOpeningViewModel: PickerView {
 
     var openingParser: OpeningParser?
-    var openingPicker: UIPickerView!
+    weak var openingPicker: UIPickerView!
     var rootController1: StartController!
     var rootController2: OpeningFilterController!
     
@@ -30,10 +30,10 @@ class PickOpeningViewModel: PickerView {
         self.openingParser = openingParser
         self.rootController1 = rootController1
         self.rootController2 = rootController2
-        DispatchQueue.main.async {
-            self.configPicker()
-            print("initialized")
-        }
+
+        self.configPicker()
+        print("initialized")
+
 
     }
     
@@ -57,5 +57,9 @@ class PickOpeningViewModel: PickerView {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         openings[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
     }
 }

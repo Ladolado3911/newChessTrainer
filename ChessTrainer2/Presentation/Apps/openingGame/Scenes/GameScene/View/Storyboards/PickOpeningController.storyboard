@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,33 +26,22 @@
                                     <action selector="onSetOpening:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gkU-51-fyH"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="uVb-ST-mMm">
-                                <rect key="frame" x="177" y="418" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="2h2-7D-OpX"/>
-                                    <constraint firstAttribute="height" constant="60" id="OFD-lU-Jjp"/>
-                                </constraints>
-                                <color key="color" name="ProjectColor1"/>
-                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Hxd-Kc-ZWn" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="5BZ-p1-NbR"/>
                             <constraint firstItem="B71-zA-miU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="GAq-Gy-XrF"/>
-                            <constraint firstItem="uVb-ST-mMm" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="R8L-OJ-xBj"/>
                             <constraint firstItem="B71-zA-miU" firstAttribute="top" secondItem="Hxd-Kc-ZWn" secondAttribute="bottom" constant="20" id="aYC-PR-WVv"/>
                             <constraint firstItem="Hxd-Kc-ZWn" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gAM-Cc-bxz"/>
                             <constraint firstItem="Hxd-Kc-ZWn" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.5" id="oHL-Z4-gVA"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="B71-zA-miU" secondAttribute="trailing" constant="20" id="pN7-Sj-eo4"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Hxd-Kc-ZWn" secondAttribute="trailing" id="skp-Hi-GEb"/>
-                            <constraint firstItem="uVb-ST-mMm" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="tYK-JG-d9V"/>
                             <constraint firstItem="Hxd-Kc-ZWn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="wm7-AO-ymL"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="openingPicker" destination="Hxd-Kc-ZWn" id="LDi-UF-QLe"/>
-                        <outlet property="spinner" destination="uVb-ST-mMm" id="QP8-js-dVT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -62,9 +50,6 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="ProjectColor1">
-            <color red="0.48600000143051147" green="0.21600000560283661" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

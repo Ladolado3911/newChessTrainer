@@ -60,24 +60,21 @@ class StartController: UIViewController {
     }
     
     @IBAction func onChooseOpening(_ sender: Any) {
-        //view.isUserInteractionEnabled = false
+        view.isUserInteractionEnabled = false
         view.backgroundColor = .gray
         spinner.isHidden = false
         spinner.startAnimating()
         let vc = pickOpeningController
         vc.rootController = self
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+
+        self.present(vc, animated: true) { [weak self] in
             guard let self = self else { return }
-            self.present(vc, animated: true) { [weak self] in
-                guard let self = self else { return }
-                self.view.isUserInteractionEnabled = true
-                self.view.backgroundColor = .white
-                self.spinner.stopAnimating()
-                self.spinner.isHidden = true
-            }
+            self.view.isUserInteractionEnabled = true
+            self.view.backgroundColor = .white
+            self.spinner.stopAnimating()
+            self.spinner.isHidden = true
         }
     }
-    
     
     @IBAction func onChooseDifficulty(_ sender: Any) {
         view.isUserInteractionEnabled = false
@@ -87,7 +84,13 @@ class StartController: UIViewController {
         
         let vc = pickDifficultyController
         vc.rootController = self
-        present(vc, animated: true)
+        present(vc, animated: true) { [weak self] in
+            guard let self = self else { return }
+            self.view.isUserInteractionEnabled = true
+            self.view.backgroundColor = .white
+            self.spinner.stopAnimating()
+            self.spinner.isHidden = true
+        }
     }
 }
 
