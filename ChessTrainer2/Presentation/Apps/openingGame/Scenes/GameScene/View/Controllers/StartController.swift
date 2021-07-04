@@ -30,9 +30,9 @@ class StartController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configViewModel()
-        navigationController!.navigationBar.prefersLargeTitles = false
     }
     
+
     func configViewModel() {
         mainViewModel = MainViewModel(distributor: DataDistributor(), openingParser: OpeningParser(), openingPicker: openingPicker, difficultyPicker: difficultyPicker)
     }

@@ -16,6 +16,17 @@ class ChooseGameController: UIViewController {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("didappear")
+        navigationController!.navigationBar.prefersLargeTitles = true
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        navigationController!.navigationBar.prefersLargeTitles = false
+    }
+    
     @IBAction func onOpeningGame(_ sender: UIButton) {
         let vc = getController(storyboardID: .openingGame, controllerID: .ChooseModeController)
         navigationController?.pushViewController(vc, animated: true)

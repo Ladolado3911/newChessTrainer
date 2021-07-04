@@ -13,7 +13,7 @@ class ChooseModeController: UIViewController {
         super.viewDidLoad()
         
     }
-    
+        
     @IBAction func onTrainingMode(_ sender: UIButton) {
         
         
