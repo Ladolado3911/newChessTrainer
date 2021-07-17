@@ -113,15 +113,24 @@ class OpeningGameCollectionDataSource: CollectDataSource {
         
         cell!.layer.cornerRadius = 20
         
+        cell!.layer.masksToBounds = false
+        //cell!.layer.shadowOffset = CGSize(width: 0, height: 3)
+        //cell!.layer.shadowRadius = 3
+        cell!.layer.shadowOpacity = 0.3
+        //cell!.layer.shadowPath = UIBezierPath(roundedRect: cell!.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 1, height: 1)).cgPath
+        cell!.layer.shouldRasterize = true
+        cell!.layer.rasterizationScale = UIScreen.main.scale
+        
         if let moves = moveChoices {
             //print("Unwrapped")
             cell!.text = moves[indexPath.item]
-
+            
             if currentOpening!.moveSequence.firstIndex(of: currentMove!)!.isEven {
                 cell!.backgroundColor = color2
                 cell!.label.textColor = color1
-                cell!.layer.borderWidth = 2
-                cell!.layer.borderColor = color1!.cgColor
+                cell!.layer.shadowColor = color1?.cgColor
+//                cell!.layer.borderWidth = 2
+//                cell!.layer.borderColor = color1!.cgColor
             }
             else {
                 cell!.backgroundColor = color1
@@ -136,15 +145,16 @@ class OpeningGameCollectionDataSource: CollectDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
+        let cell = collectionView.cellForItem(at: indexPath) as? AnswerCell
         chosenMove = moveChoices![indexPath.row]
         checkMove(chosenMove: chosenMove!)
         
         if isCorrectMove {
             correctMoveCount += 1
         }
-
-        Animator.shared.animateCell(isCorrect: isCorrectMove, targetCell: cell!) {
+        
+        let isEven = currentOpening!.moveSequence.firstIndex(of: currentMove!)!.isEven
+        Animator.shared.animateCell(isCorrect: isCorrectMove, targetCell: cell!, isEven: isEven) {
             self.chooseMove()
         }
     }
@@ -162,5 +172,9 @@ class OpeningGameCollectionDataSource: CollectDataSource {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 5, left: 20, bottom: 0, right: 20)
     }
 }
