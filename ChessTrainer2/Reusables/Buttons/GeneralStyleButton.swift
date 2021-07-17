@@ -18,8 +18,10 @@ class GeneralStyleButton: UIButton {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
-        backgroundColor = ProjectColors.purple
-        setTitleColor(ProjectColors.white, for: .normal)
+        backgroundColor = ProjectColors.white
+        setTitleColor(ProjectColors.purple, for: .normal)
         layer.cornerRadius = 15
+        layer.shadowOpacity = 0.3
+        layer.shadowColor = ProjectColors.purple.cgColor
     }
 }
