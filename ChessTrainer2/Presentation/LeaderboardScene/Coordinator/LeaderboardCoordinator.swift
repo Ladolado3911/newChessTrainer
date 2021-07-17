@@ -14,12 +14,12 @@ final class LeaderboardCoordinator: CoordinatorProtocol {
     init(_ window: UIWindow? = nil, navigationController: UINavigationController? = UINavigationController()) {
         
         self.navigationController = navigationController
-        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         
         let vc = LeaderboardController.instantiateFromStoryboard()
         vc.coordinator = self
-        vc.tabBarItem.image = UIImage(systemName: "3.circle")
-        vc.title = "Page 3"
+        vc.tabBarItem.image = UIImage(systemName: "person.3.fill")
+        vc.title = "Leaderboard"
         
         self.navigationController?.viewControllers = [vc]
         

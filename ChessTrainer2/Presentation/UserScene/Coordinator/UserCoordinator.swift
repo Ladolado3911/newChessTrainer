@@ -14,12 +14,12 @@ final class UserCoordinator: CoordinatorProtocol {
     init(_ window: UIWindow? = nil, navigationController: UINavigationController? = UINavigationController()) {
         
         self.navigationController = navigationController
-        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         
         let vc = LogInController.instantiateFromStoryboard()
         vc.coordinator = self
-        vc.tabBarItem.image = UIImage(systemName: "4.circle")
-        vc.title = "Page 4"
+        vc.tabBarItem.image = UIImage(systemName: "person.fill")
+        vc.title = "User"
         
         self.navigationController?.viewControllers = [vc]
         

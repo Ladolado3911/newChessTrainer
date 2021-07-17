@@ -14,12 +14,12 @@ final class StatsCoordinator: CoordinatorProtocol {
     init(_ window: UIWindow? = nil, navigationController: UINavigationController? = UINavigationController()) {
         
         self.navigationController = navigationController
-        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         
         let vc = StatsController.instantiateFromStoryboard()
         vc.coordinator = self
-        vc.tabBarItem.image = UIImage(systemName: "2.circle")
-        vc.title = "Page 2"
+        vc.tabBarItem.image = UIImage(systemName: "chart.pie.fill")
+        vc.title = "Statistics"
         
         self.navigationController?.viewControllers = [vc]
         

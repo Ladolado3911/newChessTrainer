@@ -25,5 +25,9 @@ class MainTabbarController: UITabBarController, Storyboarded, CoordinatorDelegat
             leaderboardCoordinator.navigationController!,
             userCoordinator.navigationController!
         ]
+        
+        let selectedColor = ProjectColors.purple
+        self.tabBar.tintColor = selectedColor
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: selectedColor], for: .selected)
     }
 }
