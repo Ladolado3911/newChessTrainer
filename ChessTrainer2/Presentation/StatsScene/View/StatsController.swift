@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StatsController: UIViewController {
+class StatsController: BaseViewController {
 
     @IBOutlet weak var correctCount: UILabel!
     

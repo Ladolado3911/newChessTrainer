@@ -8,13 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		240D62BD2676261C002BEB1D /* OpeningParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240D62BC2676261C002BEB1D /* OpeningParser.swift */; };
-		240D7D21268748DD001AA9D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240D7D1F268748DD001AA9D1 /* Main.storyboard */; };
 		246EF1EE2691A4EF000056AF /* PickOpeningController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246EF1ED2691A4EF000056AF /* PickOpeningController.storyboard */; };
 		246EF1F02691A4FD000056AF /* PickDifficultyController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246EF1EF2691A4FD000056AF /* PickDifficultyController.storyboard */; };
 		246EF1F22691A515000056AF /* OpeningFilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EF1F12691A515000056AF /* OpeningFilterController.swift */; };
 		246EF1F42691AC48000056AF /* PickOpeningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EF1F32691AC48000056AF /* PickOpeningViewModel.swift */; };
 		246EF1F62691AE41000056AF /* DiffiucultyPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EF1F52691AE41000056AF /* DiffiucultyPickerController.swift */; };
 		246EF1F82691B015000056AF /* PickDifficultyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EF1F72691B015000056AF /* PickDifficultyViewModel.swift */; };
+		247247C826A32AF50050AE89 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247247C426A32AF50050AE89 /* AppCoordinator.swift */; };
+		247247C926A32AF50050AE89 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247247C526A32AF50050AE89 /* CoordinatorProtocol.swift */; };
+		247247CA26A32AF50050AE89 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247247C626A32AF50050AE89 /* CoordinatorDelegate.swift */; };
+		247247CB26A32AF50050AE89 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247247C726A32AF50050AE89 /* Storyboarded.swift */; };
+		247247CE26A32B630050AE89 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247247CD26A32B630050AE89 /* Base.swift */; };
+		247247D126A32B870050AE89 /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247247CF26A32B870050AE89 /* MainTabbarController.swift */; };
+		247247D226A32B870050AE89 /* MainTabbarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247247D026A32B870050AE89 /* MainTabbarController.storyboard */; };
+		247247DB26A32CEB0050AE89 /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247247DA26A32CEB0050AE89 /* GameCoordinator.swift */; };
+		247247DD26A32E170050AE89 /* StatsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247247DC26A32E160050AE89 /* StatsCoordinator.swift */; };
+		247247DF26A32E450050AE89 /* LeaderboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247247DE26A32E450050AE89 /* LeaderboardCoordinator.swift */; };
+		247247E126A32E730050AE89 /* UserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247247E026A32E730050AE89 /* UserCoordinator.swift */; };
+		247247E326A32FCB0050AE89 /* ChooseGameController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247247E226A32FCB0050AE89 /* ChooseGameController.storyboard */; };
+		247247E626A3308F0050AE89 /* StatsController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247247E526A3308F0050AE89 /* StatsController.storyboard */; };
+		247247EA26A330D90050AE89 /* LeaderboardController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247247E926A330D90050AE89 /* LeaderboardController.storyboard */; };
+		247247ED26A331410050AE89 /* LogInController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247247EC26A331410050AE89 /* LogInController.storyboard */; };
 		249B748126779024008E88A9 /* LeaderboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249B748026779024008E88A9 /* LeaderboardController.swift */; };
 		249B748326779044008E88A9 /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249B748226779044008E88A9 /* LogInController.swift */; };
 		249B74852677905D008E88A9 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249B74842677905D008E88A9 /* RegisterController.swift */; };
@@ -50,7 +64,6 @@
 		3F6FB36F265FD47A00E41C41 /* GameHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6FB36E265FD47A00E41C41 /* GameHelpers.swift */; };
 		3F6FB372265FD5AC00E41C41 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6FB371265FD5AB00E41C41 /* Filter.swift */; };
 		3F6FB376265FDCB500E41C41 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6FB375265FDCB500E41C41 /* AnswerCell.swift */; };
-		3FE2BA912687858F003B07AE /* OpeningGameTrain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE2BA902687858F003B07AE /* OpeningGameTrain.storyboard */; };
 		3FE2BA9826878887003B07AE /* ChooseModeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2BA9726878887003B07AE /* ChooseModeController.swift */; };
 		3FE2BA9A26878945003B07AE /* ChooseGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2BA9926878945003B07AE /* ChooseGameController.swift */; };
 		ACE29D672673CDDB00F1D9D8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE29D662673CDDB00F1D9D8 /* NetworkManager.swift */; };
@@ -63,13 +76,27 @@
 
 /* Begin PBXFileReference section */
 		240D62BC2676261C002BEB1D /* OpeningParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningParser.swift; sourceTree = "<group>"; };
-		240D7D20268748DD001AA9D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		246EF1ED2691A4EF000056AF /* PickOpeningController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PickOpeningController.storyboard; sourceTree = "<group>"; };
 		246EF1EF2691A4FD000056AF /* PickDifficultyController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PickDifficultyController.storyboard; sourceTree = "<group>"; };
 		246EF1F12691A515000056AF /* OpeningFilterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningFilterController.swift; sourceTree = "<group>"; };
 		246EF1F32691AC48000056AF /* PickOpeningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickOpeningViewModel.swift; sourceTree = "<group>"; };
 		246EF1F52691AE41000056AF /* DiffiucultyPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffiucultyPickerController.swift; sourceTree = "<group>"; };
 		246EF1F72691B015000056AF /* PickDifficultyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDifficultyViewModel.swift; sourceTree = "<group>"; };
+		247247C426A32AF50050AE89 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		247247C526A32AF50050AE89 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		247247C626A32AF50050AE89 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
+		247247C726A32AF50050AE89 /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		247247CD26A32B630050AE89 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		247247CF26A32B870050AE89 /* MainTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
+		247247D026A32B870050AE89 /* MainTabbarController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainTabbarController.storyboard; sourceTree = "<group>"; };
+		247247DA26A32CEB0050AE89 /* GameCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
+		247247DC26A32E160050AE89 /* StatsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsCoordinator.swift; sourceTree = "<group>"; };
+		247247DE26A32E450050AE89 /* LeaderboardCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardCoordinator.swift; sourceTree = "<group>"; };
+		247247E026A32E730050AE89 /* UserCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCoordinator.swift; sourceTree = "<group>"; };
+		247247E226A32FCB0050AE89 /* ChooseGameController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChooseGameController.storyboard; sourceTree = "<group>"; };
+		247247E526A3308F0050AE89 /* StatsController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StatsController.storyboard; sourceTree = "<group>"; };
+		247247E926A330D90050AE89 /* LeaderboardController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LeaderboardController.storyboard; sourceTree = "<group>"; };
+		247247EC26A331410050AE89 /* LogInController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogInController.storyboard; sourceTree = "<group>"; };
 		249B748026779024008E88A9 /* LeaderboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardController.swift; sourceTree = "<group>"; };
 		249B748226779044008E88A9 /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
 		249B74842677905D008E88A9 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
@@ -107,7 +134,6 @@
 		3F6FB36E265FD47A00E41C41 /* GameHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelpers.swift; sourceTree = "<group>"; };
 		3F6FB371265FD5AB00E41C41 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		3F6FB375265FDCB500E41C41 /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
-		3FE2BA902687858F003B07AE /* OpeningGameTrain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OpeningGameTrain.storyboard; sourceTree = "<group>"; };
 		3FE2BA9726878887003B07AE /* ChooseModeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseModeController.swift; sourceTree = "<group>"; };
 		3FE2BA9926878945003B07AE /* ChooseGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseGameController.swift; sourceTree = "<group>"; };
 		ACE29D662673CDDB00F1D9D8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -134,24 +160,117 @@
 		246EF1E826919FCA000056AF /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				247247C426A32AF50050AE89 /* AppCoordinator.swift */,
+				247247C626A32AF50050AE89 /* CoordinatorDelegate.swift */,
+				247247C526A32AF50050AE89 /* CoordinatorProtocol.swift */,
+				247247C726A32AF50050AE89 /* Storyboarded.swift */,
 			);
 			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		246EF1E92691A0A4000056AF /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		246EF1EA2691A49E000056AF /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				3F6FB342265FD04600E41C41 /* OpeningGame.storyboard */,
 				246EF1ED2691A4EF000056AF /* PickOpeningController.storyboard */,
 				246EF1EF2691A4FD000056AF /* PickDifficultyController.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		247247CC26A32B630050AE89 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				247247CD26A32B630050AE89 /* Base.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		247247D326A32C4E0050AE89 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				247247DA26A32CEB0050AE89 /* GameCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		247247D426A32C5C0050AE89 /* StatsScene */ = {
+			isa = PBXGroup;
+			children = (
+				247247D726A32CBC0050AE89 /* Coordinator */,
+				247247E426A3306C0050AE89 /* View */,
+			);
+			path = StatsScene;
+			sourceTree = "<group>";
+		};
+		247247D526A32C650050AE89 /* LeaderboardScene */ = {
+			isa = PBXGroup;
+			children = (
+				247247D826A32CC70050AE89 /* Coordinator */,
+				247247E726A330BD0050AE89 /* View */,
+			);
+			path = LeaderboardScene;
+			sourceTree = "<group>";
+		};
+		247247D626A32C6E0050AE89 /* UserScene */ = {
+			isa = PBXGroup;
+			children = (
+				247247D926A32CCE0050AE89 /* Coordinator */,
+				247247EB26A331010050AE89 /* View */,
+			);
+			path = UserScene;
+			sourceTree = "<group>";
+		};
+		247247D726A32CBC0050AE89 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				247247DC26A32E160050AE89 /* StatsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		247247D826A32CC70050AE89 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				247247DE26A32E450050AE89 /* LeaderboardCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		247247D926A32CCE0050AE89 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				247247E026A32E730050AE89 /* UserCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		247247E426A3306C0050AE89 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F5E26792663DE3100100EBB /* StatsController.swift */,
+				247247E526A3308F0050AE89 /* StatsController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		247247E726A330BD0050AE89 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				249B748026779024008E88A9 /* LeaderboardController.swift */,
+				247247E926A330D90050AE89 /* LeaderboardController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		247247EB26A331010050AE89 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				249B748226779044008E88A9 /* LogInController.swift */,
+				249B74842677905D008E88A9 /* RegisterController.swift */,
+				247247EC26A331410050AE89 /* LogInController.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		24BA26092675249D00A81F6C /* ViewModel */ = {
@@ -182,7 +301,6 @@
 		3F6FB30E265FCE7000E41C41 /* ChessTrainer2 */ = {
 			isa = PBXGroup;
 			children = (
-				240D7D1F268748DD001AA9D1 /* Main.storyboard */,
 				ACE29D752673DA5800F1D9D8 /* eco.json */,
 				3F6FB31B265FCE7000E41C41 /* Assets.xcassets */,
 				ACE29D5F2673CC9600F1D9D8 /* App */,
@@ -200,19 +318,6 @@
 			path = ChessTrainer2;
 			sourceTree = "<group>";
 		};
-		3F6FB329265FCE8900E41C41 /* MainControllers */ = {
-			isa = PBXGroup;
-			children = (
-				3F5E26792663DE3100100EBB /* StatsController.swift */,
-				3F6C3359266CCB010070E83C /* TabBarController.swift */,
-				249B748026779024008E88A9 /* LeaderboardController.swift */,
-				249B748226779044008E88A9 /* LogInController.swift */,
-				249B74842677905D008E88A9 /* RegisterController.swift */,
-				3FE2BA9926878945003B07AE /* ChooseGameController.swift */,
-			);
-			path = MainControllers;
-			sourceTree = "<group>";
-		};
 		3F6FB32D265FCEAA00E41C41 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,22 +328,6 @@
 				3F6FB36E265FD47A00E41C41 /* GameHelpers.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		3F6FB33E265FD00A00E41C41 /* Apps */ = {
-			isa = PBXGroup;
-			children = (
-				3F6FB33F265FD01100E41C41 /* openingGame */,
-			);
-			path = Apps;
-			sourceTree = "<group>";
-		};
-		3F6FB33F265FD01100E41C41 /* openingGame */ = {
-			isa = PBXGroup;
-			children = (
-				ACE29D682673CF2500F1D9D8 /* Scenes */,
-			);
-			path = openingGame;
 			sourceTree = "<group>";
 		};
 		3F6FB340265FD02200E41C41 /* Controllers */ = {
@@ -341,22 +430,6 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		3FE2BA8D26878508003B07AE /* TrainingScene */ = {
-			isa = PBXGroup;
-			children = (
-				3FE2BA92268785A3003B07AE /* View */,
-			);
-			path = TrainingScene;
-			sourceTree = "<group>";
-		};
-		3FE2BA92268785A3003B07AE /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3FE2BA902687858F003B07AE /* OpeningGameTrain.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		ACE29D5F2673CC9600F1D9D8 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,8 +450,12 @@
 		ACE29D622673CCB200F1D9D8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				247247CC26A32B630050AE89 /* Base */,
 				ACE29D6B2673D0E300F1D9D8 /* MainScene */,
-				3F6FB33E265FD00A00E41C41 /* Apps */,
+				ACE29D6A2673D00600F1D9D8 /* GameScene */,
+				247247D426A32C5C0050AE89 /* StatsScene */,
+				247247D526A32C650050AE89 /* LeaderboardScene */,
+				247247D626A32C6E0050AE89 /* UserScene */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -401,18 +478,10 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		ACE29D682673CF2500F1D9D8 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				3FE2BA8D26878508003B07AE /* TrainingScene */,
-				ACE29D6A2673D00600F1D9D8 /* GameScene */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
 		ACE29D6A2673D00600F1D9D8 /* GameScene */ = {
 			isa = PBXGroup;
 			children = (
+				247247D326A32C4E0050AE89 /* Coordinator */,
 				3F6FB341265FD02800E41C41 /* Model */,
 				ACE29D6F2673D15200F1D9D8 /* View */,
 				ACE29D702673D15800F1D9D8 /* ViewModel */,
@@ -432,8 +501,9 @@
 		ACE29D6D2673D12300F1D9D8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				246EF1E92691A0A4000056AF /* Storyboards */,
-				3F6FB329265FCE8900E41C41 /* MainControllers */,
+				3F6C3359266CCB010070E83C /* TabBarController.swift */,
+				247247D026A32B870050AE89 /* MainTabbarController.storyboard */,
+				247247CF26A32B870050AE89 /* MainTabbarController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -441,9 +511,10 @@
 		ACE29D6F2673D15200F1D9D8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				247247E226A32FCB0050AE89 /* ChooseGameController.storyboard */,
+				3FE2BA9926878945003B07AE /* ChooseGameController.swift */,
 				246EF1EA2691A49E000056AF /* Storyboards */,
 				3F6FB340265FD02200E41C41 /* Controllers */,
-				3F6FB342265FD04600E41C41 /* OpeningGame.storyboard */,
 				3F6FB374265FDC9500E41C41 /* Cells */,
 			);
 			path = View;
@@ -530,13 +601,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				247247E626A3308F0050AE89 /* StatsController.storyboard in Resources */,
+				247247D226A32B870050AE89 /* MainTabbarController.storyboard in Resources */,
+				247247ED26A331410050AE89 /* LogInController.storyboard in Resources */,
 				246EF1F02691A4FD000056AF /* PickDifficultyController.storyboard in Resources */,
 				24BA26062675046200A81F6C /* eco.json in Resources */,
 				3F6FB31F265FCE7000E41C41 /* LaunchScreen.storyboard in Resources */,
 				3F6FB31C265FCE7000E41C41 /* Assets.xcassets in Resources */,
-				240D7D21268748DD001AA9D1 /* Main.storyboard in Resources */,
+				247247E326A32FCB0050AE89 /* ChooseGameController.storyboard in Resources */,
 				246EF1EE2691A4EF000056AF /* PickOpeningController.storyboard in Resources */,
-				3FE2BA912687858F003B07AE /* OpeningGameTrain.storyboard in Resources */,
+				247247EA26A330D90050AE89 /* LeaderboardController.storyboard in Resources */,
 				3F6FB343265FD04600E41C41 /* OpeningGame.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,6 +626,7 @@
 				3F6C335A266CCB010070E83C /* TabBarController.swift in Sources */,
 				3F6C334C266CAAF80070E83C /* openingGameCollectionDataSource.swift in Sources */,
 				240D62BD2676261C002BEB1D /* OpeningParser.swift in Sources */,
+				247247DF26A32E450050AE89 /* LeaderboardCoordinator.swift in Sources */,
 				246EF1F22691A515000056AF /* OpeningFilterController.swift in Sources */,
 				3F6C335E266CEC9C0070E83C /* ProjectColors.swift in Sources */,
 				ACE29D7F2673F18600F1D9D8 /* stringExtension.swift in Sources */,
@@ -559,10 +634,13 @@
 				3FE2BA9826878887003B07AE /* ChooseModeController.swift in Sources */,
 				ACE29D792673DAA200F1D9D8 /* GameModel.swift in Sources */,
 				3F6FB363265FD26F00E41C41 /* GeneralStyleView.swift in Sources */,
+				247247E126A32E730050AE89 /* UserCoordinator.swift in Sources */,
 				3F6C3362266CEECB0070E83C /* Animator.swift in Sources */,
+				247247CE26A32B630050AE89 /* Base.swift in Sources */,
 				3F6FB362265FD26F00E41C41 /* GeneralStyleLabel.swift in Sources */,
 				3F5E267A2663DE3100100EBB /* StatsController.swift in Sources */,
 				3F6FB372265FD5AC00E41C41 /* Filter.swift in Sources */,
+				247247DB26A32CEB0050AE89 /* GameCoordinator.swift in Sources */,
 				ACE29D7B2673DBE300F1D9D8 /* OpeningFilter.swift in Sources */,
 				249B74852677905D008E88A9 /* RegisterController.swift in Sources */,
 				ACE29D722673D60C00F1D9D8 /* openingManager.swift in Sources */,
@@ -570,6 +648,7 @@
 				ACE29D7D2673DF3200F1D9D8 /* OpeningViewModel.swift in Sources */,
 				24BA260D2675255400A81F6C /* Distributor.swift in Sources */,
 				3F6C3354266CCA7F0070E83C /* Color+Extension.swift in Sources */,
+				247247DD26A32E170050AE89 /* StatsCoordinator.swift in Sources */,
 				3F6FB34A265FD16600E41C41 /* OpeningGame.swift in Sources */,
 				3F6FB361265FD26F00E41C41 /* GeneralStyleTextField.swift in Sources */,
 				ACE29D672673CDDB00F1D9D8 /* NetworkManager.swift in Sources */,
@@ -579,33 +658,30 @@
 				3F6FB314265FCE7000E41C41 /* StartController.swift in Sources */,
 				3F6FB36F265FD47A00E41C41 /* GameHelpers.swift in Sources */,
 				249B748126779024008E88A9 /* LeaderboardController.swift in Sources */,
+				247247D126A32B870050AE89 /* MainTabbarController.swift in Sources */,
 				3F6FB310265FCE7000E41C41 /* AppDelegate.swift in Sources */,
 				24BA260B267524B900A81F6C /* MainViewModel.swift in Sources */,
 				3F6FB346265FD0A500E41C41 /* OpeningGameController.swift in Sources */,
 				3F5E26752663D90600100EBB /* intExtension.swift in Sources */,
+				247247CA26A32AF50050AE89 /* CoordinatorDelegate.swift in Sources */,
 				3F5F36FD2662D5EF00FCD034 /* Moves.swift in Sources */,
 				3F6FB312265FCE7000E41C41 /* SceneDelegate.swift in Sources */,
 				249B748326779044008E88A9 /* LogInController.swift in Sources */,
 				3F6FB36B265FD33900E41C41 /* testExtension.swift in Sources */,
 				3F6FB360265FD26F00E41C41 /* GeneralStyleButton.swift in Sources */,
+				247247C926A32AF50050AE89 /* CoordinatorProtocol.swift in Sources */,
 				246EF1F62691AE41000056AF /* DiffiucultyPickerController.swift in Sources */,
 				3F6FB31A265FCE7000E41C41 /* ChessTrainer2.xcdatamodeld in Sources */,
+				247247C826A32AF50050AE89 /* AppCoordinator.swift in Sources */,
 				3FE2BA9A26878945003B07AE /* ChooseGameController.swift in Sources */,
 				3F6FB376265FDCB500E41C41 /* AnswerCell.swift in Sources */,
+				247247CB26A32AF50050AE89 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		240D7D1F268748DD001AA9D1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				240D7D20268748DD001AA9D1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3F6FB31D265FCE7000E41C41 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
