@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChooseGameController: BaseViewController {
+class ChooseGameController: GameViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,6 @@ class ChooseGameController: BaseViewController {
     }
     
     @IBAction func onOpeningGame(_ sender: UIButton) {
-        let vc = getController(storyboardID: .openingGame, controllerID: .ChooseModeController)
-        navigationController?.pushViewController(vc, animated: true)
+        coordinator!.proceedToChooseMode()
     }
 }

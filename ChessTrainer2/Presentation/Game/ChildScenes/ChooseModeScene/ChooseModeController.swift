@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChooseModeController: UIViewController {
+class ChooseModeController: GameViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class GameCoordinator: CoordinatorProtocol {
+final class GameCoordinator: GameCoordinatorProtocol {
     
     var navigationController: UINavigationController?
     
@@ -34,6 +34,10 @@ final class GameCoordinator: CoordinatorProtocol {
         
     }
     
-    //func proceedTo
+    func proceedToChooseMode() {
+        let vc = ChooseModeController.instantiateFromStoryboard()
+        vc.coordinator = self
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 

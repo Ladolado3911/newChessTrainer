@@ -15,9 +15,9 @@ protocol CoordinatorProtocol: AnyObject {
     init(_ window: UIWindow?, navigationController: UINavigationController?)
     
     func start()
-    func proceedToProducts()
-    func proceedToProductDetails(with data: String)
-    func openSuccessAlert()
+//    func proceedToProducts()
+//    func proceedToProductDetails(with data: String)
+//    func openSuccessAlert()
 }
 
 extension CoordinatorProtocol {
@@ -32,10 +32,11 @@ extension CoordinatorProtocol {
 //        get { nil }
 //    }
     
-    func proceedToProducts() {
-        print("I am default implemented")
-    }
+//    func proceedToProducts() {
+//        print("I am default implemented")
+//    }
+
     
-    func proceedToProductDetails(with data: String) {}
-    func openSuccessAlert() {}
+//    func proceedToProductDetails(with data: String) {}
+//    func openSuccessAlert() {}
 }

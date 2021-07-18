@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OpeningFilterController: UIViewController {
+class OpeningFilterController: GameViewController {
     
     @IBOutlet weak var openingPicker: UIPickerView!
     var openingViewModel: PickOpeningViewModel!

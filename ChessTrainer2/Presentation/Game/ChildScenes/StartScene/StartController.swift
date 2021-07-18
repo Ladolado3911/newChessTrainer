@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StartController: UIViewController {
+class StartController: GameViewController {
 
     @IBOutlet weak var start: UIButton!
     

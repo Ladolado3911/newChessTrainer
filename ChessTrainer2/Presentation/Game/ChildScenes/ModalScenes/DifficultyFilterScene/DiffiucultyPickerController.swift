@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DiffiucultyPickerController: UIViewController {
+class DiffiucultyPickerController: GameViewController {
 
     @IBOutlet weak var difficultyPicker: UIPickerView!
     var difficultyViewModel: PickDifficultyViewModel!

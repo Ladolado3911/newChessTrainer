@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OpeningGameController: UIViewController {
+class OpeningGameController: GameViewController {
 
     @IBOutlet weak var collectView: UICollectionView!
     @IBOutlet weak var openingName: UILabel!
