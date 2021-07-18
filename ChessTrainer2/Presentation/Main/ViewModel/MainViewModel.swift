@@ -12,10 +12,6 @@ protocol ViewModel: AnyObject {
     
 }
 
-typealias PickerView = UIPickerViewDataSource & UIPickerViewDelegate & NSObject
-typealias CollectView = UICollectionViewDataSource & UICollectionViewDelegate & UICollectionViewDelegateFlowLayout
-typealias CollectDataSource = CollectView & NSObject
-
 class MainViewModel {
 
     weak var distributor: DataDistributor!
