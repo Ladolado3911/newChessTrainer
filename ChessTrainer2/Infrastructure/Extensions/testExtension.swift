@@ -16,11 +16,11 @@ extension Dictionary where Value : Hashable {
         var newDict = [[String]: String]()
 
         for (key, value) in self {
-            if let Key = key as? String {}
+            if key is String {}
             else {
                 return defaultDict
             }
-            if let Value = value as? [String] {}
+            if value is [String] {}
             else {
                 return defaultDict
             }
