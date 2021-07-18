@@ -67,5 +67,12 @@ final class GameCoordinator: GameCoordinatorProtocol {
         vc2.rootController = controller
         navigationController?.present(vc2, animated: true, completion: completion)
     }
+    
+    func proceedToGame(filters data: Filter) {
+        let vc2 = OpeningGameController.instantiateFromStoryboard()
+        vc2.coordinator = self
+        vc2.filters = data
+        navigationController?.pushViewController(vc2, animated: true)
+    }
 }
 

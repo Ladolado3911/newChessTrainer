@@ -98,6 +98,7 @@ class OpeningGameCollectionDataSource: CollectDataSource {
         moveChoices = currentOpening!.generate6ChoiceFor(correctMove: currentMove!)
         rootController.openingName.text = currentOpening!.name
         collectView.reloadData()
+        rootController.view.isUserInteractionEnabled = true
     }
     
     func checkMove(chosenMove move: String) {
@@ -112,25 +113,18 @@ class OpeningGameCollectionDataSource: CollectDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnswerCell", for: indexPath) as? AnswerCell
         
         cell!.layer.cornerRadius = 20
-        
         cell!.layer.masksToBounds = false
-        //cell!.layer.shadowOffset = CGSize(width: 0, height: 3)
-        //cell!.layer.shadowRadius = 3
         cell!.layer.shadowOpacity = 0.3
-        //cell!.layer.shadowPath = UIBezierPath(roundedRect: cell!.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 1, height: 1)).cgPath
         cell!.layer.shouldRasterize = true
         cell!.layer.rasterizationScale = UIScreen.main.scale
         
         if let moves = moveChoices {
-            //print("Unwrapped")
             cell!.text = moves[indexPath.item]
             
             if currentOpening!.moveSequence.firstIndex(of: currentMove!)!.isEven {
                 cell!.backgroundColor = color2
                 cell!.label.textColor = color1
                 cell!.layer.shadowColor = color1?.cgColor
-//                cell!.layer.borderWidth = 2
-//                cell!.layer.borderColor = color1!.cgColor
             }
             else {
                 cell!.backgroundColor = color1
@@ -139,12 +133,12 @@ class OpeningGameCollectionDataSource: CollectDataSource {
             return cell!
         }
         else {
-            //print("Not unwrapped")
             return cell!
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        rootController.view.isUserInteractionEnabled = false
         let cell = collectionView.cellForItem(at: indexPath) as? AnswerCell
         chosenMove = moveChoices![indexPath.row]
         checkMove(chosenMove: chosenMove!)

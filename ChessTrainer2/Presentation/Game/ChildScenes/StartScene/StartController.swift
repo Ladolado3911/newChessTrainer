@@ -54,8 +54,7 @@ class StartController: GameViewController {
             guard let levelFilter = self.levelFilter else { return }
             
             let filter = Filter(nameFilter: nameFilter, difficultyFilter: levelFilter)
-            self.openingGameController.filters = filter
-            pushController(from: self, to: self.openingGameController, method: .withBackItem)
+            self.coordinator?.proceedToGame(filters: filter)
         }
     }
     

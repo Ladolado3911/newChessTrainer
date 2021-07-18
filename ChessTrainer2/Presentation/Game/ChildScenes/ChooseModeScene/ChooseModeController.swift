@@ -20,6 +20,7 @@ class ChooseModeController: GameViewController {
     }
 
     @IBAction func onChallengeMode(_ sender: UIButton) {
-        coordinator!.proceedToController(controller: StartController.self)
+        coordinator?.proceedToController(controller: StartController.self,
+                                         present: .push) {}
     }
 }
