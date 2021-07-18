@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Opening Filter Controller-->
+        <scene sceneID="ivH-cX-WOn">
+            <objects>
+                <viewController storyboardIdentifier="PickOpeningController" id="z6w-Ob-knx" customClass="OpeningFilterController" customModule="ChessTrainer2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ump-hI-omy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="2IW-Wa-G4f">
+                                <rect key="frame" x="0.0" y="224" width="414" height="448"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkO-2P-MsX" customClass="GeneralStyleButton" customModule="ChessTrainer2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="692" width="374" height="30"/>
+                                <state key="normal" title="Set Opening"/>
+                                <connections>
+                                    <action selector="onSetOpening:" destination="z6w-Ob-knx" eventType="touchUpInside" id="5Xx-U4-T6Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cqI-kh-lAn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cqI-kh-lAn" firstAttribute="trailing" secondItem="TkO-2P-MsX" secondAttribute="trailing" constant="20" id="12s-Oq-udF"/>
+                            <constraint firstItem="TkO-2P-MsX" firstAttribute="top" secondItem="2IW-Wa-G4f" secondAttribute="bottom" constant="20" id="Dy7-3p-ejM"/>
+                            <constraint firstItem="cqI-kh-lAn" firstAttribute="trailing" secondItem="2IW-Wa-G4f" secondAttribute="trailing" id="ILu-Lm-iCf"/>
+                            <constraint firstItem="2IW-Wa-G4f" firstAttribute="height" secondItem="ump-hI-omy" secondAttribute="height" multiplier="0.5" id="JSc-C7-4hJ"/>
+                            <constraint firstItem="2IW-Wa-G4f" firstAttribute="leading" secondItem="cqI-kh-lAn" secondAttribute="leading" id="WaH-E6-gPy"/>
+                            <constraint firstItem="2IW-Wa-G4f" firstAttribute="centerY" secondItem="ump-hI-omy" secondAttribute="centerY" id="gpX-9G-iDi"/>
+                            <constraint firstItem="2IW-Wa-G4f" firstAttribute="centerX" secondItem="ump-hI-omy" secondAttribute="centerX" id="mDf-v0-iX2"/>
+                            <constraint firstItem="TkO-2P-MsX" firstAttribute="leading" secondItem="cqI-kh-lAn" secondAttribute="leading" constant="20" id="tAP-BF-x15"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="openingPicker" destination="2IW-Wa-G4f" id="cUC-ED-vUZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7b-uR-W2c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

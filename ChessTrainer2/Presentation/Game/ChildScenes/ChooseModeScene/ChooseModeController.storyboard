@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Choose Mode Controller-->
+        <scene sceneID="Qfx-AR-oIf">
+            <objects>
+                <viewController storyboardIdentifier="ChooseModeController" id="sfj-Wd-9uU" customClass="ChooseModeController" customModule="ChessTrainer2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hGQ-01-DOP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQT-Lb-Fj5" customClass="GeneralStyleButton" customModule="ChessTrainer2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="375.5" width="374" height="45"/>
+                                <color key="backgroundColor" name="ProjectColor1"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                <state key="normal" title="Training Mode">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTrainingMode:" destination="sfj-Wd-9uU" eventType="touchUpInside" id="LTq-cz-F2Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxm-Y0-8pf" customClass="GeneralStyleButton" customModule="ChessTrainer2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="475.5" width="374" height="45"/>
+                                <color key="backgroundColor" name="ProjectColor1"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                <state key="normal" title="Challenge Mode">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onChallengeMode:" destination="sfj-Wd-9uU" eventType="touchUpInside" id="d0t-zu-v1n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="i9S-sV-Una"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IQT-Lb-Fj5" firstAttribute="leading" secondItem="i9S-sV-Una" secondAttribute="leading" constant="20" id="I8e-M5-2zK"/>
+                            <constraint firstItem="jxm-Y0-8pf" firstAttribute="trailing" secondItem="IQT-Lb-Fj5" secondAttribute="trailing" id="NnF-gU-kgw"/>
+                            <constraint firstItem="IQT-Lb-Fj5" firstAttribute="centerY" secondItem="hGQ-01-DOP" secondAttribute="centerY" constant="-50" id="POQ-UW-ckX"/>
+                            <constraint firstItem="jxm-Y0-8pf" firstAttribute="leading" secondItem="IQT-Lb-Fj5" secondAttribute="leading" id="Qr6-bB-sHa"/>
+                            <constraint firstItem="i9S-sV-Una" firstAttribute="trailing" secondItem="IQT-Lb-Fj5" secondAttribute="trailing" constant="20" id="Z1f-Ce-ndY"/>
+                            <constraint firstItem="IQT-Lb-Fj5" firstAttribute="centerX" secondItem="hGQ-01-DOP" secondAttribute="centerX" id="ZgU-9t-Q6H"/>
+                            <constraint firstItem="jxm-Y0-8pf" firstAttribute="centerX" secondItem="hGQ-01-DOP" secondAttribute="centerX" id="hvD-wP-Den"/>
+                            <constraint firstItem="jxm-Y0-8pf" firstAttribute="centerY" secondItem="hGQ-01-DOP" secondAttribute="centerY" constant="50" id="pxK-Qb-WPV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="g4X-ut-3Xv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="deB-r1-WsT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-972" y="137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="ProjectColor1">
+            <color red="0.48600000143051147" green="0.21600000560283661" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

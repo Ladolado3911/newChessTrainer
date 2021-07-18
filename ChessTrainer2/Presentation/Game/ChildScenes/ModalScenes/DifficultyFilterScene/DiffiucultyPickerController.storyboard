@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Diffiuculty Picker Controller-->
+        <scene sceneID="8bC-8h-THf">
+            <objects>
+                <viewController storyboardIdentifier="PickDifficultyController" id="Eeo-7z-ByE" customClass="DiffiucultyPickerController" customModule="ChessTrainer2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lmP-V7-Uwf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="ec9-qD-Keg">
+                                <rect key="frame" x="0.0" y="224" width="414" height="448"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNc-h9-UzM" customClass="GeneralStyleButton" customModule="ChessTrainer2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="692" width="374" height="30"/>
+                                <state key="normal" title="Set Difficulty"/>
+                                <connections>
+                                    <action selector="onSetDifficulty:" destination="Eeo-7z-ByE" eventType="touchUpInside" id="D8I-eQ-afu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zR0-uo-yeW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oNc-h9-UzM" firstAttribute="leading" secondItem="lmP-V7-Uwf" secondAttribute="leading" constant="20" id="Nph-y4-oJq"/>
+                            <constraint firstItem="oNc-h9-UzM" firstAttribute="top" secondItem="ec9-qD-Keg" secondAttribute="bottom" constant="20" id="OAa-lV-QMX"/>
+                            <constraint firstItem="ec9-qD-Keg" firstAttribute="centerX" secondItem="lmP-V7-Uwf" secondAttribute="centerX" id="Ofo-ou-F4R"/>
+                            <constraint firstItem="ec9-qD-Keg" firstAttribute="leading" secondItem="zR0-uo-yeW" secondAttribute="leading" id="TGB-FH-nME"/>
+                            <constraint firstItem="ec9-qD-Keg" firstAttribute="height" secondItem="lmP-V7-Uwf" secondAttribute="height" multiplier="0.5" id="bwz-pD-4Sh"/>
+                            <constraint firstItem="zR0-uo-yeW" firstAttribute="trailing" secondItem="oNc-h9-UzM" secondAttribute="trailing" constant="20" id="do7-8s-wck"/>
+                            <constraint firstItem="zR0-uo-yeW" firstAttribute="trailing" secondItem="ec9-qD-Keg" secondAttribute="trailing" id="h5R-yz-6zf"/>
+                            <constraint firstItem="ec9-qD-Keg" firstAttribute="centerY" secondItem="lmP-V7-Uwf" secondAttribute="centerY" id="jsO-wg-J9k"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="difficultyPicker" destination="ec9-qD-Keg" id="aiq-eW-P0c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KUD-hx-Yv1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="60"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
