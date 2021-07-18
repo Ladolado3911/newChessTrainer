@@ -42,6 +42,12 @@ class OpeningGameCollectionDataSource: CollectDataSource {
         collectView.delegate = self
     }
     
+    func updateLabels() {
+        rootController.stats.text = "Moves: \(correctMoveCount) / \(currentOpening!.movesCount)"
+        rootController.openingStats.text = "Openings: \(correctOpeningCount) / \(game!.data.count)"
+        rootController.moveNum.text = "Move: \(moveIndex + 1)"
+    }
+    
     func setInitialInfo() {
         viewModel.getData {[self] openings in
             // query openings here
@@ -52,10 +58,7 @@ class OpeningGameCollectionDataSource: CollectDataSource {
             
             DispatchQueue.main.async {
                 rootController.openingName.text = currentOpening!.name
-                rootController.stats.text = "Moves: \(correctMoveCount) / \(currentOpening!.movesCount)"
-                rootController.openingStats.text = "Openings: \(correctOpeningCount) / \(game!.data.count)"
-                rootController.moveNum.text = "Move: \(moveIndex + 1)"
-                //print("reloaded")
+                updateLabels()
                 collectView.reloadData()
             }
         }
@@ -71,29 +74,22 @@ class OpeningGameCollectionDataSource: CollectDataSource {
                 correctOpeningCount += 1
             }
             correctMoveCount = 0
-            rootController.stats.text = "Moves: \(correctMoveCount) / \(currentOpening!.movesCount)"
-            rootController.openingStats.text = "Openings: \(correctOpeningCount) / \(game!.data.count)"
-            rootController.moveNum.text = "Move: \(moveIndex + 1)"
+            updateLabels()
+            
         }
         if openingIndex >= game!.openingsCount {
             openingIndex = 0
             moveIndex = 0
             correctMoveCount = 0
             correctOpeningCount = 0
-            rootController.stats.text = "Moves: \(correctMoveCount) / \(currentOpening!.movesCount)"
-            rootController.openingStats.text = "Openings: \(correctOpeningCount) / \(game!.data.count)"
-            rootController.moveNum.text = "Move: \(moveIndex + 1)"
-            print("time to quit")
-            //rootController.dismiss(animated: true, completion: nil)
+            updateLabels()
             popController(from: rootController, method: .withBackItem)
             return
         }
         currentOpening = game!.data[openingIndex]
         currentMove = currentOpening!.moveSequence[moveIndex]
         
-        rootController.stats.text = "Moves: \(correctMoveCount) / \(currentOpening!.movesCount)"
-        rootController.openingStats.text = "Openings: \(correctOpeningCount) / \(game!.data.count)"
-        rootController.moveNum.text = "Move: \(moveIndex + 1)"
+        updateLabels()
 
         moveChoices = currentOpening!.generate6ChoiceFor(correctMove: currentMove!)
         rootController.openingName.text = currentOpening!.name
