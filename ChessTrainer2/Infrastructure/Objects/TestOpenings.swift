@@ -8,10 +8,6 @@
 import Foundation
 import UIKit
 
-
-//let oneMoveOpenings = [Opening(name: "King's Pawn Opening", moveSequence: ["e4", "d5"]),
-//                       Opening(name: "Queen's Pawn Opening", moveSequence: ["d4"])]
-
 struct Opening {
 
     var jsonOpening: JsonOpening

@@ -18,36 +18,13 @@ class StartController: GameViewController {
     
     var nameFilter: String?
     var levelFilter: Int?
-    
-    lazy var openingGameController: OpeningGameController = {
-        let vc = getController(storyboardID: .openingGame, controllerID: .openingGameController) as? OpeningGameController
-        return vc!
-    }()
-    
-    lazy var statsController: StatsController = {
-        let vc = getController(storyboardID: .main, controllerID: .statsController) as? StatsController
-        return vc!
-    }()
-    
-    lazy var pickOpeningController: OpeningFilterController = {
-        let vc = getController(storyboardID: .pickOpening, controllerID: .pickOpening) as? OpeningFilterController
-        return vc!
-    }()
-    
-    lazy var pickDifficultyController: DiffiucultyPickerController = {
-        let vc = getController(storyboardID: .picDifficulty, controllerID: .pickDifficulty) as? DiffiucultyPickerController
-        return vc!
-    }()
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         spinner.isHidden = true
-
     }
 
     @IBAction func onStart(_ sender: Any) {
-        //navigationController!.navigationBar.isHidden = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) { [weak self] in
             guard let self = self else { return }
             guard let nameFilter = self.nameFilter else { return }

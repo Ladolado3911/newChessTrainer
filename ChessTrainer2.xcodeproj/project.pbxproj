@@ -362,8 +362,8 @@
 		24F040F726A3FF990095BB4B /* GameScene */ = {
 			isa = PBXGroup;
 			children = (
-				24F040FC26A400600095BB4B /* OpeningGameController.storyboard */,
-				3F6FB345265FD0A500E41C41 /* OpeningGameController.swift */,
+				3F6D843526A4342A00C21EA5 /* View */,
+				3F6D842D26A4310300C21EA5 /* ViewModel */,
 			);
 			path = GameScene;
 			sourceTree = "<group>";
@@ -371,8 +371,8 @@
 		24F040FE26A400BD0095BB4B /* OpeningFilterScene */ = {
 			isa = PBXGroup;
 			children = (
-				24F0410126A400FF0095BB4B /* OpeningFilterController.storyboard */,
-				246EF1F12691A515000056AF /* OpeningFilterController.swift */,
+				3F6D843026A431EC00C21EA5 /* View */,
+				3F6D843126A431F400C21EA5 /* ViewModel */,
 			);
 			path = OpeningFilterScene;
 			sourceTree = "<group>";
@@ -380,8 +380,8 @@
 		24F040FF26A400CD0095BB4B /* DifficultyFilterScene */ = {
 			isa = PBXGroup;
 			children = (
-				24F0410326A401350095BB4B /* DiffiucultyPickerController.storyboard */,
-				246EF1F52691AE41000056AF /* DiffiucultyPickerController.swift */,
+				3F6D843226A4321300C21EA5 /* View */,
+				3F6D843326A4321800C21EA5 /* ViewModel */,
 			);
 			path = DifficultyFilterScene;
 			sourceTree = "<group>";
@@ -393,6 +393,80 @@
 				24F040FE26A400BD0095BB4B /* OpeningFilterScene */,
 			);
 			path = ModalScenes;
+			sourceTree = "<group>";
+		};
+		3F6D842D26A4310300C21EA5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ACE29D7C2673DF3200F1D9D8 /* OpeningViewModel.swift */,
+				3F6C334B266CAAF80070E83C /* openingGameCollectionDataSource.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3F6D842F26A431CD00C21EA5 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				3F6FB349265FD16600E41C41 /* OpeningGame.swift */,
+				3F6FB366265FD2B400E41C41 /* TestOpenings.swift */,
+				3F6FB371265FD5AB00E41C41 /* Filter.swift */,
+				3F5F36FC2662D5EF00FCD034 /* Moves.swift */,
+				ACE29D7A2673DBE300F1D9D8 /* OpeningFilter.swift */,
+				240D62BC2676261C002BEB1D /* OpeningParser.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		3F6D843026A431EC00C21EA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24F0410126A400FF0095BB4B /* OpeningFilterController.storyboard */,
+				246EF1F12691A515000056AF /* OpeningFilterController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F6D843126A431F400C21EA5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				246EF1F32691AC48000056AF /* PickOpeningViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3F6D843226A4321300C21EA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24F0410326A401350095BB4B /* DiffiucultyPickerController.storyboard */,
+				246EF1F52691AE41000056AF /* DiffiucultyPickerController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F6D843326A4321800C21EA5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				246EF1F72691B015000056AF /* PickDifficultyViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3F6D843426A4326200C21EA5 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				ACE29D782673DAA200F1D9D8 /* GameModel.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3F6D843526A4342A00C21EA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F6FB374265FDC9500E41C41 /* Cells */,
+				24F040FC26A400600095BB4B /* OpeningGameController.storyboard */,
+				3F6FB345265FD0A500E41C41 /* OpeningGameController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		3F6FB303265FCE6F00E41C41 = {
@@ -417,6 +491,7 @@
 				ACE29D752673DA5800F1D9D8 /* eco.json */,
 				ACE29D5F2673CC9600F1D9D8 /* App */,
 				ACE29D602673CCA300F1D9D8 /* API */,
+				3F6D843426A4326200C21EA5 /* Domain */,
 				3F6FB32D265FCEAA00E41C41 /* Helpers */,
 				3F6FB355265FD26F00E41C41 /* Reusables */,
 				24F040F226A3FAE20095BB4B /* Resources */,
@@ -440,15 +515,6 @@
 				3F6FB36E265FD47A00E41C41 /* GameHelpers.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		3F6FB341265FD02800E41C41 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				ACE29D762673DA7E00F1D9D8 /* Structure */,
-				ACE29D782673DAA200F1D9D8 /* GameModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		3F6FB355265FD26F00E41C41 /* Reusables */ = {
@@ -567,6 +633,7 @@
 				246EF1E826919FCA000056AF /* Coordinator */,
 				3F6FB369265FD2FE00E41C41 /* Extensions */,
 				ACE29D642673CD8A00F1D9D8 /* Network */,
+				3F6D842F26A431CD00C21EA5 /* Objects */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -585,9 +652,7 @@
 				24F0410726A404D30095BB4B /* GameBase.swift */,
 				247247D326A32C4E0050AE89 /* Coordinator */,
 				24F040F426A3FF180095BB4B /* ChildScenes */,
-				3F6FB341265FD02800E41C41 /* Model */,
 				ACE29D6F2673D15200F1D9D8 /* View */,
-				ACE29D702673D15800F1D9D8 /* ViewModel */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -616,33 +681,8 @@
 			children = (
 				247247E226A32FCB0050AE89 /* ChooseGameController.storyboard */,
 				3FE2BA9926878945003B07AE /* ChooseGameController.swift */,
-				3F6FB374265FDC9500E41C41 /* Cells */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		ACE29D702673D15800F1D9D8 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				3F6C334B266CAAF80070E83C /* openingGameCollectionDataSource.swift */,
-				ACE29D7A2673DBE300F1D9D8 /* OpeningFilter.swift */,
-				ACE29D7C2673DF3200F1D9D8 /* OpeningViewModel.swift */,
-				240D62BC2676261C002BEB1D /* OpeningParser.swift */,
-				246EF1F32691AC48000056AF /* PickOpeningViewModel.swift */,
-				246EF1F72691B015000056AF /* PickDifficultyViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		ACE29D762673DA7E00F1D9D8 /* Structure */ = {
-			isa = PBXGroup;
-			children = (
-				3F6FB349265FD16600E41C41 /* OpeningGame.swift */,
-				3F6FB366265FD2B400E41C41 /* TestOpenings.swift */,
-				3F6FB371265FD5AB00E41C41 /* Filter.swift */,
-				3F5F36FC2662D5EF00FCD034 /* Moves.swift */,
-			);
-			path = Structure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

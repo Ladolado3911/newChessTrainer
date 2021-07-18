@@ -8,8 +8,6 @@
 import Foundation
 import UIKit
 
-
-
 class OpeningGame {
     var data: [Opening]
     
