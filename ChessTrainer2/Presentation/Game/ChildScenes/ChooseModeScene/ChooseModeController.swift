@@ -20,8 +20,6 @@ class ChooseModeController: GameViewController {
     }
 
     @IBAction func onChallengeMode(_ sender: UIButton) {
-        let vc = getController(storyboardID: .openingGame, controllerID: .start)
-        navigationController?.pushViewController(vc, animated: true)
-        
+        coordinator!.proceedToController(controller: StartController.self)
     }
 }

@@ -34,8 +34,8 @@ final class GameCoordinator: GameCoordinatorProtocol {
         
     }
     
-    func proceedToChooseMode() {
-        let vc = ChooseModeController.instantiateFromStoryboard()
+    func proceedToController<T: GameViewController>(controller vc: T.Type) {
+        let vc = T.instantiateFromStoryboard()
         vc.coordinator = self
         navigationController?.pushViewController(vc, animated: true)
     }

@@ -8,7 +8,5 @@
 import UIKit
 
 protocol GameCoordinatorProtocol: CoordinatorProtocol {
-    
-    
-    func proceedToChooseMode()
+    func proceedToController<T: GameViewController>(controller vc: T.Type)
 }

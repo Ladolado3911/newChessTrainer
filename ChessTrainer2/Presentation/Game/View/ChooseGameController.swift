@@ -25,6 +25,6 @@ class ChooseGameController: GameViewController {
     }
     
     @IBAction func onOpeningGame(_ sender: UIButton) {
-        coordinator!.proceedToChooseMode()
+        coordinator!.proceedToController(controller: ChooseModeController.self)
     }
 }
