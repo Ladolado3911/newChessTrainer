@@ -8,5 +8,13 @@
 import UIKit
 
 protocol GameCoordinatorProtocol: CoordinatorProtocol {
-    func proceedToController<T: GameViewController>(controller vc: T.Type)
+    func proceedToController<T: GameViewController>(controller vc: T.Type,
+                                                    present style: PresentationStyle,
+                                                    completion: @escaping () -> Void)
+    
+    func proceedToOpeningPicker(rootController controller: StartController,
+                                completion: @escaping () -> Void)
+    
+    func proceedToDifficultyPicker(rootController controller: StartController,
+                                   completion: @escaping () -> Void)
 }

@@ -11,7 +11,7 @@
         <!--Opening Filter Controller-->
         <scene sceneID="ivH-cX-WOn">
             <objects>
-                <viewController storyboardIdentifier="PickOpeningController" id="z6w-Ob-knx" customClass="OpeningFilterController" customModule="ChessTrainer2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OpeningFilterController" id="z6w-Ob-knx" customClass="OpeningFilterController" customModule="ChessTrainer2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ump-hI-omy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

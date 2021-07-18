@@ -61,36 +61,28 @@ class StartController: GameViewController {
     
     @IBAction func onChooseOpening(_ sender: Any) {
         view.isUserInteractionEnabled = false
-        view.backgroundColor = .gray
         spinner.isHidden = false
         spinner.startAnimating()
-        let vc = pickOpeningController
-        vc.rootController = self
 
-        self.present(vc, animated: true) { [weak self] in
+        coordinator?.proceedToOpeningPicker(rootController: self, completion: { [weak self] in
             guard let self = self else { return }
             self.view.isUserInteractionEnabled = true
-            self.view.backgroundColor = .white
             self.spinner.stopAnimating()
             self.spinner.isHidden = true
-        }
+        })
     }
     
     @IBAction func onChooseDifficulty(_ sender: Any) {
         view.isUserInteractionEnabled = false
-        view.backgroundColor = .gray
         spinner.isHidden = false
         spinner.startAnimating()
-        
-        let vc = pickDifficultyController
-        vc.rootController = self
-        present(vc, animated: true) { [weak self] in
+
+        coordinator?.proceedToDifficultyPicker(rootController: self, completion: { [weak self] in
             guard let self = self else { return }
             self.view.isUserInteractionEnabled = true
-            self.view.backgroundColor = .white
             self.spinner.stopAnimating()
             self.spinner.isHidden = true
-        }
+        })
     }
 }
 

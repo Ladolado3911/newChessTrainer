@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum PresentationStyle {
+    case modal
+    case push
+}
+
 final class GameCoordinator: GameCoordinatorProtocol {
     
     var navigationController: UINavigationController?
@@ -34,10 +39,33 @@ final class GameCoordinator: GameCoordinatorProtocol {
         
     }
     
-    func proceedToController<T: GameViewController>(controller vc: T.Type) {
-        let vc = T.instantiateFromStoryboard()
-        vc.coordinator = self
-        navigationController?.pushViewController(vc, animated: true)
+    func proceedToController<T: GameViewController>(controller vc: T.Type,
+                                                    present style: PresentationStyle = .push,
+                                                    completion: @escaping () -> Void) {
+        let vc2 = T.instantiateFromStoryboard()
+        vc2.coordinator = self
+
+        switch style {
+        case .push:
+            navigationController?.pushViewController(vc2, animated: true)
+        case .modal:
+            navigationController?.present(vc2, animated: true, completion: completion)
+        }
+    }
+    
+    func proceedToOpeningPicker(rootController controller: StartController,
+                                completion: @escaping () -> Void) {
+        let vc2 = OpeningFilterController.instantiateFromStoryboard()
+        vc2.coordinator = self
+        vc2.rootController = controller
+        navigationController?.present(vc2, animated: true, completion: completion)
+    }
+    
+    func proceedToDifficultyPicker(rootController controller: StartController, completion: @escaping () -> Void) {
+        let vc2 = DiffiucultyPickerController.instantiateFromStoryboard()
+        vc2.coordinator = self
+        vc2.rootController = controller
+        navigationController?.present(vc2, animated: true, completion: completion)
     }
 }
 
