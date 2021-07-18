@@ -69,13 +69,11 @@ class OpeningGameCollectionDataSource: CollectDataSource {
         if moveIndex >= currentOpening!.movesCount {
             openingIndex += 1
             moveIndex = 0
-            
             if correctMoveCount == currentOpening!.movesCount {
                 correctOpeningCount += 1
             }
             correctMoveCount = 0
             updateLabels()
-            
         }
         if openingIndex >= game!.openingsCount {
             openingIndex = 0
