@@ -58,8 +58,7 @@ class OpeningFilterController: GameViewController {
                                          style: .plain,
                                          target: self,
                                          action: #selector(onBackButton))
-        
-        
+
         navigationItem.rightBarButtonItem = nextButton
         navigationItem.leftBarButtonItem = backButton
     }
