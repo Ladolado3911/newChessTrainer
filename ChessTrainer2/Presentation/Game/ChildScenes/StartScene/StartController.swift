@@ -30,6 +30,11 @@ class StartController: GameViewController {
         disableButton(button: chooseDifficultyButton, state: &difficultyButtonState)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
     func enableButton(button: UIButton, state: inout Bool) {
         state = true
         updateButtonStyle(button: button, state: state)

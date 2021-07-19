@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,25 +17,48 @@
                 <rect key="frame" x="0.0" y="0.0" width="465" height="247"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opening Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-5D-4Ge">
-                        <rect key="frame" x="20" y="11" width="425" height="225"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOl-uf-y3d">
+                        <rect key="frame" x="40" y="31" width="385" height="185"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opening Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-5D-4Ge">
+                                <rect key="frame" x="0.0" y="0.0" width="385" height="185"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IgQ-5D-4Ge" secondAttribute="trailing" id="1y8-Yu-cGZ"/>
+                            <constraint firstItem="IgQ-5D-4Ge" firstAttribute="top" secondItem="KOl-uf-y3d" secondAttribute="top" id="37x-sF-NbM"/>
+                            <constraint firstAttribute="bottom" secondItem="IgQ-5D-4Ge" secondAttribute="bottom" id="DeJ-DU-4Um"/>
+                            <constraint firstItem="IgQ-5D-4Ge" firstAttribute="leading" secondItem="KOl-uf-y3d" secondAttribute="leading" id="V1L-fj-nbb"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="IgQ-5D-4Ge" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="37q-yL-V2e"/>
-                    <constraint firstItem="IgQ-5D-4Ge" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="cRB-2S-I0K"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="IgQ-5D-4Ge" secondAttribute="trailing" id="qDf-Et-ppV"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="IgQ-5D-4Ge" secondAttribute="bottom" id="uDy-uT-YdQ"/>
+                    <constraint firstItem="KOl-uf-y3d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="1Sm-V0-7f1"/>
+                    <constraint firstItem="KOl-uf-y3d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="20" id="7aG-mZ-SZx"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="KOl-uf-y3d" secondAttribute="trailing" constant="20" id="MXs-OZ-PdJ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="KOl-uf-y3d" secondAttribute="bottom" constant="20" id="yvz-vM-GuP"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="fancyView" destination="KOl-uf-y3d" id="Q8c-ed-rdB"/>
                 <outlet property="openingNameLabel" destination="IgQ-5D-4Ge" id="uBt-gk-42N"/>
             </connections>
             <point key="canvasLocation" x="152.89855072463769" y="138.95089285714286"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

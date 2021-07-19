@@ -30,6 +30,7 @@ class OpeningFilterController: GameViewController {
                                                   dataArray: openings,
                                                   dataElement: String.self)
 
+        
 //        guard let rootController = self.rootController else { return }
 //        let parser = OpeningParser()
 //        self.openingViewModel = PickOpeningViewModel(with: self.openingPicker, with: parser, with: rootController, with: self)
