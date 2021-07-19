@@ -18,7 +18,7 @@ final class StatsCoordinator: CoordinatorProtocol {
         
         let vc = StatsController.instantiateFromStoryboard()
         vc.coordinator = self
-        vc.tabBarItem.image = UIImage(systemName: "chart.pie.fill")
+        vc.tabBarItem.image = UIImage(systemName: "chart.pie")
         vc.title = "Statistics"
         
         self.navigationController?.viewControllers = [vc]

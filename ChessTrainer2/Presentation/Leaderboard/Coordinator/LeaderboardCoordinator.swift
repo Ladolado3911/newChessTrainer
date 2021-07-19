@@ -18,7 +18,7 @@ final class LeaderboardCoordinator: CoordinatorProtocol {
         
         let vc = LeaderboardController.instantiateFromStoryboard()
         vc.coordinator = self
-        vc.tabBarItem.image = UIImage(systemName: "person.3.fill")
+        vc.tabBarItem.image = UIImage(systemName: "person.3")
         vc.title = "Leaderboard"
         
         self.navigationController?.viewControllers = [vc]

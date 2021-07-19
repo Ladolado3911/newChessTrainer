@@ -18,7 +18,7 @@ final class UserCoordinator: CoordinatorProtocol {
         
         let vc = LogInController.instantiateFromStoryboard()
         vc.coordinator = self
-        vc.tabBarItem.image = UIImage(systemName: "person.fill")
+        vc.tabBarItem.image = UIImage(systemName: "person")
         vc.title = "User"
         
         self.navigationController?.viewControllers = [vc]

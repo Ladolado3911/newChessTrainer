@@ -18,7 +18,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSo-V8-DOh" customClass="GeneralStyleButton" customModule="ChessTrainer2" customModuleProvider="target">
                                 <rect key="frame" x="20" y="84" width="374" height="45"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Opening Game"/>
                                 <connections>
                                     <action selector="onOpeningGame:" destination="aau-PF-2tA" eventType="touchUpInside" id="XlM-bO-feg"/>
@@ -26,17 +26,17 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgK-jr-YPh" customClass="ComingSoonButton" customModule="ChessTrainer2" customModuleProvider="target">
                                 <rect key="frame" x="20" y="169" width="374" height="45"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Coming Soon..."/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tT0-9i-0P8" customClass="ComingSoonButton" customModule="ChessTrainer2" customModuleProvider="target">
                                 <rect key="frame" x="20" y="254" width="374" height="45"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Coming Soon..."/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RK9-kV-svL" customClass="ComingSoonButton" customModule="ChessTrainer2" customModuleProvider="target">
                                 <rect key="frame" x="20" y="339" width="374" height="45"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Coming Soon..."/>
                             </button>
                         </subviews>

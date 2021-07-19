@@ -23,7 +23,7 @@ final class GameCoordinator: GameCoordinatorProtocol {
         
         let vc = ChooseGameController.instantiateFromStoryboard()
         vc.coordinator = self
-        vc.tabBarItem.image = UIImage(systemName: "gamecontroller.fill")
+        vc.tabBarItem.image = UIImage(systemName: "gamecontroller")
         vc.title = "Play"
         
         self.navigationController?.viewControllers = [vc]

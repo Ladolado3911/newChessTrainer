@@ -106,6 +106,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Choose Opening" id="J8W-82-N9s"/>
                     <connections>
+                        <outlet property="chooseDifficultyButton" destination="ary-uX-Wx0" id="kta-kF-FKK"/>
                         <outlet property="chosenDifficulty" destination="8Eh-zK-nSI" id="FJ6-AG-AUQ"/>
                         <outlet property="chosenOpening" destination="5bx-86-Hir" id="1bK-FT-k74"/>
                         <outlet property="spinner" destination="MEq-l3-dTI" id="YsJ-j3-2Wt"/>

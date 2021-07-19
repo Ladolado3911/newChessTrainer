@@ -10,6 +10,7 @@ import UIKit
 class StartController: GameViewController {
 
     @IBOutlet weak var start: UIButton!
+    @IBOutlet weak var chooseDifficultyButton: GeneralStyleButton!
     
     @IBOutlet weak var chosenOpening: UILabel!
     @IBOutlet weak var chosenDifficulty: UILabel!
@@ -18,10 +19,44 @@ class StartController: GameViewController {
     
     var nameFilter: String?
     var levelFilter: Int?
+    
+    private var startButtonState: Bool = false
+    private var difficultyButtonState: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         spinner.isHidden = true
+        disableButton(button: start, state: &startButtonState)
+        disableButton(button: chooseDifficultyButton, state: &difficultyButtonState)
+    }
+    
+    func enableButton(button: UIButton, state: inout Bool) {
+        state = true
+        updateButtonStyle(button: button, state: state)
+    }
+    
+    func disableButton(button: UIButton, state: inout Bool) {
+        state = false
+        updateButtonStyle(button: button, state: state)
+    }
+    
+    func updateButtonStyle(button: UIButton, state: Bool) {
+        if state {
+            button.isEnabled = true
+            button.backgroundColor = ProjectColors.white
+            button.setTitleColor(ProjectColors.purple, for: .normal)
+            button.layer.cornerRadius = 15
+            button.layer.shadowOpacity = 0.3
+            button.layer.shadowColor = ProjectColors.purple.cgColor
+        }
+        else {
+            button.isEnabled = false
+            button.backgroundColor = ProjectColors.white
+            button.setTitleColor(UIColor.gray, for: .normal)
+            button.layer.cornerRadius = 15
+            button.layer.shadowOpacity = 0.3
+            button.layer.shadowColor = UIColor.gray.cgColor
+        }
     }
 
     @IBAction func onStart(_ sender: Any) {
