@@ -31,12 +31,18 @@ class OpeningFilterTableDataSource: GenericTableDataSource<[String], OpeningFilt
             cell?.openingNameLabel.textColor = ProjectColors.purple
             tableview.reloadData()
             print("Unhighlight")
+            
+            let openingName = cell?.openingNameLabel.text
+            rootController.chosenOpenings = rootController.chosenOpenings.filter { $0 != openingName }
         }
         else {
             cell?.fancyView.backgroundColor = ProjectColors.purple
             cell?.openingNameLabel.textColor = .white
             tableview.reloadData()
             print("Highlight")
+            
+            let openingName = cell?.openingNameLabel.text
+            rootController.chosenOpenings.append(openingName!)
         }
     }
 }

@@ -74,5 +74,9 @@ final class GameCoordinator: GameCoordinatorProtocol {
         vc2.filters = data
         navigationController?.pushViewController(vc2, animated: true)
     }
+    
+    func popController() {
+        navigationController?.popViewController(animated: true)
+    }
 }
 

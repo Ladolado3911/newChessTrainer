@@ -16,13 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkO-2P-MsX" customClass="GeneralStyleButton" customModule="ChessTrainer2" customModuleProvider="target">
-                                <rect key="frame" x="20" y="812" width="374" height="30"/>
-                                <state key="normal" title="Set Opening"/>
-                                <connections>
-                                    <action selector="onSetOpening:" destination="z6w-Ob-knx" eventType="touchUpInside" id="5Xx-U4-T6Q"/>
-                                </connections>
-                            </button>
                             <searchBar contentMode="redraw" placeholder="Enter opening name" translatesAutoresizingMaskIntoConstraints="NO" id="2fs-Tx-Fhy">
                                 <rect key="frame" x="20" y="64" width="374" height="100"/>
                                 <constraints>
@@ -30,24 +23,21 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="arM-eA-13z">
-                                <rect key="frame" x="10" y="184" width="394" height="608"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="arM-eA-13z">
+                                <rect key="frame" x="10" y="184" width="394" height="658"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cqI-kh-lAn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cqI-kh-lAn" firstAttribute="trailing" secondItem="TkO-2P-MsX" secondAttribute="trailing" constant="20" id="12s-Oq-udF"/>
                             <constraint firstItem="2fs-Tx-Fhy" firstAttribute="trailing" secondItem="cqI-kh-lAn" secondAttribute="trailing" constant="-20" id="1rm-cA-Le3"/>
                             <constraint firstItem="arM-eA-13z" firstAttribute="top" secondItem="2fs-Tx-Fhy" secondAttribute="bottom" constant="20" id="ExJ-Xq-m28"/>
                             <constraint firstItem="arM-eA-13z" firstAttribute="leading" secondItem="cqI-kh-lAn" secondAttribute="leading" constant="10" id="Id4-Q5-RFc"/>
                             <constraint firstItem="2fs-Tx-Fhy" firstAttribute="leading" secondItem="cqI-kh-lAn" secondAttribute="leading" constant="20" id="PjH-pa-lFq"/>
-                            <constraint firstItem="TkO-2P-MsX" firstAttribute="top" secondItem="arM-eA-13z" secondAttribute="bottom" constant="20" id="e2P-Sg-c2Q"/>
                             <constraint firstItem="2fs-Tx-Fhy" firstAttribute="top" secondItem="cqI-kh-lAn" secondAttribute="top" constant="20" id="lnZ-EU-DV2"/>
-                            <constraint firstItem="TkO-2P-MsX" firstAttribute="leading" secondItem="cqI-kh-lAn" secondAttribute="leading" constant="20" id="tAP-BF-x15"/>
+                            <constraint firstItem="cqI-kh-lAn" firstAttribute="bottom" secondItem="arM-eA-13z" secondAttribute="bottom" constant="20" id="ta8-1s-OWK"/>
                             <constraint firstItem="cqI-kh-lAn" firstAttribute="trailing" secondItem="arM-eA-13z" secondAttribute="trailing" constant="10" id="wXE-Mi-fOq"/>
-                            <constraint firstItem="cqI-kh-lAn" firstAttribute="bottom" secondItem="TkO-2P-MsX" secondAttribute="bottom" constant="20" id="yTs-xM-2ZA"/>
                         </constraints>
                     </view>
                     <connections>

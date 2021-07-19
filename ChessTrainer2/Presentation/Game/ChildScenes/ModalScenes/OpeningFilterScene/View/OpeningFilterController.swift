@@ -19,9 +19,12 @@ class OpeningFilterController: GameViewController {
         let openingParser = OpeningParser()
         return openingParser.uniqueOpeningNames
     }
+    
+    var chosenOpenings: [String] = []
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        setBarButtons()
         
         let cell = Cell(nibName: "OpeningCell", identifier: "OpeningCell")
         dataSource = OpeningFilterTableDataSource(tableView: tblView,
@@ -30,25 +33,56 @@ class OpeningFilterController: GameViewController {
                                                   dataArray: openings,
                                                   dataElement: String.self)
 
-        
-//        guard let rootController = self.rootController else { return }
-//        let parser = OpeningParser()
-//        self.openingViewModel = PickOpeningViewModel(with: self.openingPicker, with: parser, with: rootController, with: self)
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-    @IBAction func onSetOpening(_ sender: Any) {
-        dismiss(animated: true) { [weak self] in
-            guard let self = self else { return }
-            guard let rootController = self.rootController else { return }
-            //let name = self.openingViewModel.getNameFilter()
-//            rootController.nameFilter = name
-//            rootController.chosenOpening.text = name
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        //rootController.chosenOpenings = chosenOpenings
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+    }
+    
+    func setBarButtons() {
+        let nextButton = UIBarButtonItem(title: "Next",
+                                     style: .done,
+                                     target: self,
+                                     action: #selector(onNextButton))
+        
+        let backButton = UIBarButtonItem(title: "Back",
+                                         style: .plain,
+                                         target: self,
+                                         action: #selector(onBackButton))
+        
+        
+        navigationItem.rightBarButtonItem = nextButton
+        navigationItem.leftBarButtonItem = backButton
+    }
+    
+    func resetTableView() {
+        guard let tableCells = tblView.visibleCells as? [OpeningCell] else { return }
+        tableCells.forEach { cell in
+            if cell.fancyView.backgroundColor == ProjectColors.purple {
+                cell.fancyView.backgroundColor = .white
+                cell.openingNameLabel.textColor = ProjectColors.purple
+                tblView.reloadData()
+            }
         }
+    }
+    
+    @objc func onNextButton(sender: UIBarButtonItem) {
+        coordinator?.proceedToController(controller: DiffiucultyPickerController.self,
+                                         present: .push) {}
+    }
+    
+    @objc func onBackButton(sender: UIBarButtonItem) {
+        resetTableView()
+        coordinator?.popController()
     }
 }
 

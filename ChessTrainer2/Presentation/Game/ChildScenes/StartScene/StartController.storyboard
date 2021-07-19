@@ -75,12 +75,20 @@
                                 </constraints>
                                 <color key="color" name="ProjectColor1"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZx-S5-EEM">
+                                <rect key="frame" x="20" y="742" width="374" height="30"/>
+                                <state key="normal" title="tempTest"/>
+                                <connections>
+                                    <action selector="onTempTest:" destination="8VL-Sz-8kw" eventType="touchUpInside" id="vPh-30-lkl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6VB-rg-mVt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8Eh-zK-nSI" firstAttribute="leading" secondItem="6VB-rg-mVt" secondAttribute="leading" constant="20" id="2xN-XP-m9b"/>
                             <constraint firstItem="8Eh-zK-nSI" firstAttribute="top" secondItem="3AQ-Ch-zvy" secondAttribute="bottom" constant="20" id="58K-62-fT1"/>
+                            <constraint firstItem="eh1-s8-Y7R" firstAttribute="top" secondItem="oZx-S5-EEM" secondAttribute="bottom" constant="20" id="6NW-7J-wT6"/>
                             <constraint firstItem="3AQ-Ch-zvy" firstAttribute="top" secondItem="LFm-RW-0uV" secondAttribute="bottom" constant="60" id="ACh-eA-EPa"/>
                             <constraint firstItem="6VB-rg-mVt" firstAttribute="trailing" secondItem="5bx-86-Hir" secondAttribute="trailing" constant="20" id="EEs-Sk-X22"/>
                             <constraint firstItem="6VB-rg-mVt" firstAttribute="trailing" secondItem="3AQ-Ch-zvy" secondAttribute="trailing" constant="20" id="F6A-ZG-EOh"/>
@@ -89,6 +97,7 @@
                             <constraint firstItem="6VB-rg-mVt" firstAttribute="trailing" secondItem="ary-uX-Wx0" secondAttribute="trailing" constant="20" id="Pjc-Sf-QIc"/>
                             <constraint firstItem="5bx-86-Hir" firstAttribute="leading" secondItem="6VB-rg-mVt" secondAttribute="leading" constant="20" id="Sm3-bJ-Sdf"/>
                             <constraint firstItem="MEq-l3-dTI" firstAttribute="centerY" secondItem="IYO-ZN-AGr" secondAttribute="centerY" id="UTC-KD-j4G"/>
+                            <constraint firstItem="6VB-rg-mVt" firstAttribute="trailing" secondItem="oZx-S5-EEM" secondAttribute="trailing" constant="20" id="WCw-CW-TKE"/>
                             <constraint firstItem="0sC-7U-Jqp" firstAttribute="top" secondItem="6VB-rg-mVt" secondAttribute="top" constant="20" id="WkD-0E-1jm"/>
                             <constraint firstItem="6VB-rg-mVt" firstAttribute="trailing" secondItem="8Eh-zK-nSI" secondAttribute="trailing" constant="20" id="aCi-R7-x4d"/>
                             <constraint firstItem="ary-uX-Wx0" firstAttribute="leading" secondItem="6VB-rg-mVt" secondAttribute="leading" constant="20" id="azM-3V-lh1"/>
@@ -97,6 +106,7 @@
                             <constraint firstItem="LFm-RW-0uV" firstAttribute="leading" secondItem="6VB-rg-mVt" secondAttribute="leading" constant="20" id="e4K-hz-GQn"/>
                             <constraint firstItem="6VB-rg-mVt" firstAttribute="bottom" secondItem="eh1-s8-Y7R" secondAttribute="bottom" constant="30" id="hfv-6o-EOH"/>
                             <constraint firstItem="3AQ-Ch-zvy" firstAttribute="leading" secondItem="6VB-rg-mVt" secondAttribute="leading" constant="20" id="meH-Xf-we2"/>
+                            <constraint firstItem="oZx-S5-EEM" firstAttribute="leading" secondItem="6VB-rg-mVt" secondAttribute="leading" constant="20" id="pzD-4u-IpU"/>
                             <constraint firstItem="LFm-RW-0uV" firstAttribute="top" secondItem="5bx-86-Hir" secondAttribute="bottom" constant="20" id="q14-zR-d64"/>
                             <constraint firstItem="0sC-7U-Jqp" firstAttribute="leading" secondItem="6VB-rg-mVt" secondAttribute="leading" constant="20" id="rDy-bw-Pyj"/>
                             <constraint firstItem="5bx-86-Hir" firstAttribute="top" secondItem="0sC-7U-Jqp" secondAttribute="bottom" constant="20" id="spb-Vw-czy"/>

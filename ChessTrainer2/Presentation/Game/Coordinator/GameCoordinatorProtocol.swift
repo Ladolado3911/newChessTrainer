@@ -19,4 +19,6 @@ protocol GameCoordinatorProtocol: CoordinatorProtocol {
                                    completion: @escaping () -> Void)
     
     func proceedToGame(filters data: Filter)
+    
+    func popController()
 }

@@ -22,6 +22,8 @@ class StartController: GameViewController {
     
     private var startButtonState: Bool = false
     private var difficultyButtonState: Bool = false
+    
+    var chosenOpenings: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +65,11 @@ class StartController: GameViewController {
             button.layer.shadowColor = UIColor.gray.cgColor
         }
     }
+    
+    @IBAction func onTempTest(_ sender: Any) {
+        print(chosenOpenings)
+    }
+    
 
     @IBAction func onStart(_ sender: Any) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) { [weak self] in
