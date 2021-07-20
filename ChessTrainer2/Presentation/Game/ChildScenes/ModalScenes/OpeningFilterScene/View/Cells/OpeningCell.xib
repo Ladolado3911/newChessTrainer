@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOl-uf-y3d">
-                        <rect key="frame" x="40" y="31" width="385" height="185"/>
+                        <rect key="frame" x="30" y="21" width="405" height="205"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opening Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-5D-4Ge">
-                                <rect key="frame" x="0.0" y="0.0" width="385" height="185"/>
+                                <rect key="frame" x="0.0" y="0.0" width="405" height="205"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -42,10 +42,10 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="KOl-uf-y3d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="1Sm-V0-7f1"/>
-                    <constraint firstItem="KOl-uf-y3d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="20" id="7aG-mZ-SZx"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="KOl-uf-y3d" secondAttribute="trailing" constant="20" id="MXs-OZ-PdJ"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="KOl-uf-y3d" secondAttribute="bottom" constant="20" id="yvz-vM-GuP"/>
+                    <constraint firstItem="KOl-uf-y3d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="1Sm-V0-7f1"/>
+                    <constraint firstItem="KOl-uf-y3d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="7aG-mZ-SZx"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="KOl-uf-y3d" secondAttribute="trailing" constant="10" id="MXs-OZ-PdJ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="KOl-uf-y3d" secondAttribute="bottom" constant="10" id="yvz-vM-GuP"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

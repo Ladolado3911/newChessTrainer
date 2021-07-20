@@ -11,6 +11,11 @@ import UIKit
 struct UniqueOpening {
     var name: String?
     var openings: [Opening] = []
+    var isSelected: Bool = false
+    
+    mutating func changeStatus() {
+        isSelected = !isSelected
+    }
 }
 
 class OpeningParser {
@@ -76,9 +81,9 @@ class OpeningParser {
                 openings.forEach { jsonOpening in
                     if uniqueName.contains(jsonOpening.name!) {
                         uniqueOpening.openings.append(Opening(with: jsonOpening))
-                        uniqueOpening.name = uniqueName
                     }
                 }
+                uniqueOpening.name = uniqueName
                 uniqueArray.append(uniqueOpening)
             }
             

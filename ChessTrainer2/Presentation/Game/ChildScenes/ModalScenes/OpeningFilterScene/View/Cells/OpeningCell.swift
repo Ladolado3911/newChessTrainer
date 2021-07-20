@@ -16,26 +16,58 @@ class OpeningCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        selectionStyle = .none
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        guard let opening = opening else { return }
+        openingNameLabel.text = opening.name
+        print(opening.name)
+        fancyView.layer.shadowColor = ProjectColors.purple.cgColor
+        fancyView.layer.shadowOpacity = 0.3
+        fancyView.backgroundColor = ProjectColors.white
+        openingNameLabel.textColor = ProjectColors.purple
+        //openingNameLabel.frame = fancyView.bounds
+        
+        if opening.isSelected {
+            fancyView.backgroundColor = ProjectColors.purple
+            openingNameLabel.textColor = ProjectColors.white
+        }
+        else {
+            fancyView.backgroundColor = ProjectColors.white
+            openingNameLabel.textColor = ProjectColors.purple
+        }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        guard let opening = opening else { return }
-        fancyView.layer.shadowOpacity = 0.3
-        fancyView.layer.shadowColor = ProjectColors.purple.cgColor
-        if fancyView.backgroundColor == ProjectColors.purple {
-            openingNameLabel.textColor = .white
-        }
-        else {
-            openingNameLabel.textColor = ProjectColors.purple
-        }
-        openingNameLabel.text = opening.name
-        print(opening.name)
+        //guard let opening = opening else { return }
+        //openingNameLabel.text = opening.name
+//        fancyView.layer.shadowColor = ProjectColors.purple.cgColor
+//        fancyView.layer.shadowOpacity = 0.3
+//
+//        if opening.isSelected {
+//            fancyView.backgroundColor = ProjectColors.purple
+//            openingNameLabel.textColor = ProjectColors.white
+//        }
+//        else {
+//            fancyView.backgroundColor = ProjectColors.white
+//            openingNameLabel.textColor = ProjectColors.purple
+//        }
+        //print("layout subiews")
+        
+    }
+    
+    override func dragStateDidChange(_ dragState: UITableViewCell.DragState) {
+        print("drag")
+    }
+    
+    override func didTransition(to state: UITableViewCell.StateMask) {
+        print("changed state")
+    }
+    
+    deinit {
+        print("deinited cell")
     }
 }
