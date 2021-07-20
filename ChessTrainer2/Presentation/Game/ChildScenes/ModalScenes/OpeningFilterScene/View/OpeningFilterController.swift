@@ -10,14 +10,16 @@ import UIKit
 class OpeningFilterController: GameViewController {
     
     @IBOutlet weak var tblView: UITableView!
+    @IBOutlet weak var selectedItemsLabel: UILabel!
     
     private var dataSource: OpeningFilterTableDataSource!
     var openingViewModel: PickOpeningViewModel!
     var rootController: StartController!
+    var selectedRowCount: Int = 0
     
-    var openings: [String] {
+    var openings: [UniqueOpening] {
         let openingParser = OpeningParser()
-        return openingParser.uniqueOpeningNames
+        return openingParser.uniqueOpenings
     }
     
     var chosenOpenings: [String] = []
@@ -65,13 +67,20 @@ class OpeningFilterController: GameViewController {
     
     func resetTableView() {
         guard let tableCells = tblView.visibleCells as? [OpeningCell] else { return }
-        tableCells.forEach { cell in
+        tableCells.forEach { [weak self] cell in
+            guard let self = self else { return }
             if cell.fancyView.backgroundColor == ProjectColors.purple {
                 cell.fancyView.backgroundColor = .white
                 cell.openingNameLabel.textColor = ProjectColors.purple
-                tblView.reloadData()
+                self.selectedRowCount = 0
+                self.selectedItemsLabel.text = "\(selectedRowCount) items selected"
+                self.tblView.reloadData()
             }
         }
+    }
+    
+    @IBAction func onDeselectAll(_ sender: Any) {
+        resetTableView()
     }
     
     @objc func onNextButton(sender: UIBarButtonItem) {

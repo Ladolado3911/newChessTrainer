@@ -62,11 +62,9 @@ class GenericTableDataSource<T, E, F>: NSObject, TableViewDataSource {
     
     var counter: Int {
         if let data = self.data as? Array<Any> {
-            print("here")
             return data.count
         }
         else {
-            print("here2")
             return count ?? 0
         }
     }
@@ -104,7 +102,6 @@ class GenericTableDataSource<T, E, F>: NSObject, TableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(counter)
         return counter
     }
     

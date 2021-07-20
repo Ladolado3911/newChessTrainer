@@ -17,30 +17,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Enter opening name" translatesAutoresizingMaskIntoConstraints="NO" id="2fs-Tx-Fhy">
-                                <rect key="frame" x="20" y="64" width="374" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="jXE-rO-Xud"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="64" width="374" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="arM-eA-13z">
-                                <rect key="frame" x="10" y="184" width="394" height="658"/>
+                                <rect key="frame" x="10" y="185" width="394" height="657"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 items selected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvh-Gq-72o">
+                                <rect key="frame" x="20" y="135" width="126" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsB-Im-hzg">
+                                <rect key="frame" x="314" y="135" width="80" height="30"/>
+                                <state key="normal" title="Deselect all"/>
+                                <connections>
+                                    <action selector="onDeselectAll:" destination="z6w-Ob-knx" eventType="touchUpInside" id="k1y-Dh-gZC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cqI-kh-lAn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2fs-Tx-Fhy" firstAttribute="trailing" secondItem="cqI-kh-lAn" secondAttribute="trailing" constant="-20" id="1rm-cA-Le3"/>
-                            <constraint firstItem="arM-eA-13z" firstAttribute="top" secondItem="2fs-Tx-Fhy" secondAttribute="bottom" constant="20" id="ExJ-Xq-m28"/>
+                            <constraint firstItem="cqI-kh-lAn" firstAttribute="trailing" secondItem="CsB-Im-hzg" secondAttribute="trailing" constant="20" id="IS9-8A-UjB"/>
                             <constraint firstItem="arM-eA-13z" firstAttribute="leading" secondItem="cqI-kh-lAn" secondAttribute="leading" constant="10" id="Id4-Q5-RFc"/>
+                            <constraint firstItem="arM-eA-13z" firstAttribute="top" secondItem="Hvh-Gq-72o" secondAttribute="bottom" constant="20" id="KVN-nM-dVh"/>
+                            <constraint firstItem="Hvh-Gq-72o" firstAttribute="top" secondItem="2fs-Tx-Fhy" secondAttribute="bottom" constant="20" id="OZL-vH-Hth"/>
                             <constraint firstItem="2fs-Tx-Fhy" firstAttribute="leading" secondItem="cqI-kh-lAn" secondAttribute="leading" constant="20" id="PjH-pa-lFq"/>
                             <constraint firstItem="2fs-Tx-Fhy" firstAttribute="top" secondItem="cqI-kh-lAn" secondAttribute="top" constant="20" id="lnZ-EU-DV2"/>
+                            <constraint firstItem="arM-eA-13z" firstAttribute="top" secondItem="CsB-Im-hzg" secondAttribute="bottom" constant="20" id="oZp-1f-E1a"/>
+                            <constraint firstItem="CsB-Im-hzg" firstAttribute="top" secondItem="2fs-Tx-Fhy" secondAttribute="bottom" constant="20" id="ogQ-lc-jfy"/>
+                            <constraint firstItem="Hvh-Gq-72o" firstAttribute="leading" secondItem="cqI-kh-lAn" secondAttribute="leading" constant="20" id="tJE-Ac-qdd"/>
                             <constraint firstItem="cqI-kh-lAn" firstAttribute="bottom" secondItem="arM-eA-13z" secondAttribute="bottom" constant="20" id="ta8-1s-OWK"/>
                             <constraint firstItem="cqI-kh-lAn" firstAttribute="trailing" secondItem="arM-eA-13z" secondAttribute="trailing" constant="10" id="wXE-Mi-fOq"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="selectedItemsLabel" destination="Hvh-Gq-72o" id="v0e-v3-1Dc"/>
                         <outlet property="tblView" destination="arM-eA-13z" id="TIe-O4-lDv"/>
                     </connections>
                 </viewController>

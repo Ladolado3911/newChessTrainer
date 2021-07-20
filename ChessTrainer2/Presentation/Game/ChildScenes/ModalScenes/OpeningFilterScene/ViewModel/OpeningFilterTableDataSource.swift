@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OpeningFilterTableDataSource: GenericTableDataSource<[String], OpeningFilterController, String.Type> {
+class OpeningFilterTableDataSource: GenericTableDataSource<[UniqueOpening], OpeningFilterController, String.Type> {
     
     private var isCellHighlighted: Bool = false
     
@@ -15,7 +15,8 @@ class OpeningFilterTableDataSource: GenericTableDataSource<[String], OpeningFilt
         let cell = cellsArr.first
         let realCell = tableView.dequeueReusableCell(withIdentifier: (cell?.identifier)!) as? OpeningCell
         guard let data = data else { return realCell! }
-        realCell!.openingName = data[indexPath.row]
+        realCell!.opening = data[indexPath.row]
+        print(indexPath.row)
         return realCell!
     }
     
@@ -24,25 +25,28 @@ class OpeningFilterTableDataSource: GenericTableDataSource<[String], OpeningFilt
     }
     
     override func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as? OpeningCell
-        cell?.selectionStyle = .none
-        if cell?.fancyView.backgroundColor == ProjectColors.purple {
-            cell?.fancyView.backgroundColor = .white
-            cell?.openingNameLabel.textColor = ProjectColors.purple
-            tableview.reloadData()
+        guard let cell = tableView.cellForRow(at: indexPath) as? OpeningCell else { return }
+        cell.selectionStyle = .none
+        if cell.fancyView.backgroundColor == ProjectColors.purple {
+            cell.fancyView.backgroundColor = .white
+            cell.openingNameLabel.textColor = ProjectColors.purple
             print("Unhighlight")
             
-            let openingName = cell?.openingNameLabel.text
-            rootController.chosenOpenings = rootController.chosenOpenings.filter { $0 != openingName }
+//            let openingName = cell?.openingNameLabel.text
+//            rootController.chosenOpenings = rootController.chosenOpenings.filter { $0 != openingName }
+//            rootController.selectedRowCount -= 1
+//            rootController.selectedItemsLabel.text = "\(rootController.selectedRowCount) items selected"
         }
         else {
-            cell?.fancyView.backgroundColor = ProjectColors.purple
-            cell?.openingNameLabel.textColor = .white
-            tableview.reloadData()
+            cell.fancyView.backgroundColor = ProjectColors.purple
+            cell.openingNameLabel.textColor = .white
             print("Highlight")
             
-            let openingName = cell?.openingNameLabel.text
-            rootController.chosenOpenings.append(openingName!)
+//            let openingName = cell?.openingNameLabel.text
+//            rootController.chosenOpenings.append(openingName!)
+//            rootController.selectedRowCount += 1
+//            rootController.selectedItemsLabel.text = "\(rootController.selectedRowCount) items selected"
         }
+        //tableView.reloadData()
     }
 }

@@ -11,7 +11,7 @@ class OpeningCell: UITableViewCell {
     
     @IBOutlet weak var fancyView: UIView!
     @IBOutlet weak var openingNameLabel: UILabel!
-    var openingName: String?
+    var opening: UniqueOpening?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,7 +26,7 @@ class OpeningCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        guard let openingName = openingName else { return }
+        guard let opening = opening else { return }
         fancyView.layer.shadowOpacity = 0.3
         fancyView.layer.shadowColor = ProjectColors.purple.cgColor
         if fancyView.backgroundColor == ProjectColors.purple {
@@ -35,6 +35,7 @@ class OpeningCell: UITableViewCell {
         else {
             openingNameLabel.textColor = ProjectColors.purple
         }
-        openingNameLabel.text = openingName
+        openingNameLabel.text = opening.name
+        print(opening.name)
     }
 }
