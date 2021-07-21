@@ -345,8 +345,9 @@
 		24F040F426A3FF180095BB4B /* ChildScenes */ = {
 			isa = PBXGroup;
 			children = (
-				24F0410026A400DB0095BB4B /* ModalScenes */,
 				24F040F526A3FF320095BB4B /* ChooseModeScene */,
+				24F040FE26A400BD0095BB4B /* Filter1Scene */,
+				24F040FF26A400CD0095BB4B /* Filter2Scene */,
 				24F040F626A3FF8A0095BB4B /* StartScene */,
 				24F040F726A3FF990095BB4B /* GameScene */,
 			);
@@ -380,31 +381,22 @@
 			path = GameScene;
 			sourceTree = "<group>";
 		};
-		24F040FE26A400BD0095BB4B /* OpeningFilterScene */ = {
+		24F040FE26A400BD0095BB4B /* Filter1Scene */ = {
 			isa = PBXGroup;
 			children = (
 				3F6D843026A431EC00C21EA5 /* View */,
 				3F6D843126A431F400C21EA5 /* ViewModel */,
 			);
-			path = OpeningFilterScene;
+			path = Filter1Scene;
 			sourceTree = "<group>";
 		};
-		24F040FF26A400CD0095BB4B /* DifficultyFilterScene */ = {
+		24F040FF26A400CD0095BB4B /* Filter2Scene */ = {
 			isa = PBXGroup;
 			children = (
 				3F6D843226A4321300C21EA5 /* View */,
 				3F6D843326A4321800C21EA5 /* ViewModel */,
 			);
-			path = DifficultyFilterScene;
-			sourceTree = "<group>";
-		};
-		24F0410026A400DB0095BB4B /* ModalScenes */ = {
-			isa = PBXGroup;
-			children = (
-				24F040FF26A400CD0095BB4B /* DifficultyFilterScene */,
-				24F040FE26A400BD0095BB4B /* OpeningFilterScene */,
-			);
-			path = ModalScenes;
+			path = Filter2Scene;
 			sourceTree = "<group>";
 		};
 		3F6D842D26A4310300C21EA5 /* ViewModel */ = {

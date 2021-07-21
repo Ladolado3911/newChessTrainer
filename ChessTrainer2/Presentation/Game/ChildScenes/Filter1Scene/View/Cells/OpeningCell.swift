@@ -22,6 +22,7 @@ class OpeningCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         guard let opening = opening else { return }
+        
         openingNameLabel.text = opening.name
         print(opening.name)
         fancyView.layer.shadowColor = ProjectColors.purple.cgColor

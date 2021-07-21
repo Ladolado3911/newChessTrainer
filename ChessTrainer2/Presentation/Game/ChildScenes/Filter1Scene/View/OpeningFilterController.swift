@@ -65,22 +65,8 @@ class OpeningFilterController: GameViewController {
         navigationItem.leftBarButtonItem = backButton
     }
     
-    func resetTableView() {
-        guard let tableCells = tblView.visibleCells as? [OpeningCell] else { return }
-        tableCells.forEach { [weak self] cell in
-            guard let self = self else { return }
-            if cell.fancyView.backgroundColor == ProjectColors.purple {
-                cell.fancyView.backgroundColor = .white
-                cell.openingNameLabel.textColor = ProjectColors.purple
-                self.selectedRowCount = 0
-                self.selectedItemsLabel.text = "\(selectedRowCount) items selected"
-                self.tblView.reloadData()
-            }
-        }
-    }
-    
     @IBAction func onDeselectAll(_ sender: Any) {
-        resetTableView()
+        dataSource.resetTableView()
     }
     
     @objc func onNextButton(sender: UIBarButtonItem) {
@@ -89,7 +75,7 @@ class OpeningFilterController: GameViewController {
     }
     
     @objc func onBackButton(sender: UIBarButtonItem) {
-        resetTableView()
+        dataSource.resetTableView()
         coordinator?.popController()
     }
 }
