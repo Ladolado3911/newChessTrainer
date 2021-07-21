@@ -8,8 +8,16 @@
 import UIKit
 
 class OpeningFilterTableDataSource: GenericTableDataSource<[UniqueOpening], OpeningFilterController, String.Type> {
-    
-    private var isCellHighlighted: Bool = false
+        
+    var nothingIsSelected: Bool {
+        let boolData = data!.map { $0.isSelected }
+        if boolData.contains(true) {
+            return false
+        }
+        else {
+            return true
+        }
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = cellsArr.first
@@ -35,10 +43,12 @@ class OpeningFilterTableDataSource: GenericTableDataSource<[UniqueOpening], Open
                 tempData.append(newOpening)
                 
                 if newOpening.isSelected {
+                    rootController.selectedOpenings.append(newOpening)
                     rootController.selectedRowCount += 1
                     rootController.selectedItemsLabel.text = "\(rootController.selectedRowCount) items selected"
                 }
                 else {
+                    rootController.selectedOpenings = rootController.selectedOpenings.filter { $0.name != newOpening.name }
                     rootController.selectedRowCount -= 1
                     rootController.selectedItemsLabel.text = "\(rootController.selectedRowCount) items selected"
                 }
@@ -48,7 +58,17 @@ class OpeningFilterTableDataSource: GenericTableDataSource<[UniqueOpening], Open
             }
         }
         data = tempData
+        setNextButtonState()
         tableView.reloadData()
+    }
+    
+    func setNextButtonState() {
+        if nothingIsSelected {
+            rootController.nextButton.isEnabled = false
+        }
+        else {
+            rootController.nextButton.isEnabled = true
+        }
     }
     
     func resetTableView() {
@@ -66,6 +86,7 @@ class OpeningFilterTableDataSource: GenericTableDataSource<[UniqueOpening], Open
             }
         }
         data = tempData
+        setNextButtonState()
         rootController.selectedRowCount = 0
         rootController.selectedItemsLabel.text = "\(rootController.selectedRowCount) items selected"
         tableview.reloadData()

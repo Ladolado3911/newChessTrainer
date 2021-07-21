@@ -11,23 +11,39 @@ class DiffiucultyPickerController: GameViewController {
 
     @IBOutlet weak var difficultyPicker: UIPickerView!
     var difficultyViewModel: PickDifficultyViewModel!
-    weak var rootController: StartController?
+    var previousController: OpeningFilterController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let rootController = rootController else { return }
-        difficultyViewModel = PickDifficultyViewModel(with: difficultyPicker, with: OpeningParser(), with: rootController)
+        setBarButtons()
+        //difficultyViewModel = PickDifficultyViewModel(with: difficultyPicker, with: OpeningParser(), with: previousController)
 
 
     }
     
-    @IBAction func onSetDifficulty(_ sender: Any) {
-        dismiss(animated: true) { [weak self] in
-            guard let self = self else { return }
-            guard let rootController = self.rootController else { return }
-            let level = self.difficultyViewModel.getLevelFilter()
-            rootController.levelFilter = level
-            rootController.chosenDifficulty.text = "\(level)"
-        }
+    func setBarButtons() {
+        let nextButton = UIBarButtonItem(title: "Next",
+                                     style: .done,
+                                     target: self,
+                                     action: #selector(onNextButton2))
+        
+        let backButton = UIBarButtonItem(title: "Back",
+                                         style: .plain,
+                                         target: self,
+                                         action: #selector(onBackButton2))
+
+        navigationItem.rightBarButtonItem = nextButton
+        navigationItem.leftBarButtonItem = backButton
+    }
+ 
+    @objc func onNextButton2(sender: UIBarButtonItem) {
+
+    }
+    
+    @objc func onBackButton2(sender: UIBarButtonItem) {
+        guard let prevController = previousController else { return }
+        prevController.dataSource.resetTableView()
+        prevController.selectedOpenings = []
+        coordinator?.popController()
     }
 }

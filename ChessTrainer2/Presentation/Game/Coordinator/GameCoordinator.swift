@@ -61,11 +61,11 @@ final class GameCoordinator: GameCoordinatorProtocol {
         navigationController?.present(vc2, animated: true, completion: completion)
     }
     
-    func proceedToDifficultyPicker(rootController controller: StartController, completion: @escaping () -> Void) {
+    func proceedToDifficultyPicker(rootController controller: OpeningFilterController) {
         let vc2 = DiffiucultyPickerController.instantiateFromStoryboard()
         vc2.coordinator = self
-        vc2.rootController = controller
-        navigationController?.present(vc2, animated: true, completion: completion)
+        vc2.previousController = controller
+        navigationController?.pushViewController(vc2, animated: true)
     }
     
     func proceedToGame(filters data: Filter) {

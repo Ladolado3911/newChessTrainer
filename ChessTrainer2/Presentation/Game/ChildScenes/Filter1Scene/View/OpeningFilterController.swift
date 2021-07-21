@@ -12,17 +12,20 @@ class OpeningFilterController: GameViewController {
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var selectedItemsLabel: UILabel!
     
-    private var dataSource: OpeningFilterTableDataSource!
+    var dataSource: OpeningFilterTableDataSource!
     var openingViewModel: PickOpeningViewModel!
     var rootController: StartController!
     var selectedRowCount: Int = 0
+    
+    var nextButton: UIBarButtonItem!
+    var backButton: UIBarButtonItem!
     
     var openings: [UniqueOpening] {
         let openingParser = OpeningParser()
         return openingParser.uniqueOpenings
     }
     
-    var chosenOpenings: [String] = []
+    var selectedOpenings: [UniqueOpening] = []
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,27 +54,31 @@ class OpeningFilterController: GameViewController {
     }
     
     func setBarButtons() {
-        let nextButton = UIBarButtonItem(title: "Next",
+        nextButton = UIBarButtonItem(title: "Next",
                                      style: .done,
                                      target: self,
                                      action: #selector(onNextButton))
         
-        let backButton = UIBarButtonItem(title: "Back",
+        backButton = UIBarButtonItem(title: "Back",
                                          style: .plain,
                                          target: self,
                                          action: #selector(onBackButton))
 
         navigationItem.rightBarButtonItem = nextButton
         navigationItem.leftBarButtonItem = backButton
+        
+        nextButton.isEnabled = false
     }
     
     @IBAction func onDeselectAll(_ sender: Any) {
+        selectedOpenings = []
         dataSource.resetTableView()
     }
     
     @objc func onNextButton(sender: UIBarButtonItem) {
-        coordinator?.proceedToController(controller: DiffiucultyPickerController.self,
-                                         present: .push) {}
+        let toBePrinted = selectedOpenings.map { $0.name }
+        print(toBePrinted)
+        coordinator?.proceedToDifficultyPicker(rootController: self)
     }
     
     @objc func onBackButton(sender: UIBarButtonItem) {

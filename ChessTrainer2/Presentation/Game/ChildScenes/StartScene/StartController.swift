@@ -100,12 +100,12 @@ class StartController: GameViewController {
         spinner.isHidden = false
         spinner.startAnimating()
 
-        coordinator?.proceedToDifficultyPicker(rootController: self, completion: { [weak self] in
-            guard let self = self else { return }
-            self.view.isUserInteractionEnabled = true
-            self.spinner.stopAnimating()
-            self.spinner.isHidden = true
-        })
+//        coordinator?.proceedToDifficultyPicker(rootController: self, completion: { [weak self] in
+//            guard let self = self else { return }
+//            self.view.isUserInteractionEnabled = true
+//            self.spinner.stopAnimating()
+//            self.spinner.isHidden = true
+//        })
     }
 }
 

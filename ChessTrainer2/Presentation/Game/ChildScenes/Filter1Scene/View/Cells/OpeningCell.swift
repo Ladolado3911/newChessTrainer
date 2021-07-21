@@ -24,7 +24,6 @@ class OpeningCell: UITableViewCell {
         guard let opening = opening else { return }
         
         openingNameLabel.text = opening.name
-        print(opening.name)
         fancyView.layer.shadowColor = ProjectColors.purple.cgColor
         fancyView.layer.shadowOpacity = 0.3
         fancyView.backgroundColor = ProjectColors.white
