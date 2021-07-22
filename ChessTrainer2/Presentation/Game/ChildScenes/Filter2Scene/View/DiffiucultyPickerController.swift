@@ -13,12 +13,18 @@ class DiffiucultyPickerController: GameViewController {
     var difficultyViewModel: PickDifficultyViewModel!
     var previousController: OpeningFilterController?
     
+    private var selectedOpenings: [UniqueOpening] {
+        guard let previousController = previousController else { return [] }
+        return previousController.selectedOpenings
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setBarButtons()
         //difficultyViewModel = PickDifficultyViewModel(with: difficultyPicker, with: OpeningParser(), with: previousController)
-
-
+        selectedOpenings.forEach { uniqueOpening in
+            print(uniqueOpening.openings.count)
+        }
     }
     
     func setBarButtons() {

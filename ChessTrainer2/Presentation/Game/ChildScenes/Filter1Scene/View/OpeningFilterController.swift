@@ -11,7 +11,7 @@ class OpeningFilterController: GameViewController {
     
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var selectedItemsLabel: UILabel!
-    
+
     var dataSource: OpeningFilterTableDataSource!
     var openingViewModel: PickOpeningViewModel!
     var rootController: StartController!
@@ -30,7 +30,7 @@ class OpeningFilterController: GameViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setBarButtons()
-        
+
         let cell = Cell(nibName: "OpeningCell", identifier: "OpeningCell")
         dataSource = OpeningFilterTableDataSource(tableView: tblView,
                                                   cellsArray: [cell],

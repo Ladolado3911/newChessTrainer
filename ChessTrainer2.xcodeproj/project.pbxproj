@@ -176,6 +176,7 @@
 		3F6FB36E265FD47A00E41C41 /* GameHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelpers.swift; sourceTree = "<group>"; };
 		3F6FB371265FD5AB00E41C41 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		3F6FB375265FDCB500E41C41 /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
+		3FBBA4F526A8804F002ECCB3 /* small experiments.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "small experiments.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3FE2BA9726878887003B07AE /* ChooseModeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseModeController.swift; sourceTree = "<group>"; };
 		3FE2BA9926878945003B07AE /* ChooseGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseGameController.swift; sourceTree = "<group>"; };
 		ACE29D662673CDDB00F1D9D8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -533,6 +534,7 @@
 				3F6FB318265FCE7000E41C41 /* ChessTrainer2.xcdatamodeld */,
 				ACE29D802673F3C000F1D9D8 /* filterPlayground.playground */,
 				24BA260F26763B5800A81F6C /* NamePlayground.playground */,
+				3FBBA4F526A8804F002ECCB3 /* small experiments.playground */,
 			);
 			path = ChessTrainer2;
 			sourceTree = "<group>";
@@ -1011,13 +1013,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8C7J4PSQLX;
+				DEVELOPMENT_TEAM = M5DM73ULV2;
 				INFOPLIST_FILE = "ChessTrainer2/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lado.ChessTrainer22;
+				PRODUCT_BUNDLE_IDENTIFIER = lado.ChessTrainer2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1030,13 +1032,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8C7J4PSQLX;
+				DEVELOPMENT_TEAM = M5DM73ULV2;
 				INFOPLIST_FILE = "ChessTrainer2/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lado.ChessTrainer22;
+				PRODUCT_BUNDLE_IDENTIFIER = lado.ChessTrainer2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

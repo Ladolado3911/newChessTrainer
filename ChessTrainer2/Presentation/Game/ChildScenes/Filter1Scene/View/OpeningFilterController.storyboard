@@ -42,17 +42,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2fs-Tx-Fhy" firstAttribute="trailing" secondItem="cqI-kh-lAn" secondAttribute="trailing" constant="-20" id="1rm-cA-Le3"/>
-                            <constraint firstItem="cqI-kh-lAn" firstAttribute="trailing" secondItem="CsB-Im-hzg" secondAttribute="trailing" constant="20" id="IS9-8A-UjB"/>
+                            <constraint firstItem="CsB-Im-hzg" firstAttribute="top" secondItem="2fs-Tx-Fhy" secondAttribute="bottom" constant="20" id="2EZ-17-vqH"/>
+                            <constraint firstItem="Hvh-Gq-72o" firstAttribute="top" secondItem="2fs-Tx-Fhy" secondAttribute="bottom" constant="20" id="5lV-82-KRM"/>
                             <constraint firstItem="arM-eA-13z" firstAttribute="leading" secondItem="cqI-kh-lAn" secondAttribute="leading" constant="10" id="Id4-Q5-RFc"/>
-                            <constraint firstItem="arM-eA-13z" firstAttribute="top" secondItem="Hvh-Gq-72o" secondAttribute="bottom" constant="20" id="KVN-nM-dVh"/>
-                            <constraint firstItem="Hvh-Gq-72o" firstAttribute="top" secondItem="2fs-Tx-Fhy" secondAttribute="bottom" constant="20" id="OZL-vH-Hth"/>
                             <constraint firstItem="2fs-Tx-Fhy" firstAttribute="leading" secondItem="cqI-kh-lAn" secondAttribute="leading" constant="20" id="PjH-pa-lFq"/>
+                            <constraint firstItem="arM-eA-13z" firstAttribute="top" secondItem="Hvh-Gq-72o" secondAttribute="bottom" constant="20" id="Z9a-wQ-Ixy"/>
                             <constraint firstItem="2fs-Tx-Fhy" firstAttribute="top" secondItem="cqI-kh-lAn" secondAttribute="top" constant="20" id="lnZ-EU-DV2"/>
-                            <constraint firstItem="arM-eA-13z" firstAttribute="top" secondItem="CsB-Im-hzg" secondAttribute="bottom" constant="20" id="oZp-1f-E1a"/>
-                            <constraint firstItem="CsB-Im-hzg" firstAttribute="top" secondItem="2fs-Tx-Fhy" secondAttribute="bottom" constant="20" id="ogQ-lc-jfy"/>
-                            <constraint firstItem="Hvh-Gq-72o" firstAttribute="leading" secondItem="cqI-kh-lAn" secondAttribute="leading" constant="20" id="tJE-Ac-qdd"/>
+                            <constraint firstItem="Hvh-Gq-72o" firstAttribute="leading" secondItem="cqI-kh-lAn" secondAttribute="leading" constant="20" id="m7j-Rl-CJd"/>
+                            <constraint firstItem="arM-eA-13z" firstAttribute="top" secondItem="CsB-Im-hzg" secondAttribute="bottom" constant="20" id="oQv-7w-nPL"/>
                             <constraint firstItem="cqI-kh-lAn" firstAttribute="bottom" secondItem="arM-eA-13z" secondAttribute="bottom" constant="20" id="ta8-1s-OWK"/>
                             <constraint firstItem="cqI-kh-lAn" firstAttribute="trailing" secondItem="arM-eA-13z" secondAttribute="trailing" constant="10" id="wXE-Mi-fOq"/>
+                            <constraint firstItem="cqI-kh-lAn" firstAttribute="trailing" secondItem="CsB-Im-hzg" secondAttribute="trailing" constant="20" id="x7r-zA-ob5"/>
                         </constraints>
                     </view>
                     <connections>
