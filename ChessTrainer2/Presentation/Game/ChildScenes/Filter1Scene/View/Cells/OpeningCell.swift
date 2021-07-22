@@ -11,6 +11,8 @@ class OpeningCell: UITableViewCell {
     
     @IBOutlet weak var fancyView: UIView!
     @IBOutlet weak var openingNameLabel: UILabel!
+    @IBOutlet weak var variations: UILabel!
+    
     var opening: UniqueOpening?
     
     override func awakeFromNib() {
@@ -24,19 +26,24 @@ class OpeningCell: UITableViewCell {
         guard let opening = opening else { return }
         
         openingNameLabel.text = opening.name
+        variations.text = "\(opening.openings.count) Variations"
+    
         fancyView.layer.shadowColor = ProjectColors.purple.cgColor
         fancyView.layer.shadowOpacity = 0.3
         fancyView.backgroundColor = ProjectColors.white
         openingNameLabel.textColor = ProjectColors.purple
+        variations.textColor = .gray
         //openingNameLabel.frame = fancyView.bounds
         
         if opening.isSelected {
             fancyView.backgroundColor = ProjectColors.purple
             openingNameLabel.textColor = ProjectColors.white
+            variations.textColor = .white
         }
         else {
             fancyView.backgroundColor = ProjectColors.white
             openingNameLabel.textColor = ProjectColors.purple
+            variations.textColor = .gray
         }
     }
     

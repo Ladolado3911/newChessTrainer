@@ -121,7 +121,7 @@ class OpeningParser {
             uniqueOpenings2.forEach { uniqueName in
                 var uniqueOpening = UniqueOpening()
                 openings.forEach { jsonOpening in
-                    if uniqueName.contains(jsonOpening.name!) {
+                    if jsonOpening.name!.contains(uniqueName) {
                         uniqueOpening.openings.append(Opening(with: jsonOpening))
                     }
                 }

@@ -21,8 +21,14 @@
                         <rect key="frame" x="30" y="21" width="405" height="205"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opening Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-5D-4Ge">
-                                <rect key="frame" x="0.0" y="0.0" width="405" height="205"/>
+                                <rect key="frame" x="0.0" y="0.0" width="405" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Variations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbq-LP-jCc">
+                                <rect key="frame" x="0.0" y="34" width="405" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -31,8 +37,10 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="IgQ-5D-4Ge" secondAttribute="trailing" id="1y8-Yu-cGZ"/>
                             <constraint firstItem="IgQ-5D-4Ge" firstAttribute="top" secondItem="KOl-uf-y3d" secondAttribute="top" id="37x-sF-NbM"/>
-                            <constraint firstAttribute="bottom" secondItem="IgQ-5D-4Ge" secondAttribute="bottom" id="DeJ-DU-4Um"/>
+                            <constraint firstAttribute="trailing" secondItem="Rbq-LP-jCc" secondAttribute="trailing" id="AbG-ed-LNc"/>
+                            <constraint firstItem="Rbq-LP-jCc" firstAttribute="top" secondItem="IgQ-5D-4Ge" secondAttribute="bottom" constant="10" id="ClI-69-fQh"/>
                             <constraint firstItem="IgQ-5D-4Ge" firstAttribute="leading" secondItem="KOl-uf-y3d" secondAttribute="leading" id="V1L-fj-nbb"/>
+                            <constraint firstItem="Rbq-LP-jCc" firstAttribute="leading" secondItem="KOl-uf-y3d" secondAttribute="leading" id="jCe-eC-YEr"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -52,6 +60,7 @@
             <connections>
                 <outlet property="fancyView" destination="KOl-uf-y3d" id="Q8c-ed-rdB"/>
                 <outlet property="openingNameLabel" destination="IgQ-5D-4Ge" id="uBt-gk-42N"/>
+                <outlet property="variations" destination="Rbq-LP-jCc" id="cAy-7M-9fJ"/>
             </connections>
             <point key="canvasLocation" x="152.89855072463769" y="138.95089285714286"/>
         </tableViewCell>
