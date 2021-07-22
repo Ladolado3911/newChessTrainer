@@ -28,7 +28,7 @@ class OpeningFilterTableDataSource: GenericTableDataSource<[UniqueOpening], Open
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        100
+        150
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

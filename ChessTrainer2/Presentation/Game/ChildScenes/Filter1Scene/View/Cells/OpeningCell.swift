@@ -12,6 +12,7 @@ class OpeningCell: UITableViewCell {
     @IBOutlet weak var fancyView: UIView!
     @IBOutlet weak var openingNameLabel: UILabel!
     @IBOutlet weak var variations: UILabel!
+    @IBOutlet weak var mastery: UILabel!
     
     var opening: UniqueOpening?
     
@@ -33,17 +34,20 @@ class OpeningCell: UITableViewCell {
         fancyView.backgroundColor = ProjectColors.white
         openingNameLabel.textColor = ProjectColors.purple
         variations.textColor = .gray
+        mastery.textColor = .gray
         //openingNameLabel.frame = fancyView.bounds
         
         if opening.isSelected {
             fancyView.backgroundColor = ProjectColors.purple
             openingNameLabel.textColor = ProjectColors.white
             variations.textColor = .white
+            mastery.textColor = .white
         }
         else {
             fancyView.backgroundColor = ProjectColors.white
             openingNameLabel.textColor = ProjectColors.purple
             variations.textColor = .gray
+            mastery.textColor = .gray
         }
     }
     

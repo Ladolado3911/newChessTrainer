@@ -20,15 +20,21 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOl-uf-y3d">
                         <rect key="frame" x="30" y="21" width="405" height="205"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opening Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-5D-4Ge">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Opening Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-5D-4Ge">
                                 <rect key="frame" x="0.0" y="0.0" width="405" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Variations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbq-LP-jCc">
-                                <rect key="frame" x="0.0" y="34" width="405" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="34" width="405" height="130"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Mastery: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBm-Rl-n6i">
+                                <rect key="frame" x="0.0" y="174" width="405" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -40,7 +46,11 @@
                             <constraint firstAttribute="trailing" secondItem="Rbq-LP-jCc" secondAttribute="trailing" id="AbG-ed-LNc"/>
                             <constraint firstItem="Rbq-LP-jCc" firstAttribute="top" secondItem="IgQ-5D-4Ge" secondAttribute="bottom" constant="10" id="ClI-69-fQh"/>
                             <constraint firstItem="IgQ-5D-4Ge" firstAttribute="leading" secondItem="KOl-uf-y3d" secondAttribute="leading" id="V1L-fj-nbb"/>
+                            <constraint firstItem="KBm-Rl-n6i" firstAttribute="leading" secondItem="KOl-uf-y3d" secondAttribute="leading" id="bt3-dv-hxm"/>
+                            <constraint firstAttribute="trailing" secondItem="KBm-Rl-n6i" secondAttribute="trailing" id="iYV-B1-3va"/>
                             <constraint firstItem="Rbq-LP-jCc" firstAttribute="leading" secondItem="KOl-uf-y3d" secondAttribute="leading" id="jCe-eC-YEr"/>
+                            <constraint firstItem="KBm-Rl-n6i" firstAttribute="top" secondItem="Rbq-LP-jCc" secondAttribute="bottom" constant="10" id="luB-ke-9zC"/>
+                            <constraint firstAttribute="bottom" secondItem="KBm-Rl-n6i" secondAttribute="bottom" constant="10" id="rut-xj-YxB"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -59,6 +69,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="fancyView" destination="KOl-uf-y3d" id="Q8c-ed-rdB"/>
+                <outlet property="mastery" destination="KBm-Rl-n6i" id="jMp-uf-kap"/>
                 <outlet property="openingNameLabel" destination="IgQ-5D-4Ge" id="uBt-gk-42N"/>
                 <outlet property="variations" destination="Rbq-LP-jCc" id="cAy-7M-9fJ"/>
             </connections>
