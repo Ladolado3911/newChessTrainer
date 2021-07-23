@@ -36,6 +36,10 @@ class OpeningFilterController: GameViewController {
                                                   with: self)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        openingViewModel.removeFilter()
+    }
+    
     @IBAction func onDeselectAll(_ sender: Any) {
         selectedOpenings = []
         openingViewModel.resetTable()

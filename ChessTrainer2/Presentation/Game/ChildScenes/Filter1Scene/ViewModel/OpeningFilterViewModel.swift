@@ -69,6 +69,10 @@ class OpeningFilterViewModel {
         rootController.navigationItem.leftBarButtonItem = backButton
     }
     
+    func removeFilter() {
+        searchBarViewModel.disableFilter()
+    }
+    
     func resetTable() {
         dataSourceViewModel.resetTableView()
     }
