@@ -31,7 +31,7 @@
 		2478474D26A57EC300354E25 /* OpeningCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2478474B26A57EC300354E25 /* OpeningCell.xib */; };
 		2478474F26A57ED800354E25 /* PickDifficultyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2478474E26A57ED800354E25 /* PickDifficultyViewModel.swift */; };
 		2478475226A5853300354E25 /* OpeningFilterTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2478475026A5853300354E25 /* OpeningFilterTableDataSource.swift */; };
-		2478475326A5853300354E25 /* PickOpeningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2478475126A5853300354E25 /* PickOpeningViewModel.swift */; };
+		2478475326A5853300354E25 /* OpeningFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2478475126A5853300354E25 /* OpeningFilterViewModel.swift */; };
 		249B748126779024008E88A9 /* LeaderboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249B748026779024008E88A9 /* LeaderboardController.swift */; };
 		249B748326779044008E88A9 /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249B748226779044008E88A9 /* LogInController.swift */; };
 		249B74852677905D008E88A9 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249B74842677905D008E88A9 /* RegisterController.swift */; };
@@ -54,6 +54,8 @@
 		24F0411826A40FE80095BB4B /* UserBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0411726A40FE80095BB4B /* UserBase.swift */; };
 		24F0411A26A410100095BB4B /* UserCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0411926A410100095BB4B /* UserCoordinatorProtocol.swift */; };
 		24F0411C26A410310095BB4B /* UserCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0411B26A410310095BB4B /* UserCoordinatorDelegate.swift */; };
+		3F398C7726AAC56F008A32EA /* SearchbarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F398C7626AAC56F008A32EA /* SearchbarProtocol.swift */; };
+		3F398C7926AAC661008A32EA /* OpeningFilterSearchbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F398C7826AAC661008A32EA /* OpeningFilterSearchbar.swift */; };
 		3F5E26752663D90600100EBB /* intExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E26742663D90600100EBB /* intExtension.swift */; };
 		3F5E267A2663DE3100100EBB /* StatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E26792663DE3100100EBB /* StatsController.swift */; };
 		3F5F36FD2662D5EF00FCD034 /* Moves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F36FC2662D5EF00FCD034 /* Moves.swift */; };
@@ -120,7 +122,7 @@
 		2478474B26A57EC300354E25 /* OpeningCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpeningCell.xib; sourceTree = "<group>"; };
 		2478474E26A57ED800354E25 /* PickDifficultyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickDifficultyViewModel.swift; sourceTree = "<group>"; };
 		2478475026A5853300354E25 /* OpeningFilterTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningFilterTableDataSource.swift; sourceTree = "<group>"; };
-		2478475126A5853300354E25 /* PickOpeningViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickOpeningViewModel.swift; sourceTree = "<group>"; };
+		2478475126A5853300354E25 /* OpeningFilterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningFilterViewModel.swift; sourceTree = "<group>"; };
 		249B748026779024008E88A9 /* LeaderboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardController.swift; sourceTree = "<group>"; };
 		249B748226779044008E88A9 /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
 		249B74842677905D008E88A9 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,8 @@
 		24F0411726A40FE80095BB4B /* UserBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBase.swift; sourceTree = "<group>"; };
 		24F0411926A410100095BB4B /* UserCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		24F0411B26A410310095BB4B /* UserCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		3F398C7626AAC56F008A32EA /* SearchbarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchbarProtocol.swift; sourceTree = "<group>"; };
+		3F398C7826AAC661008A32EA /* OpeningFilterSearchbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningFilterSearchbar.swift; sourceTree = "<group>"; };
 		3F5E26742663D90600100EBB /* intExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = intExtension.swift; sourceTree = "<group>"; };
 		3F5E26792663DE3100100EBB /* StatsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsController.swift; sourceTree = "<group>"; };
 		3F5F36FC2662D5EF00FCD034 /* Moves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moves.swift; sourceTree = "<group>"; };
@@ -400,6 +404,14 @@
 			path = Filter2Scene;
 			sourceTree = "<group>";
 		};
+		3F398C7526AAC557008A32EA /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				3F398C7626AAC56F008A32EA /* SearchbarProtocol.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		3F6D842D26A4310300C21EA5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -437,7 +449,8 @@
 			isa = PBXGroup;
 			children = (
 				2478475026A5853300354E25 /* OpeningFilterTableDataSource.swift */,
-				2478475126A5853300354E25 /* PickOpeningViewModel.swift */,
+				2478475126A5853300354E25 /* OpeningFilterViewModel.swift */,
+				3F398C7826AAC661008A32EA /* OpeningFilterSearchbar.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -480,6 +493,7 @@
 		3F6D843626A4418300C21EA5 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				3F398C7526AAC557008A32EA /* Objects */,
 				3F6D843726A441C900C21EA5 /* DataSource */,
 			);
 			path = Protocols;
@@ -806,6 +820,7 @@
 				3F6FB367265FD2B400E41C41 /* TestOpenings.swift in Sources */,
 				24F0411A26A410100095BB4B /* UserCoordinatorProtocol.swift in Sources */,
 				3F6D843D26A441DF00C21EA5 /* Typealiases.swift in Sources */,
+				3F398C7726AAC56F008A32EA /* SearchbarProtocol.swift in Sources */,
 				3F6C335A266CCB010070E83C /* TabBarController.swift in Sources */,
 				2478474C26A57EC300354E25 /* OpeningCell.swift in Sources */,
 				2478474726A57E9500354E25 /* OpeningFilterController.swift in Sources */,
@@ -824,7 +839,7 @@
 				24F0411826A40FE80095BB4B /* UserBase.swift in Sources */,
 				3F6C3362266CEECB0070E83C /* Animator.swift in Sources */,
 				247247CE26A32B630050AE89 /* Base.swift in Sources */,
-				2478475326A5853300354E25 /* PickOpeningViewModel.swift in Sources */,
+				2478475326A5853300354E25 /* OpeningFilterViewModel.swift in Sources */,
 				3F6FB362265FD26F00E41C41 /* GeneralStyleLabel.swift in Sources */,
 				3F5E267A2663DE3100100EBB /* StatsController.swift in Sources */,
 				3F6FB372265FD5AC00E41C41 /* Filter.swift in Sources */,
@@ -864,6 +879,7 @@
 				249B748326779044008E88A9 /* LogInController.swift in Sources */,
 				3F6FB36B265FD33900E41C41 /* testExtension.swift in Sources */,
 				3F6FB360265FD26F00E41C41 /* GeneralStyleButton.swift in Sources */,
+				3F398C7926AAC661008A32EA /* OpeningFilterSearchbar.swift in Sources */,
 				24F0410626A404470095BB4B /* GameCoordinatorProtocol.swift in Sources */,
 				247247C926A32AF50050AE89 /* CoordinatorProtocol.swift in Sources */,
 				246EF1F62691AE41000056AF /* DiffiucultyPickerController.swift in Sources */,

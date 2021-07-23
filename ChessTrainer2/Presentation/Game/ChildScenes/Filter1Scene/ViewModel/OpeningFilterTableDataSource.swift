@@ -64,10 +64,10 @@ class OpeningFilterTableDataSource: GenericTableDataSource<[UniqueOpening], Open
     
     func setNextButtonState() {
         if nothingIsSelected {
-            rootController.nextButton.isEnabled = false
+            rootController.openingViewModel.nextButton.isEnabled = false
         }
         else {
-            rootController.nextButton.isEnabled = true
+            rootController.openingViewModel.nextButton.isEnabled = true
         }
     }
     

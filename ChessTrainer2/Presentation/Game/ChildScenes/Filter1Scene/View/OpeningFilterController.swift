@@ -11,68 +11,34 @@ class OpeningFilterController: GameViewController {
     
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var selectedItemsLabel: UILabel!
-
-    var dataSource: OpeningFilterTableDataSource!
-    var openingViewModel: PickOpeningViewModel!
-    var rootController: StartController!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    var openingViewModel: OpeningFilterViewModel!
     var selectedRowCount: Int = 0
-    
-    var nextButton: UIBarButtonItem!
-    var backButton: UIBarButtonItem!
-    
+
     var openings: [UniqueOpening] {
         let openingParser = OpeningParser()
         return openingParser.uniqueOpenings
     }
-    
+
     var selectedOpenings: [UniqueOpening] = []
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBarButtons()
+        configureViewModel()
+        openingViewModel.setUpLayout()
+        openingViewModel.createObjects()
+    }
 
-        let cell = Cell(nibName: "OpeningCell", identifier: "OpeningCell")
-        dataSource = OpeningFilterTableDataSource(tableView: tblView,
-                                                  cellsArray: [cell],
-                                                  rootController: self,
-                                                  dataArray: openings,
-                                                  dataElement: String.self)
-
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        //rootController.chosenOpenings = chosenOpenings
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-    }
-    
-    func setBarButtons() {
-        nextButton = UIBarButtonItem(title: "Next",
-                                     style: .done,
-                                     target: self,
-                                     action: #selector(onNextButton))
-        
-        backButton = UIBarButtonItem(title: "Back",
-                                         style: .plain,
-                                         target: self,
-                                         action: #selector(onBackButton))
-
-        navigationItem.rightBarButtonItem = nextButton
-        navigationItem.leftBarButtonItem = backButton
-        
-        nextButton.isEnabled = false
+    func configureViewModel() {
+        openingViewModel = OpeningFilterViewModel(with: tblView,
+                                                  with: searchBar,
+                                                  with: self)
     }
     
     @IBAction func onDeselectAll(_ sender: Any) {
         selectedOpenings = []
-        dataSource.resetTableView()
+        openingViewModel.resetTable()
     }
     
     @objc func onNextButton(sender: UIBarButtonItem) {
@@ -82,7 +48,7 @@ class OpeningFilterController: GameViewController {
     }
     
     @objc func onBackButton(sender: UIBarButtonItem) {
-        dataSource.resetTableView()
+        openingViewModel.resetTable()
         coordinator?.popController()
     }
 }

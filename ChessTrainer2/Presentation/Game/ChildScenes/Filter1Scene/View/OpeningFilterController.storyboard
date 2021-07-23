@@ -56,6 +56,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="2fs-Tx-Fhy" id="puM-vf-3qs"/>
                         <outlet property="selectedItemsLabel" destination="Hvh-Gq-72o" id="v0e-v3-1Dc"/>
                         <outlet property="tblView" destination="arM-eA-13z" id="TIe-O4-lDv"/>
                     </connections>

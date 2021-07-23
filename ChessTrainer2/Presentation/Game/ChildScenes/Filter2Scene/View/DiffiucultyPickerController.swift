@@ -48,7 +48,7 @@ class DiffiucultyPickerController: GameViewController {
     
     @objc func onBackButton2(sender: UIBarButtonItem) {
         guard let prevController = previousController else { return }
-        prevController.dataSource.resetTableView()
+        prevController.openingViewModel.resetTable()
         prevController.selectedOpenings = []
         coordinator?.popController()
     }
