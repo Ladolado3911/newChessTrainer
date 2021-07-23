@@ -8,7 +8,7 @@
 import UIKit
 
 class OpeningFilterTableDataSource: GenericTableDataSource<[UniqueOpening], OpeningFilterController, String.Type> {
-        
+
     var nothingIsSelected: Bool {
         let boolData = data!.map { $0.isSelected }
         if boolData.contains(true) {
@@ -37,7 +37,21 @@ class OpeningFilterTableDataSource: GenericTableDataSource<[UniqueOpening], Open
 //    }
     
     func updateTable(with data: [UniqueOpening]) {
-        self.data = data
+        var newData = data
+        //let originalData = self.data!
+        
+        let newDataNames = data.map { $0.name }
+        //let originalDataNames = self.data!.map { $0.name }
+        guard let selectedOpeningNames = UserDefaults.standard.value(forKey: "SelectedOpeningNames") as? [String] else { return }
+        
+        for item in 0..<selectedOpeningNames.count {
+            let openingName = selectedOpeningNames[item]
+
+            if newDataNames.contains(openingName) {
+                newData[item].isSelected = true
+            }
+        }
+        self.data = newData
         self.tableview.reloadData()
     }
     
@@ -66,11 +80,13 @@ class OpeningFilterTableDataSource: GenericTableDataSource<[UniqueOpening], Open
                 
                 if newOpening.isSelected {
                     rootController.selectedOpenings.append(newOpening)
+                    SelectedDataManager.shared.addToSelections(openingName: newOpening.name!)
                     rootController.selectedRowCount += 1
                     rootController.selectedItemsLabel.text = "\(rootController.selectedRowCount) items selected"
                 }
                 else {
                     rootController.selectedOpenings = rootController.selectedOpenings.filter { $0.name != newOpening.name }
+                    SelectedDataManager.shared.removeFromSelections(openingName: newOpening.name!)
                     rootController.selectedRowCount -= 1
                     rootController.selectedItemsLabel.text = "\(rootController.selectedRowCount) items selected"
                 }
@@ -82,14 +98,19 @@ class OpeningFilterTableDataSource: GenericTableDataSource<[UniqueOpening], Open
         data = tempData
         setNextButtonState()
         tableView.reloadData()
+        
+//        let selectedNames = rootController?.selectedOpenings.map { $0.name }
+//        UserDefaults.standard.setValue(selectedNames, forKey: "SelectedOpeningNames")
     }
     
     func setNextButtonState() {
         if nothingIsSelected {
-            rootController.openingViewModel.nextButton.isEnabled = false
+            rootController.nextButton.isEnabled = false
+            rootController.deselectButton.isEnabled = false
         }
         else {
-            rootController.openingViewModel.nextButton.isEnabled = true
+            rootController.nextButton.isEnabled = true
+            rootController.deselectButton.isEnabled = true
         }
     }
     
@@ -107,10 +128,13 @@ class OpeningFilterTableDataSource: GenericTableDataSource<[UniqueOpening], Open
                 tempData.append(uniqueOpening)
             }
         }
+        
         data = tempData
         setNextButtonState()
         rootController.selectedRowCount = 0
         rootController.selectedItemsLabel.text = "\(rootController.selectedRowCount) items selected"
+        
+        UserDefaults.standard.setValue([], forKey: "SelectedOpeningNames")
         tableview.reloadData()
     }
 }

@@ -40,6 +40,7 @@ final class OpeningFilterSearchbar: NSObject, SearchbarProtocol {
         guard let dataSource = dataSource else { return }
         rootController!.view.endEditing(true)
         isSearchBarActive = false
+        print("disabling filter")
         dataSource.tableview.reloadData()
     }
     
@@ -53,8 +54,15 @@ final class OpeningFilterSearchbar: NSObject, SearchbarProtocol {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let filteredUniqueOpenings = (data!.filter { $0.name!.contains(searchText) || testIfArrayContains(input: $0.openings.map { $0.name }, testString: searchText) })
-
         isSearchBarActive = true
+        
+        for opening in filteredUniqueOpenings {
+            if opening.isSelected {
+                SelectedDataManager.shared.removeFromSelections(openingName: opening.name!)
+                print("removed \(opening.name!)")
+            }
+        }
+
         filteredData = filteredUniqueOpenings
         dataSource?.updateTable(with: filteredData!)
         if searchText == "" {

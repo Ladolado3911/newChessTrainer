@@ -16,9 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Enter opening name" translatesAutoresizingMaskIntoConstraints="NO" id="2fs-Tx-Fhy">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Enter opening name" translatesAutoresizingMaskIntoConstraints="NO" id="2fs-Tx-Fhy">
                                 <rect key="frame" x="20" y="64" width="374" height="51"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="arM-eA-13z">
                                 <rect key="frame" x="10" y="185" width="394" height="657"/>
@@ -56,6 +56,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="deselectButton" destination="CsB-Im-hzg" id="RT3-Fd-zea"/>
                         <outlet property="searchBar" destination="2fs-Tx-Fhy" id="puM-vf-3qs"/>
                         <outlet property="selectedItemsLabel" destination="Hvh-Gq-72o" id="v0e-v3-1Dc"/>
                         <outlet property="tblView" destination="arM-eA-13z" id="TIe-O4-lDv"/>

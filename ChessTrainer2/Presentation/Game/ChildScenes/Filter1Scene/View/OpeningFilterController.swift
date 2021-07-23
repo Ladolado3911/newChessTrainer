@@ -12,6 +12,10 @@ class OpeningFilterController: GameViewController {
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var selectedItemsLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var deselectButton: UIButton!
+    
+    var nextButton: UIBarButtonItem!
+    var backButton: UIBarButtonItem!
     
     var openingViewModel: OpeningFilterViewModel!
     var selectedRowCount: Int = 0
@@ -25,8 +29,8 @@ class OpeningFilterController: GameViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpLayout()
         configureViewModel()
-        openingViewModel.setUpLayout()
         openingViewModel.createObjects()
     }
 
@@ -34,6 +38,28 @@ class OpeningFilterController: GameViewController {
         openingViewModel = OpeningFilterViewModel(with: tblView,
                                                   with: searchBar,
                                                   with: self)
+    }
+    
+    func setUpLayout() {
+        setUpButtons()
+    }
+    
+    private func setUpButtons() {
+        nextButton = UIBarButtonItem(title: "Next",
+                                     style: .done,
+                                     target: self,
+                                     action: #selector(onNextButton))
+        
+        backButton = UIBarButtonItem(title: "Back",
+                                     style: .plain,
+                                     target: self,
+                                     action: #selector(onBackButton))
+        
+        nextButton.isEnabled = false
+        deselectButton.isEnabled = false
+        
+        navigationItem.rightBarButtonItem = nextButton
+        navigationItem.leftBarButtonItem = backButton
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -48,6 +74,7 @@ class OpeningFilterController: GameViewController {
     @objc func onNextButton(sender: UIBarButtonItem) {
         let toBePrinted = selectedOpenings.map { $0.name }
         print(toBePrinted)
+        print("Userdefaults: \(SelectedDataManager.shared.selectedOpeningNames)")
         coordinator?.proceedToDifficultyPicker(rootController: self)
     }
     

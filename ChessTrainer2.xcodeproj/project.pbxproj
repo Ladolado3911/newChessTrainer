@@ -56,6 +56,7 @@
 		24F0411C26A410310095BB4B /* UserCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0411B26A410310095BB4B /* UserCoordinatorDelegate.swift */; };
 		3F398C7726AAC56F008A32EA /* SearchbarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F398C7626AAC56F008A32EA /* SearchbarProtocol.swift */; };
 		3F398C7926AAC661008A32EA /* OpeningFilterSearchbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F398C7826AAC661008A32EA /* OpeningFilterSearchbar.swift */; };
+		3F398C7B26AB0ACB008A32EA /* SelectedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F398C7A26AB0ACB008A32EA /* SelectedDataManager.swift */; };
 		3F5E26752663D90600100EBB /* intExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E26742663D90600100EBB /* intExtension.swift */; };
 		3F5E267A2663DE3100100EBB /* StatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E26792663DE3100100EBB /* StatsController.swift */; };
 		3F5F36FD2662D5EF00FCD034 /* Moves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F36FC2662D5EF00FCD034 /* Moves.swift */; };
@@ -147,6 +148,7 @@
 		24F0411B26A410310095BB4B /* UserCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		3F398C7626AAC56F008A32EA /* SearchbarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchbarProtocol.swift; sourceTree = "<group>"; };
 		3F398C7826AAC661008A32EA /* OpeningFilterSearchbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningFilterSearchbar.swift; sourceTree = "<group>"; };
+		3F398C7A26AB0ACB008A32EA /* SelectedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDataManager.swift; sourceTree = "<group>"; };
 		3F5E26742663D90600100EBB /* intExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = intExtension.swift; sourceTree = "<group>"; };
 		3F5E26792663DE3100100EBB /* StatsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsController.swift; sourceTree = "<group>"; };
 		3F5F36FC2662D5EF00FCD034 /* Moves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moves.swift; sourceTree = "<group>"; };
@@ -451,6 +453,7 @@
 				2478475026A5853300354E25 /* OpeningFilterTableDataSource.swift */,
 				2478475126A5853300354E25 /* OpeningFilterViewModel.swift */,
 				3F398C7826AAC661008A32EA /* OpeningFilterSearchbar.swift */,
+				3F398C7A26AB0ACB008A32EA /* SelectedDataManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -883,6 +886,7 @@
 				24F0410626A404470095BB4B /* GameCoordinatorProtocol.swift in Sources */,
 				247247C926A32AF50050AE89 /* CoordinatorProtocol.swift in Sources */,
 				246EF1F62691AE41000056AF /* DiffiucultyPickerController.swift in Sources */,
+				3F398C7B26AB0ACB008A32EA /* SelectedDataManager.swift in Sources */,
 				3F6FB31A265FCE7000E41C41 /* ChessTrainer2.xcdatamodeld in Sources */,
 				247247C826A32AF50050AE89 /* AppCoordinator.swift in Sources */,
 				24F0411026A4067E0095BB4B /* StatsCoordinatorDelegate.swift in Sources */,

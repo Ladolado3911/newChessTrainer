@@ -22,7 +22,7 @@ class OpeningParser {
     
     var uniqueOpeningNames: [String] {
         var result: [String] = []
-        var tempDict: [String: String] = [:]
+        //var tempDict: [String: String] = [:]
         let datta = fetchOpenings()
         guard let data = datta else { return [] }
 //        datta!.forEach {
@@ -115,8 +115,8 @@ class OpeningParser {
             let openings = try JSONDecoder().decode([JsonOpening].self, from: data)
             
             var uniqueArray: [UniqueOpening] = []
-            let uniqueOpeningNames = getUniqueNames(data: openings)
-            print(uniqueOpeningNames)
+            //let uniqueOpeningNames = getUniqueNames(data: openings)
+            //print(uniqueOpeningNames)
             
             uniqueOpenings2.forEach { uniqueName in
                 var uniqueOpening = UniqueOpening()

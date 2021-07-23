@@ -50,6 +50,7 @@ class DiffiucultyPickerController: GameViewController {
         guard let prevController = previousController else { return }
         prevController.openingViewModel.resetTable()
         prevController.selectedOpenings = []
+        UserDefaults.standard.setValue([], forKey: "SelectedOpeningNames")
         coordinator?.popController()
     }
 }

@@ -48,27 +48,6 @@ class OpeningFilterViewModel {
                                                     with: rootController)
     }
     
-    func setUpLayout() {
-        setUpButtons()
-    }
-    
-    private func setUpButtons() {
-        nextButton = UIBarButtonItem(title: "Next",
-                                     style: .done,
-                                     target: self,
-                                     action: #selector(rootController.onNextButton))
-        
-        backButton = UIBarButtonItem(title: "Back",
-                                     style: .plain,
-                                     target: self,
-                                     action: #selector(rootController.onBackButton))
-        
-        nextButton.isEnabled = false
-        
-        rootController.navigationItem.rightBarButtonItem = nextButton
-        rootController.navigationItem.leftBarButtonItem = backButton
-    }
-    
     func removeFilter() {
         searchBarViewModel.disableFilter()
     }
