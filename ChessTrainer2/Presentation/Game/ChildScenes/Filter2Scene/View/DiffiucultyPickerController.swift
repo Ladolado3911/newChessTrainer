@@ -10,7 +10,7 @@ import UIKit
 class DiffiucultyPickerController: GameViewController {
 
     @IBOutlet weak var difficultyPicker: UIPickerView!
-    var difficultyViewModel: PickDifficultyViewModel!
+    unowned var difficultyViewModel: PickDifficultyViewModel!
     var previousController: OpeningFilterController?
     
     private var selectedOpenings: [UniqueOpening] {
@@ -21,10 +21,9 @@ class DiffiucultyPickerController: GameViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setBarButtons()
-        //difficultyViewModel = PickDifficultyViewModel(with: difficultyPicker, with: OpeningParser(), with: previousController)
-        selectedOpenings.forEach { uniqueOpening in
-            print(uniqueOpening.openings.count)
-        }
+        difficultyViewModel = PickDifficultyViewModel(with: difficultyPicker,
+                                                      with: previousController)
+
     }
     
     func setBarButtons() {

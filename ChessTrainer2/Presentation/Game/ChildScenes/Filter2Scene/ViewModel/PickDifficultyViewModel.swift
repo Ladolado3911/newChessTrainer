@@ -8,30 +8,43 @@
 import Foundation
 import UIKit
 
+struct MinMax {
+    var min: Int!
+    var max: Int!
+    
+    init(minimum min: Int, maximum max: Int) {
+        self.min = min
+        self.max = max
+    }
+}
+
+
 class PickDifficultyViewModel: PickerView {
 
-    weak var openingParser: OpeningParser!
+    private var openingParser: OpeningParser = OpeningParser()
+    private var data: [Opening]!
     weak var difficultyPicker: UIPickerView!
     weak var rootController: StartController!
     
-    lazy var openings: [String] = { [weak self] in
-        guard let self = self else { return [""] }
-        return self.openingParser.uniqueOpeningNames
-    }()
-    
-    init(with picker: UIPickerView, with openingParser: OpeningParser, with rootController: StartController) {
+    var minMaxMoves: MinMax {
+        let minMovesCount = ( data!.map { $0.movesCount } ).min()
+        let maxMovesCount = ( data!.map { $0.movesCount } ).max()
+        
+        return MinMax(minimum: minMovesCount!, maximum: maxMovesCount!)
+    }
+
+    init(with picker: UIPickerView, with data: [Opening]) {
         super.init()
         self.difficultyPicker = picker
-        self.openingParser = openingParser
-        self.rootController = rootController 
+        self.data = data
         configPicker()
     }
     
-    func configPicker() {
+    private func configPicker() {
         difficultyPicker.dataSource = self
         difficultyPicker.delegate = self
     }
-    
+
     func getLevelFilter() -> Int {
         let difficultyFilter = difficultyPicker.selectedRow(inComponent: 0) + 3
         return difficultyFilter
@@ -42,10 +55,10 @@ class PickDifficultyViewModel: PickerView {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        4
+        data.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        "Level \(row + 1)"
+        "\(row + 1) Moves"
     }
 }

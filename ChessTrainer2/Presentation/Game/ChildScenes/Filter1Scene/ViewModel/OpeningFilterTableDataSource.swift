@@ -18,24 +18,7 @@ class OpeningFilterTableDataSource: GenericTableDataSource<[UniqueOpening], Open
             return true
         }
     }
-    
-//    var searchBarViewModel: OpeningFilterSearchbar? {
-//        guard let rootController = rootController else { return nil }
-//        return rootController.openingViewModel.searchBarViewModel
-//    }
-//    
-//    var filtered: [UniqueOpening] {
-//        guard let searchBarViewModel = searchBarViewModel else { return [] }
-//        guard let filtered = searchBarViewModel.filteredData else { return [] }
-//        return filtered
-//    }
-//    
-//    var isSearchBarActive: Bool {
-//        guard let searchBarViewModel = searchBarViewModel else { return false }
-//        guard let isActive = searchBarViewModel.isSearchBarActive else { return false }
-//        return isActive
-//    }
-    
+
     func updateTable(with data: [UniqueOpening]) {
         var newData = data
         //let originalData = self.data!

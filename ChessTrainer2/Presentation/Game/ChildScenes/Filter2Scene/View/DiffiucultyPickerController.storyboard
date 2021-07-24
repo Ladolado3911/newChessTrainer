@@ -21,10 +21,7 @@
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNc-h9-UzM" customClass="GeneralStyleButton" customModule="ChessTrainer2" customModuleProvider="target">
                                 <rect key="frame" x="20" y="692" width="374" height="30"/>
-                                <state key="normal" title="Set Difficulty"/>
-                                <connections>
-                                    <action selector="onSetDifficulty:" destination="Eeo-7z-ByE" eventType="touchUpInside" id="D8I-eQ-afu"/>
-                                </connections>
+                                <state key="normal" title="Play"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zR0-uo-yeW"/>
