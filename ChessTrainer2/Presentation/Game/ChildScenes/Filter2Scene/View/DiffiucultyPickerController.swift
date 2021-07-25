@@ -7,6 +7,26 @@
 
 import UIKit
 
+struct Scope {
+    var low: Int!
+    var high: Int!
+    
+    init(_ low: Int, _ high: Int) {
+        self.low = low
+        self.high = high
+    }
+}
+
+enum Difficulty {
+    case beginner(Scope)
+    case junior(Scope)
+    case experienced(Scope)
+    case master(Scope)
+}
+
+
+
+
 class DiffiucultyPickerController: GameViewController {
 
     var difficultyViewModel: PickDifficultyViewModel!
@@ -46,18 +66,18 @@ class DiffiucultyPickerController: GameViewController {
     
     @IBAction func onEasy(_ sender: Any) {
         let level = 3
-        coordinator?.proceedToGame(arr: openingsArr, movesCountFilter: level)
+        coordinator?.proceedToGame(arr: openingsArr, movesCountFilter: level, difficulty: .beginner(Scope(0, 3)))
     }
     
     @IBAction func onMedium(_ sender: Any) {
-        let level = 5
-        coordinator?.proceedToGame(arr: openingsArr, movesCountFilter: level)
+        let level = 6
+        coordinator?.proceedToGame(arr: openingsArr, movesCountFilter: level, difficulty: .junior(Scope(3, 6)))
     }
     
     
     @IBAction func onHard(_ sender: Any) {
         let level = 10
-        coordinator?.proceedToGame(arr: openingsArr, movesCountFilter: level)
+        coordinator?.proceedToGame(arr: openingsArr, movesCountFilter: level, difficulty: .experienced(Scope(6, 10)))
     }
     
     

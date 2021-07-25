@@ -68,10 +68,15 @@ final class GameCoordinator: GameCoordinatorProtocol {
         navigationController?.pushViewController(vc2, animated: true)
     }
     
-    func proceedToGame(arr: [Opening], movesCountFilter moves: Int) {
+    func proceedToGame(arr: [Opening],
+                       movesCountFilter moves: Int,
+                       difficulty diff: Difficulty) {
+        
         let vc2 = OpeningGameController.instantiateFromStoryboard()
         vc2.coordinator = self
-        let data = getFilteredOpenings(movesCountFilter: moves, arr: arr)
+        let data = getFilteredOpenings(movesCountFilter: moves,
+                                       arr: arr,
+                                       difficulty: diff)
         vc2.openingsData = data
         navigationController?.pushViewController(vc2, animated: true)
     }
@@ -80,18 +85,17 @@ final class GameCoordinator: GameCoordinatorProtocol {
         navigationController?.popViewController(animated: true)
     }
     
-    func getFilteredOpenings(movesCountFilter moves: Int, arr openingsArr: [Opening]) -> [Opening] {
+    func getFilteredOpenings(movesCountFilter moves: Int,
+                             arr openingsArr: [Opening],
+                             difficulty diff: Difficulty) -> [Opening] {
+
         let simplifiedOpeningSequences = openingsArr.map { Array($0.moveSequence.prefix(moves)) }
         //print(simplifiedOpeningSequences)
-        
         var openings: [Opening] = openingsArr
-        
         for a in 0..<simplifiedOpeningSequences.count {
             openings[a].setMoveSequence(newSequence: simplifiedOpeningSequences[a])
         }
-        
         //print(openings.map { $0.newMoveSequence })
-
         let unifiedSequences = Array(Set(simplifiedOpeningSequences))
         //print(unifiedSequences)
         var new: [Opening] = []
@@ -113,7 +117,25 @@ final class GameCoordinator: GameCoordinatorProtocol {
                 }
             }
         }
-        return new
+        
+        switch diff {
+        case .beginner(let scope):
+            return returnResult(scope: scope, array: new)
+            
+        case .junior(let scope):
+            return returnResult(scope: scope, array: new)
+
+        case .experienced(let scope):
+            return returnResult(scope: scope, array: new)
+            
+        case .master(let scope):
+            return returnResult(scope: scope, array: new)
+        }
+    }
+    
+    func returnResult(scope sc: Scope, array arr: [Opening]) -> [Opening] {
+        let arr2 = arr.filter { $0.newMovesCount <= sc.high && $0.newMovesCount > sc.low }
+        return Array(arr2.prefix(5))
     }
 }
 

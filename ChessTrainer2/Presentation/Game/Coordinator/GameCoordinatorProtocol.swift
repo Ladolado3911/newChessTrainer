@@ -17,7 +17,9 @@ protocol GameCoordinatorProtocol: CoordinatorProtocol {
     
     func proceedToDifficultyPicker(rootController controller: OpeningFilterController)
     
-    func proceedToGame(arr: [Opening], movesCountFilter moves: Int)
+    func proceedToGame(arr: [Opening],
+                       movesCountFilter moves: Int,
+                       difficulty diff: Difficulty)
     
     func popController()
 }
