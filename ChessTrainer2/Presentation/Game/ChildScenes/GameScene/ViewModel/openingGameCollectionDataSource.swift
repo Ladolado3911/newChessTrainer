@@ -50,7 +50,7 @@ class OpeningGameCollectionDataSource: CollectDataSource {
     }
     
     func updateLabels() {
-        rootController.stats.text = "Moves: \(correctMoveCount) / \(currentOpening!.movesCount)"
+        rootController.stats.text = "Moves: \(correctMoveCount) / \(currentOpening!.newMovesCount)"
         rootController.openingStats.text = "Openings: \(correctOpeningCount) / \(game!.data.count)"
         rootController.moveNum.text = "Move: \(moveIndex + 1)"
     }
@@ -83,10 +83,10 @@ class OpeningGameCollectionDataSource: CollectDataSource {
     
     func chooseMove() {
         moveIndex += 1
-        if moveIndex >= currentOpening!.movesCount {
+        if moveIndex >= currentOpening!.newMovesCount {
             openingIndex += 1
             moveIndex = 0
-            if correctMoveCount == currentOpening!.movesCount {
+            if correctMoveCount == currentOpening!.newMovesCount {
                 correctOpeningCount += 1
             }
             correctMoveCount = 0

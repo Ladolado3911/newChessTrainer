@@ -21,6 +21,9 @@ struct Opening {
     }
     
     var newMoveSequence: [String] = []
+    var newMovesCount: Int {
+        return newMoveSequence.count
+    }
     
     var movesCount: Int {
         return moveSequence.count

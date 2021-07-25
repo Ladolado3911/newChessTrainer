@@ -16,36 +16,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="ec9-qD-Keg">
-                                <rect key="frame" x="0.0" y="44" width="414" height="738"/>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNc-h9-UzM" customClass="GeneralStyleButton" customModule="ChessTrainer2" customModuleProvider="target">
                                 <rect key="frame" x="20" y="802" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Txr-VC-MZH"/>
                                 </constraints>
-                                <state key="normal" title="Play"/>
+                                <state key="normal" title="Legendary Master"/>
                                 <connections>
                                     <action selector="onPlay:" destination="Eeo-7z-ByE" eventType="touchUpInside" id="iw1-Jr-yf9"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="WEr-eK-Nm6">
+                                <rect key="frame" x="20" y="348" width="374" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBe-x9-wr2" customClass="GeneralStyleButton" customModule="ChessTrainer2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                        <state key="normal" title="Beginner"/>
+                                        <connections>
+                                            <action selector="onEasy:" destination="Eeo-7z-ByE" eventType="touchUpInside" id="VPc-71-V4z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5J-FD-4hc" customClass="GeneralStyleButton" customModule="ChessTrainer2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="85" width="374" height="30"/>
+                                        <state key="normal" title="Junior"/>
+                                        <connections>
+                                            <action selector="onMedium:" destination="Eeo-7z-ByE" eventType="touchUpInside" id="Eo0-ro-QCO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwt-Za-DT9" customClass="GeneralStyleButton" customModule="ChessTrainer2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="170" width="374" height="30"/>
+                                        <state key="normal" title="Experienced"/>
+                                        <connections>
+                                            <action selector="onHard:" destination="Eeo-7z-ByE" eventType="touchUpInside" id="PeK-Wd-yEN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jBe-x9-wr2" secondAttribute="trailing" id="2ZV-c4-Rdc"/>
+                                    <constraint firstItem="vwt-Za-DT9" firstAttribute="leading" secondItem="WEr-eK-Nm6" secondAttribute="leading" id="3yR-0i-MFB"/>
+                                    <constraint firstItem="jBe-x9-wr2" firstAttribute="leading" secondItem="WEr-eK-Nm6" secondAttribute="leading" id="88b-Qz-cat"/>
+                                    <constraint firstItem="l5J-FD-4hc" firstAttribute="leading" secondItem="WEr-eK-Nm6" secondAttribute="leading" id="PwX-zh-wEH"/>
+                                    <constraint firstAttribute="trailing" secondItem="vwt-Za-DT9" secondAttribute="trailing" id="QzJ-5E-k72"/>
+                                    <constraint firstAttribute="trailing" secondItem="l5J-FD-4hc" secondAttribute="trailing" id="Xe5-mM-8rW"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zR0-uo-yeW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zR0-uo-yeW" firstAttribute="bottom" secondItem="oNc-h9-UzM" secondAttribute="bottom" constant="20" id="GtI-1r-hTb"/>
+                            <constraint firstItem="zR0-uo-yeW" firstAttribute="trailing" secondItem="WEr-eK-Nm6" secondAttribute="trailing" constant="20" id="3Ei-UA-1h5"/>
+                            <constraint firstItem="zR0-uo-yeW" firstAttribute="bottom" secondItem="oNc-h9-UzM" secondAttribute="bottom" constant="20" id="5lq-ER-2KK"/>
                             <constraint firstItem="oNc-h9-UzM" firstAttribute="leading" secondItem="lmP-V7-Uwf" secondAttribute="leading" constant="20" id="Nph-y4-oJq"/>
-                            <constraint firstItem="oNc-h9-UzM" firstAttribute="top" secondItem="ec9-qD-Keg" secondAttribute="bottom" constant="20" id="OAa-lV-QMX"/>
-                            <constraint firstItem="ec9-qD-Keg" firstAttribute="centerX" secondItem="lmP-V7-Uwf" secondAttribute="centerX" id="Ofo-ou-F4R"/>
-                            <constraint firstItem="ec9-qD-Keg" firstAttribute="leading" secondItem="zR0-uo-yeW" secondAttribute="leading" id="TGB-FH-nME"/>
-                            <constraint firstItem="ec9-qD-Keg" firstAttribute="top" secondItem="zR0-uo-yeW" secondAttribute="top" id="coH-4b-TJ2"/>
-                            <constraint firstItem="zR0-uo-yeW" firstAttribute="trailing" secondItem="oNc-h9-UzM" secondAttribute="trailing" constant="20" id="do7-8s-wck"/>
-                            <constraint firstItem="zR0-uo-yeW" firstAttribute="trailing" secondItem="ec9-qD-Keg" secondAttribute="trailing" id="h5R-yz-6zf"/>
+                            <constraint firstItem="zR0-uo-yeW" firstAttribute="trailing" secondItem="oNc-h9-UzM" secondAttribute="trailing" constant="20" id="S5B-ya-dQY"/>
+                            <constraint firstItem="WEr-eK-Nm6" firstAttribute="centerY" secondItem="lmP-V7-Uwf" secondAttribute="centerY" id="bGF-0p-j0q"/>
+                            <constraint firstItem="WEr-eK-Nm6" firstAttribute="centerX" secondItem="lmP-V7-Uwf" secondAttribute="centerX" id="vE2-h7-o1f"/>
+                            <constraint firstItem="WEr-eK-Nm6" firstAttribute="leading" secondItem="zR0-uo-yeW" secondAttribute="leading" constant="20" id="yzK-bp-ksi"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="difficultyPicker" destination="ec9-qD-Keg" id="aiq-eW-P0c"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUD-hx-Yv1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -19,7 +19,7 @@ struct MinMax {
 }
 
 
-class PickDifficultyViewModel: PickerView {
+class PickDifficultyViewModel {
 
     private var openingParser: OpeningParser = OpeningParser()
     private var data: [Opening]!
@@ -34,32 +34,7 @@ class PickDifficultyViewModel: PickerView {
         return MinMax(minimum: minMovesCount!, maximum: maxMovesCount!)
     }
 
-    init(with picker: UIPickerView, with data: [Opening]) {
-        super.init()
-        self.difficultyPicker = picker
+    init(with data: [Opening]) {
         self.data = data
-        configPicker()
-    }
-    
-    private func configPicker() {
-        difficultyPicker.dataSource = self
-        difficultyPicker.delegate = self
-    }
-
-    func getChosenMovesCount() -> Int {
-        let count = difficultyPicker.selectedRow(inComponent: 0) + 1
-        return count
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        minMaxMoves.max - 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        "\(row + 1) Moves"
     }
 }

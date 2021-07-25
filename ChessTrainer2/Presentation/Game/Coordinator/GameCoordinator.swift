@@ -68,15 +68,52 @@ final class GameCoordinator: GameCoordinatorProtocol {
         navigationController?.pushViewController(vc2, animated: true)
     }
     
-    func proceedToGame(openingsData data: [Opening]) {
+    func proceedToGame(arr: [Opening], movesCountFilter moves: Int) {
         let vc2 = OpeningGameController.instantiateFromStoryboard()
         vc2.coordinator = self
+        let data = getFilteredOpenings(movesCountFilter: moves, arr: arr)
         vc2.openingsData = data
         navigationController?.pushViewController(vc2, animated: true)
     }
     
     func popController() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    func getFilteredOpenings(movesCountFilter moves: Int, arr openingsArr: [Opening]) -> [Opening] {
+        let simplifiedOpeningSequences = openingsArr.map { Array($0.moveSequence.prefix(moves)) }
+        //print(simplifiedOpeningSequences)
+        
+        var openings: [Opening] = openingsArr
+        
+        for a in 0..<simplifiedOpeningSequences.count {
+            openings[a].setMoveSequence(newSequence: simplifiedOpeningSequences[a])
+        }
+        
+        //print(openings.map { $0.newMoveSequence })
+
+        let unifiedSequences = Array(Set(simplifiedOpeningSequences))
+        //print(unifiedSequences)
+        var new: [Opening] = []
+        var temp = unifiedSequences
+
+        for a in 0..<openings.count {
+            //print(temp.count)
+            if temp.isEmpty {
+                print("0!")
+                break
+            }
+            for b in 0..<unifiedSequences.count {
+                if b > temp.count - 1 {
+                    break
+                }
+                if temp[b] == openings[a].newMoveSequence {
+                    new.append(openings[a])
+                    temp.remove(at: b)
+                }
+            }
+        }
+        return new
     }
 }
 

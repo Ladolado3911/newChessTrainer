@@ -9,7 +9,6 @@ import UIKit
 
 class DiffiucultyPickerController: GameViewController {
 
-    @IBOutlet weak var difficultyPicker: UIPickerView!
     var difficultyViewModel: PickDifficultyViewModel!
     var previousController: OpeningFilterController?
     
@@ -31,8 +30,8 @@ class DiffiucultyPickerController: GameViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setBarButtons()
-        difficultyViewModel = PickDifficultyViewModel(with: difficultyPicker,
-                                                      with: openingsArr)
+        //difficultyViewModel = PickDifficultyViewModel(with: difficultyPicker,
+  //                                                    with: openingsArr)
 
     }
     
@@ -45,43 +44,33 @@ class DiffiucultyPickerController: GameViewController {
         navigationItem.leftBarButtonItem = backButton
     }
     
-    func getFilteredOpenings(movesCountFilter moves: Int) -> [Opening] {
-        let simplifiedOpeningSequences = openingsArr.map { Array($0.moveSequence.prefix(moves)) }
-        
-        var openings: [Opening] = openingsArr
-        
-        for a in 0..<simplifiedOpeningSequences.count - 1 {
-            openings[a].setMoveSequence(newSequence: simplifiedOpeningSequences[a])
-        }
-
-        let unifiedSequences = Array(Set(simplifiedOpeningSequences))
-        var new: [Opening] = []
-        var temp = unifiedSequences
-
-        for a in 0..<openings.count - 1 {
-            print(temp.count)
-            if temp.isEmpty {
-                print("0!")
-                break
-            }
-            for b in 0..<unifiedSequences.count - 1 {
-                if b > temp.count - 1 {
-                    break
-                }
-                if temp[b] == openings[a].newMoveSequence {
-                    new.append(openings[a])
-                    temp.remove(at: b)
-                }
-            }
-        }
-        return new
+    @IBAction func onEasy(_ sender: Any) {
+        let level = 3
+        coordinator?.proceedToGame(arr: openingsArr, movesCountFilter: level)
     }
-
+    
+    @IBAction func onMedium(_ sender: Any) {
+        let level = 5
+        coordinator?.proceedToGame(arr: openingsArr, movesCountFilter: level)
+    }
+    
+    
+    @IBAction func onHard(_ sender: Any) {
+        let level = 10
+        coordinator?.proceedToGame(arr: openingsArr, movesCountFilter: level)
+    }
+    
+    
+    @IBAction func onLegendary(_ sender: Any) {
+//        let level = 30
+ //       coordinator?.proceedToGame(arr: openingsArr, movesCountFilter: level)
+    }
+    
     @IBAction func onPlay(_ sender: GeneralStyleButton) {
-        print(difficultyViewModel.getChosenMovesCount())
-        let movesCountFilter = difficultyViewModel.getChosenMovesCount()
-        let simplifiedOpeningSequences = getFilteredOpenings(movesCountFilter: movesCountFilter)
-        coordinator?.proceedToGame(openingsData: simplifiedOpeningSequences)
+//        print(difficultyViewModel.getChosenMovesCount())
+//        let movesCountFilter = difficultyViewModel.getChosenMovesCount()
+//        let simplifiedOpeningSequences = getFilteredOpenings(movesCountFilter: movesCountFilter)
+//        coordinator?.proceedToGame(openingsData: simplifiedOpeningSequences)
     }
 
     @objc func onBackButton2(sender: UIBarButtonItem) {
