@@ -17,24 +17,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="ec9-qD-Keg">
-                                <rect key="frame" x="0.0" y="224" width="414" height="448"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="738"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNc-h9-UzM" customClass="GeneralStyleButton" customModule="ChessTrainer2" customModuleProvider="target">
-                                <rect key="frame" x="20" y="692" width="374" height="30"/>
+                                <rect key="frame" x="20" y="802" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Txr-VC-MZH"/>
+                                </constraints>
                                 <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="onPlay:" destination="Eeo-7z-ByE" eventType="touchUpInside" id="iw1-Jr-yf9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zR0-uo-yeW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zR0-uo-yeW" firstAttribute="bottom" secondItem="oNc-h9-UzM" secondAttribute="bottom" constant="20" id="GtI-1r-hTb"/>
                             <constraint firstItem="oNc-h9-UzM" firstAttribute="leading" secondItem="lmP-V7-Uwf" secondAttribute="leading" constant="20" id="Nph-y4-oJq"/>
                             <constraint firstItem="oNc-h9-UzM" firstAttribute="top" secondItem="ec9-qD-Keg" secondAttribute="bottom" constant="20" id="OAa-lV-QMX"/>
                             <constraint firstItem="ec9-qD-Keg" firstAttribute="centerX" secondItem="lmP-V7-Uwf" secondAttribute="centerX" id="Ofo-ou-F4R"/>
                             <constraint firstItem="ec9-qD-Keg" firstAttribute="leading" secondItem="zR0-uo-yeW" secondAttribute="leading" id="TGB-FH-nME"/>
-                            <constraint firstItem="ec9-qD-Keg" firstAttribute="height" secondItem="lmP-V7-Uwf" secondAttribute="height" multiplier="0.5" id="bwz-pD-4Sh"/>
+                            <constraint firstItem="ec9-qD-Keg" firstAttribute="top" secondItem="zR0-uo-yeW" secondAttribute="top" id="coH-4b-TJ2"/>
                             <constraint firstItem="zR0-uo-yeW" firstAttribute="trailing" secondItem="oNc-h9-UzM" secondAttribute="trailing" constant="20" id="do7-8s-wck"/>
                             <constraint firstItem="zR0-uo-yeW" firstAttribute="trailing" secondItem="ec9-qD-Keg" secondAttribute="trailing" id="h5R-yz-6zf"/>
-                            <constraint firstItem="ec9-qD-Keg" firstAttribute="centerY" secondItem="lmP-V7-Uwf" secondAttribute="centerY" id="jsO-wg-J9k"/>
                         </constraints>
                     </view>
                     <connections>

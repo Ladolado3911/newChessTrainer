@@ -10,7 +10,7 @@ import UIKit
 class DiffiucultyPickerController: GameViewController {
 
     @IBOutlet weak var difficultyPicker: UIPickerView!
-    unowned var difficultyViewModel: PickDifficultyViewModel!
+    var difficultyViewModel: PickDifficultyViewModel!
     var previousController: OpeningFilterController?
     
     private var selectedOpenings: [UniqueOpening] {
@@ -18,33 +18,37 @@ class DiffiucultyPickerController: GameViewController {
         return previousController.selectedOpenings
     }
     
+    private var openingsArr: [Opening] {
+        var result: [Opening] = []
+        selectedOpenings.forEach { uniqueOpening in
+            uniqueOpening.openings.forEach { opening in
+                result.append(opening)
+            }
+        }
+        return result
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setBarButtons()
         difficultyViewModel = PickDifficultyViewModel(with: difficultyPicker,
-                                                      with: previousController)
+                                                      with: openingsArr)
 
     }
     
     func setBarButtons() {
-        let nextButton = UIBarButtonItem(title: "Next",
-                                     style: .done,
-                                     target: self,
-                                     action: #selector(onNextButton2))
-        
         let backButton = UIBarButtonItem(title: "Back",
                                          style: .plain,
                                          target: self,
                                          action: #selector(onBackButton2))
 
-        navigationItem.rightBarButtonItem = nextButton
         navigationItem.leftBarButtonItem = backButton
     }
- 
-    @objc func onNextButton2(sender: UIBarButtonItem) {
-
-    }
     
+    @IBAction func onPlay(_ sender: GeneralStyleButton) {
+        print(difficultyViewModel.getChosenMovesCount())
+    }
+
     @objc func onBackButton2(sender: UIBarButtonItem) {
         guard let prevController = previousController else { return }
         prevController.openingViewModel.resetTable()

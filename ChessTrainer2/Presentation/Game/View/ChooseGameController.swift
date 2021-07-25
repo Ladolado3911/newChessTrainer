@@ -25,7 +25,8 @@ class ChooseGameController: GameViewController {
     }
     
     @IBAction func onOpeningGame(_ sender: UIButton) {
-        coordinator?.proceedToController(controller: ChooseModeController.self,
-                                         present: .push) {}
+//        coordinator?.proceedToController(controller: ChooseModeController.self,
+//                                         present: .push) {}
+        coordinator?.proceedToController(controller: OpeningFilterController.self, present: .push) {}
     }
 }

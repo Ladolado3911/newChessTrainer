@@ -27,8 +27,9 @@ class PickDifficultyViewModel: PickerView {
     weak var rootController: StartController!
     
     var minMaxMoves: MinMax {
-        let minMovesCount = ( data!.map { $0.movesCount } ).min()
-        let maxMovesCount = ( data!.map { $0.movesCount } ).max()
+        let testArr = data!.map { $0.movesCount }
+        let minMovesCount = testArr.min()
+        let maxMovesCount = testArr.max()
         
         return MinMax(minimum: minMovesCount!, maximum: maxMovesCount!)
     }
@@ -45,9 +46,9 @@ class PickDifficultyViewModel: PickerView {
         difficultyPicker.delegate = self
     }
 
-    func getLevelFilter() -> Int {
-        let difficultyFilter = difficultyPicker.selectedRow(inComponent: 0) + 3
-        return difficultyFilter
+    func getChosenMovesCount() -> Int {
+        let count = difficultyPicker.selectedRow(inComponent: 0) + 1
+        return count
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -55,7 +56,7 @@ class PickDifficultyViewModel: PickerView {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        data.count
+        minMaxMoves.max - 1
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
