@@ -14,6 +14,9 @@ class OpeningGameCollectionDataSource: CollectDataSource {
     weak var rootController: OpeningGameController!
     weak var viewModel: OpeningViewModel!
     
+    private var openingsData: [Opening]!
+    private var movesCountFilter: Int!
+    
     var game: OpeningGame?
 
     var currentOpening: Opening?
@@ -32,11 +35,15 @@ class OpeningGameCollectionDataSource: CollectDataSource {
     var correctOpeningCount: Int = 0
 //    var correctCount: Int = 0
     
-    init(collectView collect: UICollectionView, controller ctrl: OpeningGameController, viewModel model: OpeningViewModel) {
+    init(collectView collect: UICollectionView,
+         controller ctrl: OpeningGameController,
+         openingsData data: [Opening]) {
+        
         super.init()
         collectView = collect
         rootController = ctrl
-        viewModel = model
+
+        openingsData = data
         
         collectView.dataSource = self
         collectView.delegate = self
@@ -49,18 +56,28 @@ class OpeningGameCollectionDataSource: CollectDataSource {
     }
     
     func setInitialInfo() {
-        viewModel.getData {[self] openings in
-            // query openings here
-            game = OpeningGame(data: openings)
-            currentOpening = game!.data[0]
-            currentMove = currentOpening!.moveSequence[0]
-            moveChoices = currentOpening!.generate6ChoiceFor(correctMove: currentMove!)
-            
-            DispatchQueue.main.async {
-                rootController.openingName.text = currentOpening!.name
-                updateLabels()
-                collectView.reloadData()
-            }
+//        viewModel.getData {[self] openings in
+//            // query openings here
+//            game = OpeningGame(data: openings)
+//            currentOpening = game!.data[0]
+//            currentMove = currentOpening!.moveSequence[0]
+//            moveChoices = currentOpening!.generate6ChoiceFor(correctMove: currentMove!)
+//
+//            DispatchQueue.main.async {
+//                rootController.openingName.text = currentOpening!.name
+//                updateLabels()
+//                collectView.reloadData()
+//            }
+//        }
+        game = OpeningGame(data: openingsData)
+        currentOpening = game!.data[0]
+        currentMove = currentOpening!.newMoveSequence[0]
+        moveChoices = currentOpening!.generate6ChoiceFor(correctMove: currentMove!)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.rootController.openingName.text = self.currentOpening!.name
+            self.updateLabels()
+            self.collectView.reloadData()
         }
     }
     
@@ -85,7 +102,7 @@ class OpeningGameCollectionDataSource: CollectDataSource {
             return
         }
         currentOpening = game!.data[openingIndex]
-        currentMove = currentOpening!.moveSequence[moveIndex]
+        currentMove = currentOpening!.newMoveSequence[moveIndex]
         
         updateLabels()
 
@@ -115,7 +132,7 @@ class OpeningGameCollectionDataSource: CollectDataSource {
         if let moves = moveChoices {
             cell!.text = moves[indexPath.item]
             
-            if currentOpening!.moveSequence.firstIndex(of: currentMove!)!.isEven {
+            if currentOpening!.newMoveSequence.firstIndex(of: currentMove!)!.isEven {
                 cell!.backgroundColor = color2
                 cell!.label.textColor = color1
                 cell!.layer.shadowColor = color1?.cgColor
@@ -141,7 +158,7 @@ class OpeningGameCollectionDataSource: CollectDataSource {
             correctMoveCount += 1
         }
         
-        let isEven = currentOpening!.moveSequence.firstIndex(of: currentMove!)!.isEven
+        let isEven = currentOpening!.newMoveSequence.firstIndex(of: currentMove!)!.isEven
         Animator.shared.animateCell(isCorrect: isCorrectMove, targetCell: cell!, isEven: isEven) {
             self.chooseMove()
         }

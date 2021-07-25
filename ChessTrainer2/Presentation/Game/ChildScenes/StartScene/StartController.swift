@@ -78,7 +78,7 @@ class StartController: GameViewController {
             guard let levelFilter = self.levelFilter else { return }
             
             let filter = Filter(nameFilter: nameFilter, difficultyFilter: levelFilter)
-            self.coordinator?.proceedToGame(filters: filter)
+            //self.coordinator?.proceedToGame(filters: filter)
         }
     }
     

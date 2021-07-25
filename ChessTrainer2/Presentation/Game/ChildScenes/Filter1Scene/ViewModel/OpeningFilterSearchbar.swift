@@ -40,7 +40,7 @@ final class OpeningFilterSearchbar: NSObject, SearchbarProtocol {
         guard let dataSource = dataSource else { return }
         rootController!.view.endEditing(true)
         isSearchBarActive = false
-        print("disabling filter")
+        //print("disabling filter")
         dataSource.tableview.reloadData()
     }
     
@@ -59,7 +59,7 @@ final class OpeningFilterSearchbar: NSObject, SearchbarProtocol {
         for opening in filteredUniqueOpenings {
             if opening.isSelected {
                 SelectedDataManager.shared.removeFromSelections(openingName: opening.name!)
-                print("removed \(opening.name!)")
+                //print("removed \(opening.name!)")
             }
         }
 

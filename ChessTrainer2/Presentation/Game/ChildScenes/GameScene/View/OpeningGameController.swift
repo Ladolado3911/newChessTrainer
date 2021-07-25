@@ -20,6 +20,8 @@ class OpeningGameController: GameViewController {
     private var viewModel: OpeningViewModel!
     private var dataSource: OpeningGameCollectionDataSource!
     
+    var openingsData: [Opening]?
+    
     // filters
     var filters: Filter?
 
@@ -38,9 +40,13 @@ class OpeningGameController: GameViewController {
     }
 
     func configViewModel() {
-        openingFilter = OpeningFilter(nameFilter: filters!.nameFilter, difficultyFilter: filters!.difficultyFilter)
-        openingParser = OpeningParser()
-        viewModel = OpeningViewModel(with: openingFilter, with2: openingParser)
-        dataSource = OpeningGameCollectionDataSource(collectView: collectView, controller: self, viewModel: viewModel)
+        guard let openingsData = openingsData else { return }
+        
+//        openingFilter = OpeningFilter(nameFilter: filters!.nameFilter, difficultyFilter: filters!.difficultyFilter)
+//        openingParser = OpeningParser()
+//        viewModel = OpeningViewModel(with: openingFilter, with2: openingParser)
+        dataSource = OpeningGameCollectionDataSource(collectView: collectView,
+                                                     controller: self,
+                                                     openingsData: openingsData)
     }
 }

@@ -68,10 +68,10 @@ final class GameCoordinator: GameCoordinatorProtocol {
         navigationController?.pushViewController(vc2, animated: true)
     }
     
-    func proceedToGame(filters data: Filter) {
+    func proceedToGame(openingsData data: [Opening]) {
         let vc2 = OpeningGameController.instantiateFromStoryboard()
         vc2.coordinator = self
-        vc2.filters = data
+        vc2.openingsData = data
         navigationController?.pushViewController(vc2, animated: true)
     }
     

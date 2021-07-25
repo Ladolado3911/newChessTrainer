@@ -72,9 +72,9 @@ class OpeningFilterController: GameViewController {
     }
     
     @objc func onNextButton(sender: UIBarButtonItem) {
-        let toBePrinted = selectedOpenings.map { $0.name }
-        print(toBePrinted)
-        print("Userdefaults: \(SelectedDataManager.shared.selectedOpeningNames)")
+        //let toBePrinted = selectedOpenings.map { $0.name }
+//        print(toBePrinted)
+//        print("Userdefaults: \(SelectedDataManager.shared.selectedOpeningNames)")
         coordinator?.proceedToDifficultyPicker(rootController: self)
     }
     

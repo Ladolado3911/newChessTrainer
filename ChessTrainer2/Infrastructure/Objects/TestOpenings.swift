@@ -15,8 +15,12 @@ struct Opening {
         jsonOpening.name ?? ""
     }
     var moveSequence: [String] {
-        (jsonOpening.moves ?? "").moves
+        get {
+            (jsonOpening.moves ?? "").moves
+        }
     }
+    
+    var newMoveSequence: [String] = []
     
     var movesCount: Int {
         return moveSequence.count
@@ -37,5 +41,9 @@ struct Opening {
         }
         moves2.append(move)
         return moves2.shuffled()
+    }
+    
+    mutating func setMoveSequence(newSequence sequence: [String]) {
+        newMoveSequence = sequence
     }
 }
