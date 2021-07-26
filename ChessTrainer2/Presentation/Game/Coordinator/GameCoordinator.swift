@@ -135,7 +135,12 @@ final class GameCoordinator: GameCoordinatorProtocol {
     
     func returnResult(scope sc: Scope, array arr: [Opening]) -> [Opening] {
         let arr2 = arr.filter { $0.newMovesCount <= sc.high && $0.newMovesCount > sc.low }
-        return Array(arr2.prefix(5))
+        if arr2.isEmpty {
+            return arr
+        }
+        else {
+            return Array(arr2.prefix(5))
+        }
     }
 }
 

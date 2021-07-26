@@ -14,9 +14,39 @@ class OpeningFilterController: GameViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var deselectButton: UIButton!
     
-    var nextButton: UIBarButtonItem!
-    var backButton: UIBarButtonItem!
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        print("Init")
+        
+        //fatalError("init(coder:) has not been implemented")
+    }
     
+    unowned var nextButtonCode: UIBarButtonItem {
+        let nextButton = UIBarButtonItem(title: "Next",
+                                         style: .done,
+                                         target: self,
+                                         action: #selector(onNextButton))
+        nextButton.isEnabled = false
+        return nextButton
+    }
+    
+    unowned var backButtonCode: UIBarButtonItem {
+        let backButton = UIBarButtonItem(title: "Back",
+                                         style: .plain,
+                                         target: self,
+                                         action: #selector(onBackButton))
+        return backButton
+    }
+    
+    unowned var backButton: UIBarButtonItem {
+        return navigationItem.leftBarButtonItem!
+    }
+    
+    unowned var nextButton: UIBarButtonItem {
+        return navigationItem.rightBarButtonItem!
+    }
+
     var openingViewModel: OpeningFilterViewModel!
     var selectedRowCount: Int = 0
 
@@ -29,6 +59,7 @@ class OpeningFilterController: GameViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("didload")
         setUpLayout()
         configureViewModel()
         openingViewModel.createObjects()
@@ -45,21 +76,10 @@ class OpeningFilterController: GameViewController {
     }
     
     private func setUpButtons() {
-        nextButton = UIBarButtonItem(title: "Next",
-                                     style: .done,
-                                     target: self,
-                                     action: #selector(onNextButton))
-        
-        backButton = UIBarButtonItem(title: "Back",
-                                     style: .plain,
-                                     target: self,
-                                     action: #selector(onBackButton))
-        
-        nextButton.isEnabled = false
         deselectButton.isEnabled = false
         
-        navigationItem.rightBarButtonItem = nextButton
-        navigationItem.leftBarButtonItem = backButton
+        navigationItem.rightBarButtonItem = nextButtonCode
+        navigationItem.leftBarButtonItem = backButtonCode
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -81,6 +101,10 @@ class OpeningFilterController: GameViewController {
     @objc func onBackButton(sender: UIBarButtonItem) {
         openingViewModel.resetTable()
         coordinator?.popController()
+    }
+    
+    deinit {
+        print("filter1 deinit")
     }
 }
 

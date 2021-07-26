@@ -10,18 +10,17 @@ import UIKit
 
 class OpeningFilterViewModel {
 
-    var openingParser: OpeningParser = OpeningParser()
-    var rootController: OpeningFilterController!
+    unowned var rootController: OpeningFilterController!
     var dataSourceViewModel: OpeningFilterTableDataSource!
     var searchBarViewModel: OpeningFilterSearchbar!
-    var tableView: UITableView!
-    var searchBar: UISearchBar!
+    unowned var tableView: UITableView!
+    unowned var searchBar: UISearchBar!
     
-    var nextButton: UIBarButtonItem!
-    var backButton: UIBarButtonItem!
+    unowned var nextButton: UIBarButtonItem!
+    unowned var backButton: UIBarButtonItem!
     
     var openings: [UniqueOpening] {
-        let openingParser = openingParser
+        let openingParser = OpeningParser()
         return openingParser.uniqueOpenings
     }
     

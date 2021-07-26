@@ -15,7 +15,6 @@ class ChooseGameController: GameViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("didappear")
         navigationController!.navigationBar.prefersLargeTitles = true
     }
     

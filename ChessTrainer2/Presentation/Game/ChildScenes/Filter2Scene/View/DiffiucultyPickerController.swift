@@ -100,4 +100,8 @@ class DiffiucultyPickerController: GameViewController {
         UserDefaults.standard.setValue([], forKey: "SelectedOpeningNames")
         coordinator?.popController()
     }
+    
+    deinit {
+        print("filter2 deinit")
+    }
 }

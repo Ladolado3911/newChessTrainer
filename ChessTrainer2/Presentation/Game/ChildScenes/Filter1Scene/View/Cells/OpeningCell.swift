@@ -29,8 +29,8 @@ class OpeningCell: UITableViewCell {
         openingNameLabel.text = opening.name
         variations.text = "\(opening.openings.count) Variations"
     
-        fancyView.layer.shadowColor = ProjectColors.purple.cgColor
-        fancyView.layer.shadowOpacity = 0.3
+        //fancyView.layer.shadowColor = ProjectColors.purple.cgColor
+        fancyView.layer.shadowOpacity = 0.5
         fancyView.backgroundColor = ProjectColors.white
         openingNameLabel.textColor = ProjectColors.purple
         variations.textColor = .gray
@@ -38,12 +38,14 @@ class OpeningCell: UITableViewCell {
         //openingNameLabel.frame = fancyView.bounds
         
         if opening.isSelected {
+            fancyView.layer.shadowColor = UIColor.black.cgColor
             fancyView.backgroundColor = ProjectColors.purple
             openingNameLabel.textColor = ProjectColors.white
             variations.textColor = .white
             mastery.textColor = .white
         }
         else {
+            fancyView.layer.shadowColor = ProjectColors.purple.cgColor
             fancyView.backgroundColor = ProjectColors.white
             openingNameLabel.textColor = ProjectColors.purple
             variations.textColor = .gray

@@ -49,4 +49,8 @@ class OpeningGameController: GameViewController {
                                                      controller: self,
                                                      openingsData: openingsData)
     }
+    
+    deinit {
+        print("game deinit")
+    }
 }
