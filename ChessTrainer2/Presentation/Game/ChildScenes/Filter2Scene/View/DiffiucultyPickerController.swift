@@ -79,18 +79,16 @@ class DiffiucultyPickerController: GameViewController {
         let level = 10
         coordinator?.proceedToGame(arr: openingsArr, movesCountFilter: level, difficulty: .experienced(Scope(6, 10)))
     }
-    
-    
-    @IBAction func onLegendary(_ sender: Any) {
-//        let level = 30
- //       coordinator?.proceedToGame(arr: openingsArr, movesCountFilter: level)
-    }
-    
+        
     @IBAction func onPlay(_ sender: GeneralStyleButton) {
 //        print(difficultyViewModel.getChosenMovesCount())
 //        let movesCountFilter = difficultyViewModel.getChosenMovesCount()
 //        let simplifiedOpeningSequences = getFilteredOpenings(movesCountFilter: movesCountFilter)
 //        coordinator?.proceedToGame(openingsData: simplifiedOpeningSequences)
+        
+        let level = 30
+        coordinator?.proceedToGame(arr: openingsArr, movesCountFilter: level, difficulty: .master(Scope(10, 30)))
+
     }
 
     @objc func onBackButton2(sender: UIBarButtonItem) {
