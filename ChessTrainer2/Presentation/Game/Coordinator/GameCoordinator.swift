@@ -35,21 +35,22 @@ final class GameCoordinator: GameCoordinatorProtocol {
         
     }
     
-    func start() {
-        
-    }
-    
+    func start() {}
+
     func proceedToController<T: GameViewController>(controller vc: T.Type,
                                                     present style: PresentationStyle = .push,
                                                     completion: @escaping () -> Void) {
         let vc2 = T.instantiateFromStoryboard()
         vc2.coordinator = self
 
-        switch style {
-        case .push:
-            navigationController?.pushViewController(vc2, animated: true)
-        case .modal:
-            navigationController?.present(vc2, animated: true, completion: completion)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            switch style {
+            case .push:
+                self.navigationController?.pushViewController(vc2, animated: true)
+            case .modal:
+                self.navigationController?.present(vc2, animated: true, completion: completion)
+            }
         }
     }
     
@@ -141,6 +142,18 @@ final class GameCoordinator: GameCoordinatorProtocol {
         else {
             return Array(arr2.prefix(5))
         }
+    }
+    
+    func showLoadingScreen() {
+        let vc = LoadingViewController.instantiateFromStoryboard()
+        vc.coordinator = self
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        navigationController?.present(vc, animated: true, completion: nil)
+    }
+    
+    func dismissLoadingScreen() {
+        navigationController?.dismiss(animated: true, completion: nil)
     }
 }
 

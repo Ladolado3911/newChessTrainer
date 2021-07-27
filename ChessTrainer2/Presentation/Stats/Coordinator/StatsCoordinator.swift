@@ -29,8 +29,8 @@ final class StatsCoordinator: CoordinatorProtocol {
         
     }
     
-    func start() {
-        
-    }
+    func start() {}
+    func showLoadingScreen() {}
+    func dismissLoadingScreen() {}
 }
 

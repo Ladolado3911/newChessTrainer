@@ -29,8 +29,8 @@ final class UserCoordinator: CoordinatorProtocol {
         
     }
     
-    func start() {
-        
-    }
+    func start() {}
+    func showLoadingScreen() {}
+    func dismissLoadingScreen() {}
 }
 

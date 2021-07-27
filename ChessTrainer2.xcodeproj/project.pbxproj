@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		240D62BD2676261C002BEB1D /* OpeningParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240D62BC2676261C002BEB1D /* OpeningParser.swift */; };
+		2423AFE826AEF00000A4D412 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2423AFE726AEF00000A4D412 /* LoadingViewController.swift */; };
+		2423AFEA26AEF01F00A4D412 /* LoadingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2423AFE926AEF01F00A4D412 /* LoadingViewController.storyboard */; };
 		246EF1F62691AE41000056AF /* DiffiucultyPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EF1F52691AE41000056AF /* DiffiucultyPickerController.swift */; };
 		247247C826A32AF50050AE89 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247247C426A32AF50050AE89 /* AppCoordinator.swift */; };
 		247247C926A32AF50050AE89 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247247C526A32AF50050AE89 /* CoordinatorProtocol.swift */; };
@@ -100,6 +102,8 @@
 
 /* Begin PBXFileReference section */
 		240D62BC2676261C002BEB1D /* OpeningParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningParser.swift; sourceTree = "<group>"; };
+		2423AFE726AEF00000A4D412 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		2423AFE926AEF01F00A4D412 /* LoadingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadingViewController.storyboard; sourceTree = "<group>"; };
 		246EF1F52691AE41000056AF /* DiffiucultyPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffiucultyPickerController.swift; sourceTree = "<group>"; };
 		247247C426A32AF50050AE89 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		247247C526A32AF50050AE89 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
@@ -206,6 +210,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2423AFE626AEEFD300A4D412 /* LoadingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2423AFE726AEF00000A4D412 /* LoadingViewController.swift */,
+				2423AFE926AEF01F00A4D412 /* LoadingViewController.storyboard */,
+			);
+			path = LoadingScreen;
+			sourceTree = "<group>";
+		};
 		246EF1E826919FCA000056AF /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +233,7 @@
 		247247CC26A32B630050AE89 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				2423AFE626AEEFD300A4D412 /* LoadingScreen */,
 				247247CD26A32B630050AE89 /* Base.swift */,
 			);
 			path = Base;
@@ -806,6 +820,7 @@
 				3F6FB31F265FCE7000E41C41 /* LaunchScreen.storyboard in Resources */,
 				3F6FB31C265FCE7000E41C41 /* Assets.xcassets in Resources */,
 				247247E326A32FCB0050AE89 /* ChooseGameController.storyboard in Resources */,
+				2423AFEA26AEF01F00A4D412 /* LoadingViewController.storyboard in Resources */,
 				24F040FD26A400600095BB4B /* OpeningGameController.storyboard in Resources */,
 				247247EA26A330D90050AE89 /* LeaderboardController.storyboard in Resources */,
 				24F040FB26A400230095BB4B /* StartController.storyboard in Resources */,
@@ -830,6 +845,7 @@
 				3F6C334C266CAAF80070E83C /* openingGameCollectionDataSource.swift in Sources */,
 				240D62BD2676261C002BEB1D /* OpeningParser.swift in Sources */,
 				247247DF26A32E450050AE89 /* LeaderboardCoordinator.swift in Sources */,
+				2423AFE826AEF00000A4D412 /* LoadingViewController.swift in Sources */,
 				3F6C335E266CEC9C0070E83C /* ProjectColors.swift in Sources */,
 				ACE29D7F2673F18600F1D9D8 /* stringExtension.swift in Sources */,
 				3F6FB335265FCECA00E41C41 /* LocalDatabaseHelpers.swift in Sources */,
@@ -1033,13 +1049,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M5DM73ULV2;
+				DEVELOPMENT_TEAM = 8C7J4PSQLX;
 				INFOPLIST_FILE = "ChessTrainer2/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lado.ChessTrainer2;
+				PRODUCT_BUNDLE_IDENTIFIER = lado.ChessTrainer22;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1052,13 +1068,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M5DM73ULV2;
+				DEVELOPMENT_TEAM = 8C7J4PSQLX;
 				INFOPLIST_FILE = "ChessTrainer2/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lado.ChessTrainer2;
+				PRODUCT_BUNDLE_IDENTIFIER = lado.ChessTrainer22;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

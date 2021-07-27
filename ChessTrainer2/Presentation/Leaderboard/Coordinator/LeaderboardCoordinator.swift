@@ -29,8 +29,8 @@ final class LeaderboardCoordinator: CoordinatorProtocol {
         
     }
     
-    func start() {
-        
-    }
+    func start() {}
+    func showLoadingScreen() {}
+    func dismissLoadingScreen() {}
 }
 

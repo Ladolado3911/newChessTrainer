@@ -22,4 +22,6 @@ protocol GameCoordinatorProtocol: CoordinatorProtocol {
                        difficulty diff: Difficulty)
     
     func popController()
+    func showLoadingScreen()
+    func dismissLoadingScreen()
 }

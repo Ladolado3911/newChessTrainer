@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "aps,504x498,small,transparent-pad,600x600,f8f8f8.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

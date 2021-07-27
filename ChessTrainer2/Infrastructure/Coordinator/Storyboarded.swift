@@ -22,11 +22,11 @@ extension Storyboarded {
 }
 
 extension Storyboarded where Self: UIViewController {
-
+    
     public static func instantiateFromStoryboard() -> Self {
 
         let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
-
+        
         guard let viewController: Self
             = storyboard.instantiateViewController(withIdentifier: storyboardIdentifier)
                 as? Self else {
