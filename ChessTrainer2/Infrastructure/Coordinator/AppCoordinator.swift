@@ -23,7 +23,6 @@ final class AppCoordinator: CoordinatorProtocol {
         let vc = MainTabbarController.instantiateFromStoryboard()
         vc.coordinator = self
         navigationController?.setViewControllers([vc], animated: false)
-        
         navigationController?.isNavigationBarHidden = true
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

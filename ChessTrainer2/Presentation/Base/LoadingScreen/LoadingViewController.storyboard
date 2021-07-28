@@ -9,22 +9,63 @@
     </dependencies>
     <scenes>
         <!--Loading View Controller-->
-        <scene sceneID="s0d-6b-0kx">
+        <scene sceneID="iPk-tP-Aea">
             <objects>
-                <viewController storyboardIdentifier="LoadingViewController" id="Y6W-OH-hqX" customClass="LoadingViewController" customModule="ChessTrainer2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                <viewController storyboardIdentifier="LoadingViewController" id="tab-CK-zgE" customClass="LoadingViewController" customModule="ChessTrainer2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aa4-xs-rXx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chess" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpP-2t-rBm">
+                                <rect key="frame" x="179" y="430.5" width="56" height="25"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="21"/>
+                                <color key="textColor" red="0.48627450979999998" green="0.2156862745" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen" translatesAutoresizingMaskIntoConstraints="NO" id="WW8-gO-zbM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="object" translatesAutoresizingMaskIntoConstraints="NO" id="QJi-6P-4JH">
+                                <rect key="frame" x="72.5" y="327" width="269" height="242"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chess Trainer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RA1-eM-fHY">
+                                <rect key="frame" x="20" y="599" width="374" height="41"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Yi-6n-2ed"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QJi-6P-4JH" firstAttribute="height" secondItem="WW8-gO-zbM" secondAttribute="height" multiplier="0.27" id="1VE-dw-gi2"/>
+                            <constraint firstItem="4Yi-6n-2ed" firstAttribute="trailing" secondItem="WW8-gO-zbM" secondAttribute="trailing" id="9Ub-6Q-vUy"/>
+                            <constraint firstItem="RA1-eM-fHY" firstAttribute="top" secondItem="QJi-6P-4JH" secondAttribute="bottom" constant="30" id="9dq-ce-TtT"/>
+                            <constraint firstItem="4Yi-6n-2ed" firstAttribute="trailing" secondItem="RA1-eM-fHY" secondAttribute="trailing" constant="20" id="CZH-eA-KCN"/>
+                            <constraint firstAttribute="bottom" secondItem="WW8-gO-zbM" secondAttribute="bottom" id="Gzh-OG-sGX"/>
+                            <constraint firstItem="WW8-gO-zbM" firstAttribute="top" secondItem="Aa4-xs-rXx" secondAttribute="top" id="NQ8-W6-RnK"/>
+                            <constraint firstItem="RA1-eM-fHY" firstAttribute="centerX" secondItem="QJi-6P-4JH" secondAttribute="centerX" id="RDH-aP-6XS"/>
+                            <constraint firstItem="RA1-eM-fHY" firstAttribute="leading" secondItem="4Yi-6n-2ed" secondAttribute="leading" constant="20" id="UzD-mY-mzU"/>
+                            <constraint firstItem="QJi-6P-4JH" firstAttribute="centerY" secondItem="Aa4-xs-rXx" secondAttribute="centerY" id="YvS-9i-LMx"/>
+                            <constraint firstItem="BpP-2t-rBm" firstAttribute="centerX" secondItem="Aa4-xs-rXx" secondAttribute="centerX" id="Z98-FG-GUK"/>
+                            <constraint firstItem="QJi-6P-4JH" firstAttribute="width" secondItem="WW8-gO-zbM" secondAttribute="width" multiplier="0.65" id="baQ-qe-CVG"/>
+                            <constraint firstItem="QJi-6P-4JH" firstAttribute="centerX" secondItem="Aa4-xs-rXx" secondAttribute="centerX" id="dmP-Qa-u6A"/>
+                            <constraint firstItem="BpP-2t-rBm" firstAttribute="centerY" secondItem="Aa4-xs-rXx" secondAttribute="centerY" constant="-5" id="f39-z3-0fe"/>
+                            <constraint firstItem="WW8-gO-zbM" firstAttribute="leading" secondItem="4Yi-6n-2ed" secondAttribute="leading" id="t2V-w4-kah"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pawn" destination="QJi-6P-4JH" id="nt9-W7-vO7"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m3S-yo-dyi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="60"/>
+            <point key="canvasLocation" x="407" y="33"/>
         </scene>
     </scenes>
     <resources>
+        <image name="object" width="319" height="427"/>
+        <image name="screen" width="375" height="812"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
