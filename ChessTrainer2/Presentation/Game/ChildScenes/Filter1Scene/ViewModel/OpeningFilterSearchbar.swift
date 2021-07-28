@@ -53,7 +53,8 @@ final class OpeningFilterSearchbar: NSObject, SearchbarProtocol {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        let filteredUniqueOpenings = (data!.filter { $0.name!.contains(searchText) || testIfArrayContains(input: $0.openings.map { $0.name }, testString: searchText) })
+//        let filteredUniqueOpenings = (data!.filter { $0.name!.contains(searchText) || testIfArrayContains(input: $0.openings.map { $0.name }, testString: searchText) })
+        let filteredUniqueOpenings = (data!.filter { $0.name!.lowercased().contains(searchText.lowercased()) })
         isSearchBarActive = true
         
         for opening in filteredUniqueOpenings {

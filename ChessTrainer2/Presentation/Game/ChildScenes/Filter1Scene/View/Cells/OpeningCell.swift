@@ -38,43 +38,43 @@ class OpeningCell: UITableViewCell {
         //openingNameLabel.frame = fancyView.bounds
         
         if opening.isSelected {
-            DispatchQueue.main.asyncAfter(deadline: .now()) { [weak self] in
-                guard let self = self else { return }
-                UIView.animate(withDuration: 0.1) {
-                    print("inside animation")
-                    self.fancyView.layer.shadowColor = UIColor.black.cgColor
-                    self.fancyView.backgroundColor = ProjectColors.purple
-                    self.openingNameLabel.textColor = ProjectColors.white
-                    self.variations.textColor = .white
-                    self.mastery.textColor = .white
-                }
-            }
-//            fancyView.layer.shadowColor = UIColor.black.cgColor
-//            fancyView.backgroundColor = ProjectColors.purple
-//            openingNameLabel.textColor = ProjectColors.white
-//            variations.textColor = .white
-//            mastery.textColor = .white
+//            DispatchQueue.main.asyncAfter(deadline: .now()) { [weak self] in
+//                guard let self = self else { return }
+//                UIView.animate(withDuration: 0.1) {
+//                    print("inside animation")
+//                    self.fancyView.layer.shadowColor = UIColor.black.cgColor
+//                    self.fancyView.backgroundColor = ProjectColors.purple
+//                    self.openingNameLabel.textColor = ProjectColors.white
+//                    self.variations.textColor = .white
+//                    self.mastery.textColor = .white
+//                }
+//            }
+            fancyView.layer.shadowColor = UIColor.black.cgColor
+            fancyView.backgroundColor = ProjectColors.purple
+            openingNameLabel.textColor = ProjectColors.white
+            variations.textColor = .white
+            mastery.textColor = .white
         }
         else {
-            DispatchQueue.main.asyncAfter(deadline: .now()) { [weak self] in
-                guard let self = self else { return }
-                UIView.animate(withDuration: 0.1) {
-                    print("inside animation")
-                    self.fancyView.layer.shadowColor = ProjectColors.purple.cgColor
-                    self.fancyView.backgroundColor = ProjectColors.white
-                    self.openingNameLabel.textColor = ProjectColors.purple
-                    self.variations.textColor = .gray
-                    self.mastery.textColor = .gray
-                }
-            }
+//            DispatchQueue.main.asyncAfter(deadline: .now()) { [weak self] in
+//                guard let self = self else { return }
+//                UIView.animate(withDuration: 0.1) {
+//                    print("inside animation")
+//                    self.fancyView.layer.shadowColor = ProjectColors.purple.cgColor
+//                    self.fancyView.backgroundColor = ProjectColors.white
+//                    self.openingNameLabel.textColor = ProjectColors.purple
+//                    self.variations.textColor = .gray
+//                    self.mastery.textColor = .gray
+//                }
+//            }
             
             
             
-//            fancyView.layer.shadowColor = ProjectColors.purple.cgColor
-//            fancyView.backgroundColor = ProjectColors.white
-//            openingNameLabel.textColor = ProjectColors.purple
-//            variations.textColor = .gray
-//            mastery.textColor = .gray
+            fancyView.layer.shadowColor = ProjectColors.purple.cgColor
+            fancyView.backgroundColor = ProjectColors.white
+            openingNameLabel.textColor = ProjectColors.purple
+            variations.textColor = .gray
+            mastery.textColor = .gray
         }
     }
     
