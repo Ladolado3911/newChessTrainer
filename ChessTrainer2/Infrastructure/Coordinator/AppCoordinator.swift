@@ -20,11 +20,25 @@ final class AppCoordinator: CoordinatorProtocol {
     }
     
     func start() {
+        
+//        coordinator?.showLoadingScreen()
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) { [weak self] in
+//            guard let self = self else { return }
+//            self.coordinator?.dismissLoadingScreen()
+//        }
+        
+        
         let vc = MainTabbarController.instantiateFromStoryboard()
+        let vc2 = LoadingViewController.instantiateFromStoryboard()
         vc.coordinator = self
-        navigationController?.setViewControllers([vc], animated: false)
+        navigationController?.setViewControllers([vc, vc2], animated: false)
         navigationController?.isNavigationBarHidden = true
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) { [weak self] in
+            guard let self = self else { return }
+            self.navigationController?.popViewController(animated: false)
+        }
+        
     }
 }

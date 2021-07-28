@@ -10,6 +10,8 @@
 		240D62BD2676261C002BEB1D /* OpeningParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240D62BC2676261C002BEB1D /* OpeningParser.swift */; };
 		2423AFE826AEF00000A4D412 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2423AFE726AEF00000A4D412 /* LoadingViewController.swift */; };
 		2423AFEA26AEF01F00A4D412 /* LoadingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2423AFE926AEF01F00A4D412 /* LoadingViewController.storyboard */; };
+		24580D0026B195AF0087659A /* LaunchAnimationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24580CFE26B195AF0087659A /* LaunchAnimationController.storyboard */; };
+		24580D0126B195AF0087659A /* LaunchAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24580CFF26B195AF0087659A /* LaunchAnimationController.swift */; };
 		246EF1F62691AE41000056AF /* DiffiucultyPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EF1F52691AE41000056AF /* DiffiucultyPickerController.swift */; };
 		247247C826A32AF50050AE89 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247247C426A32AF50050AE89 /* AppCoordinator.swift */; };
 		247247C926A32AF50050AE89 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247247C526A32AF50050AE89 /* CoordinatorProtocol.swift */; };
@@ -104,6 +106,8 @@
 		240D62BC2676261C002BEB1D /* OpeningParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningParser.swift; sourceTree = "<group>"; };
 		2423AFE726AEF00000A4D412 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		2423AFE926AEF01F00A4D412 /* LoadingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadingViewController.storyboard; sourceTree = "<group>"; };
+		24580CFE26B195AF0087659A /* LaunchAnimationController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchAnimationController.storyboard; sourceTree = "<group>"; };
+		24580CFF26B195AF0087659A /* LaunchAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchAnimationController.swift; sourceTree = "<group>"; };
 		246EF1F52691AE41000056AF /* DiffiucultyPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffiucultyPickerController.swift; sourceTree = "<group>"; };
 		247247C426A32AF50050AE89 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		247247C526A32AF50050AE89 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
@@ -219,6 +223,15 @@
 			path = LoadingScreen;
 			sourceTree = "<group>";
 		};
+		24580CFD26B195A40087659A /* LaunchAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				24580CFE26B195AF0087659A /* LaunchAnimationController.storyboard */,
+				24580CFF26B195AF0087659A /* LaunchAnimationController.swift */,
+			);
+			path = LaunchAnimation;
+			sourceTree = "<group>";
+		};
 		246EF1E826919FCA000056AF /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +246,7 @@
 		247247CC26A32B630050AE89 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				24580CFD26B195A40087659A /* LaunchAnimation */,
 				2423AFE626AEEFD300A4D412 /* LoadingScreen */,
 				247247CD26A32B630050AE89 /* Base.swift */,
 			);
@@ -819,6 +833,7 @@
 				24BA26062675046200A81F6C /* eco.json in Resources */,
 				3F6FB31F265FCE7000E41C41 /* LaunchScreen.storyboard in Resources */,
 				3F6FB31C265FCE7000E41C41 /* Assets.xcassets in Resources */,
+				24580D0026B195AF0087659A /* LaunchAnimationController.storyboard in Resources */,
 				247247E326A32FCB0050AE89 /* ChooseGameController.storyboard in Resources */,
 				2423AFEA26AEF01F00A4D412 /* LoadingViewController.storyboard in Resources */,
 				24F040FD26A400600095BB4B /* OpeningGameController.storyboard in Resources */,
@@ -858,6 +873,7 @@
 				24F0411826A40FE80095BB4B /* UserBase.swift in Sources */,
 				3F6C3362266CEECB0070E83C /* Animator.swift in Sources */,
 				247247CE26A32B630050AE89 /* Base.swift in Sources */,
+				24580D0126B195AF0087659A /* LaunchAnimationController.swift in Sources */,
 				2478475326A5853300354E25 /* OpeningFilterViewModel.swift in Sources */,
 				3F6FB362265FD26F00E41C41 /* GeneralStyleLabel.swift in Sources */,
 				3F5E267A2663DE3100100EBB /* StatsController.swift in Sources */,

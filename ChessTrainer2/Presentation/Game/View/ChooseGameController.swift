@@ -9,13 +9,17 @@ import UIKit
 
 class ChooseGameController: GameViewController {
     
+    override func loadView() {
+        super.loadView()
+//        coordinator?.showLoadingScreen()
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) { [weak self] in
+//            guard let self = self else { return }
+//            self.coordinator?.dismissLoadingScreen()
+//        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        coordinator?.showLoadingScreen()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) { [weak self] in
-            guard let self = self else { return }
-            self.coordinator?.dismissLoadingScreen()
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

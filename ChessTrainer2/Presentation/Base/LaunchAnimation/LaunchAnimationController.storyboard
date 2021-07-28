@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Launch Animation Controller-->
+        <scene sceneID="HfE-Ug-sJv">
+            <objects>
+                <viewController storyboardIdentifier="LaunchAnimationController" id="Fxd-xA-9PE" customClass="LaunchAnimationController" customModule="ChessTrainer2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2X6-yl-3N2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chess" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eo-EY-C16">
+                                <rect key="frame" x="179" y="430.5" width="56" height="25"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="21"/>
+                                <color key="textColor" red="0.48627450979999998" green="0.2156862745" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen" translatesAutoresizingMaskIntoConstraints="NO" id="hG9-67-t7h">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="object" translatesAutoresizingMaskIntoConstraints="NO" id="v3i-bw-rIu">
+                                <rect key="frame" x="72.5" y="327" width="269" height="242"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chess Trainer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSh-IW-nH3">
+                                <rect key="frame" x="20" y="599" width="374" height="41"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="whW-qf-prY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="whW-qf-prY" firstAttribute="trailing" secondItem="BSh-IW-nH3" secondAttribute="trailing" constant="20" id="1Gz-1g-gTP"/>
+                            <constraint firstItem="5eo-EY-C16" firstAttribute="centerX" secondItem="2X6-yl-3N2" secondAttribute="centerX" id="FWv-Fj-5c5"/>
+                            <constraint firstAttribute="bottom" secondItem="hG9-67-t7h" secondAttribute="bottom" id="KCm-OV-Ov5"/>
+                            <constraint firstItem="whW-qf-prY" firstAttribute="trailing" secondItem="hG9-67-t7h" secondAttribute="trailing" id="KvN-Wj-yoF"/>
+                            <constraint firstItem="v3i-bw-rIu" firstAttribute="centerX" secondItem="2X6-yl-3N2" secondAttribute="centerX" id="MP2-Hb-Ywi"/>
+                            <constraint firstItem="5eo-EY-C16" firstAttribute="centerY" secondItem="2X6-yl-3N2" secondAttribute="centerY" constant="-5" id="Nib-c2-VYx"/>
+                            <constraint firstItem="BSh-IW-nH3" firstAttribute="leading" secondItem="whW-qf-prY" secondAttribute="leading" constant="20" id="P2h-2Q-Kme"/>
+                            <constraint firstItem="v3i-bw-rIu" firstAttribute="centerY" secondItem="2X6-yl-3N2" secondAttribute="centerY" id="UIc-W4-W0a"/>
+                            <constraint firstItem="hG9-67-t7h" firstAttribute="top" secondItem="2X6-yl-3N2" secondAttribute="top" id="fz7-Vw-gHS"/>
+                            <constraint firstItem="BSh-IW-nH3" firstAttribute="centerX" secondItem="v3i-bw-rIu" secondAttribute="centerX" id="hoh-Hz-iV4"/>
+                            <constraint firstItem="v3i-bw-rIu" firstAttribute="width" secondItem="hG9-67-t7h" secondAttribute="width" multiplier="0.65" id="il8-5Z-E7W"/>
+                            <constraint firstItem="v3i-bw-rIu" firstAttribute="height" secondItem="hG9-67-t7h" secondAttribute="height" multiplier="0.27" id="wVA-cg-mJQ"/>
+                            <constraint firstItem="BSh-IW-nH3" firstAttribute="top" secondItem="v3i-bw-rIu" secondAttribute="bottom" constant="30" id="wve-A4-GYJ"/>
+                            <constraint firstItem="hG9-67-t7h" firstAttribute="leading" secondItem="whW-qf-prY" secondAttribute="leading" id="yIZ-5W-gmp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pawn" destination="v3i-bw-rIu" id="tvV-NE-YRa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gIV-mO-saQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="407" y="33"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="object" width="319" height="427"/>
+        <image name="screen" width="375" height="812"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
