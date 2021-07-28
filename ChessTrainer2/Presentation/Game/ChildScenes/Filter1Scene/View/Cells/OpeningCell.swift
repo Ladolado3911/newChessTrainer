@@ -40,7 +40,7 @@ class OpeningCell: UITableViewCell {
         if opening.isSelected {
             DispatchQueue.main.asyncAfter(deadline: .now()) { [weak self] in
                 guard let self = self else { return }
-                UIView.animate(withDuration: 0.2) {
+                UIView.animate(withDuration: 0.1) {
                     print("inside animation")
                     self.fancyView.layer.shadowColor = UIColor.black.cgColor
                     self.fancyView.backgroundColor = ProjectColors.purple
@@ -58,7 +58,7 @@ class OpeningCell: UITableViewCell {
         else {
             DispatchQueue.main.asyncAfter(deadline: .now()) { [weak self] in
                 guard let self = self else { return }
-                UIView.animate(withDuration: 0.2) {
+                UIView.animate(withDuration: 0.1) {
                     print("inside animation")
                     self.fancyView.layer.shadowColor = ProjectColors.purple.cgColor
                     self.fancyView.backgroundColor = ProjectColors.white

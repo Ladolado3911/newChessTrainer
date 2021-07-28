@@ -27,23 +27,31 @@ class LoadingViewController: BaseViewController {
     }
     
     func setUpLayout() {
-        let frame = CGRect(x: (screenWidth / 2) - 100, y: (screenHeight / 2) - 100, width: 200, height: 200)
+        //setUpBackgroundImage()
+        setUpPawnAnimation()
+
+
+    }
+    
+//    func setUpBackgroundImage() {
+//        let frame = UIScreen.main.bounds
+//        let testView = UIImageView()
+//        testView.frame = frame
+//        testView.image = UIImage(named: "screen")
+//        testView.contentMode = .scaleAspectFill
+//
+//        view.addSubview(testView)
+//    }
+    
+    func setUpPawnAnimation() {
+        let frame = CGRect(x: (screenWidth / 2) - 75, y: (screenHeight / 2) - 75, width: 150, height: 150)
         let testView = UIImageView()
         testView.frame = frame
         testView.image = UIImage(named: "object")
+        testView.contentMode = .scaleAspectFit
         
         view.addSubview(testView)
-        
-//        UIView.animate(withDuration: 1) {
-//            testView.layer.backgroundColor = UIColor.blue.cgColor
-//        }
-        
-//        UIView.animate(withDuration: 2, delay: 0.25, options: [.repeat, .autoreverse]) {
-//            testView.transform = CGAffineTransform(rotationAngle: -6)
-//        } completion: { bool in
-//
-//        }
-        
+
         UIView.animateKeyframes(withDuration: 2.5, delay: 0, options: []) {
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.3) {
                 testView.transform = CGAffineTransform(rotationAngle: .pi)
@@ -61,8 +69,6 @@ class LoadingViewController: BaseViewController {
         } completion: { bool in
         
         }
-
-
     }
     
 
